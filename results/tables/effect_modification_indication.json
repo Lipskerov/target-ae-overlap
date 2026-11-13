@@ -1,0 +1,929 @@
+{
+ "note": "post hoc; not in SAP v1",
+ "molecules": 1039,
+ "counts_trials": {
+  "unknown": 268,
+  "mixed": 126,
+  "nervous system": 92,
+  "endocrine": 5,
+  "neoplasms": 169,
+  "cardiovascular": 65,
+  "mental disorders": 76,
+  "respiratory": 36,
+  "blood/lymphatic": 23,
+  "eye": 20,
+  "urogenital": 38,
+  "skin": 35,
+  "musculoskeletal": 7,
+  "digestive": 20,
+  "immune": 27,
+  "metabolic/nutritional": 29,
+  "infections": 2,
+  "ENT": 1
+ },
+ "counts_faers": {
+  "immune": 19,
+  "unknown": 491,
+  "urogenital": 7,
+  "mixed": 277,
+  "neoplasms": 8,
+  "cardiovascular": 105,
+  "nervous system": 54,
+  "mental disorders": 27,
+  "metabolic/nutritional": 9,
+  "skin": 15,
+  "digestive": 2,
+  "endocrine": 10,
+  "musculoskeletal": 4,
+  "respiratory": 8,
+  "eye": 3
+ },
+ "agreement": {
+  "both_labelled": 188,
+  "same_area": 130
+ },
+ "prr_clean": {
+  "trials": {
+   "unknown": {
+    "n_molecules": 268,
+    "molecules_used": 239,
+    "same_target_pairs": 983,
+    "different_target_pairs": 34795,
+    "delta": 0.759,
+    "ci95": [
+     0.432,
+     1.096
+    ],
+    "pair_mean_same": 0.458,
+    "pair_mean_different": 0.084,
+    "ratio_same_vs_diff": 5.48,
+    "pct_same_target_pairs_sharing_none": 81.2
+   },
+   "neoplasms": {
+    "n_molecules": 169,
+    "molecules_used": 161,
+    "same_target_pairs": 452,
+    "different_target_pairs": 13744,
+    "delta": 1.212,
+    "ci95": [
+     0.833,
+     1.688
+    ],
+    "pair_mean_same": 1.137,
+    "pair_mean_different": 0.131,
+    "ratio_same_vs_diff": 8.69,
+    "pct_same_target_pairs_sharing_none": 52.7,
+    "adjusted_same_target": {
+     "beta": 0.537,
+     "ci95": [
+      0.235,
+      0.952
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "mixed": {
+    "n_molecules": 126,
+    "molecules_used": 99,
+    "same_target_pairs": 139,
+    "different_target_pairs": 7736,
+    "delta": 0.817,
+    "ci95": [
+     0.416,
+     1.292
+    ],
+    "pair_mean_same": 0.863,
+    "pair_mean_different": 0.063,
+    "ratio_same_vs_diff": 13.74,
+    "pct_same_target_pairs_sharing_none": 58.3
+   },
+   "nervous system": {
+    "n_molecules": 92,
+    "molecules_used": 76,
+    "same_target_pairs": 228,
+    "different_target_pairs": 3958,
+    "delta": 0.814,
+    "ci95": [
+     0.36,
+     1.444
+    ],
+    "pair_mean_same": 0.908,
+    "pair_mean_different": 0.226,
+    "ratio_same_vs_diff": 4.02,
+    "pct_same_target_pairs_sharing_none": 63.6,
+    "adjusted_same_target": {
+     "beta": -0.139,
+     "ci95": [
+      -0.491,
+      0.235
+     ],
+     "share_boot_le0": 0.764
+    }
+   },
+   "mental disorders": {
+    "n_molecules": 76,
+    "molecules_used": 63,
+    "same_target_pairs": 430,
+    "different_target_pairs": 2420,
+    "delta": 0.829,
+    "ci95": [
+     0.31,
+     1.245
+    ],
+    "pair_mean_same": 0.814,
+    "pair_mean_different": 0.182,
+    "ratio_same_vs_diff": 4.48,
+    "pct_same_target_pairs_sharing_none": 62.8,
+    "adjusted_same_target": {
+     "beta": -0.063,
+     "ci95": [
+      -0.284,
+      0.124
+     ],
+     "share_boot_le0": 0.749
+    }
+   },
+   "cardiovascular": {
+    "n_molecules": 65,
+    "molecules_used": 61,
+    "same_target_pairs": 97,
+    "different_target_pairs": 1983,
+    "delta": 0.596,
+    "ci95": [
+     0.023,
+     1.124
+    ],
+    "pair_mean_same": 0.619,
+    "pair_mean_different": 0.265,
+    "ratio_same_vs_diff": 2.34,
+    "pct_same_target_pairs_sharing_none": 69.1,
+    "adjusted_same_target": {
+     "beta": 0.257,
+     "ci95": [
+      -0.237,
+      1.007
+     ],
+     "share_boot_le0": 0.168
+    }
+   },
+   "urogenital": {
+    "n_molecules": 38,
+    "molecules_used": 31,
+    "same_target_pairs": 42,
+    "different_target_pairs": 661,
+    "delta": 1.349,
+    "ci95": [
+     0.436,
+     2.579
+    ],
+    "pair_mean_same": 1.69,
+    "pair_mean_different": 0.254,
+    "ratio_same_vs_diff": 6.65,
+    "pct_same_target_pairs_sharing_none": 42.9,
+    "adjusted_same_target": {
+     "beta": 0.72,
+     "ci95": [
+      -0.42,
+      2.091
+     ],
+     "share_boot_le0": 0.128
+    }
+   },
+   "respiratory": {
+    "n_molecules": 36,
+    "molecules_used": 29,
+    "same_target_pairs": 60,
+    "different_target_pairs": 570,
+    "delta": 0.991,
+    "ci95": [
+     0.285,
+     1.917
+    ],
+    "pair_mean_same": 1.917,
+    "pair_mean_different": 0.716,
+    "ratio_same_vs_diff": 2.68,
+    "pct_same_target_pairs_sharing_none": 33.3,
+    "adjusted_same_target": {
+     "beta": -0.407,
+     "ci95": [
+      -2.42,
+      1.599
+     ],
+     "share_boot_le0": 0.658
+    }
+   },
+   "skin": {
+    "n_molecules": 35,
+    "molecules_used": 29,
+    "same_target_pairs": 45,
+    "different_target_pairs": 550,
+    "delta": 0.785,
+    "ci95": [
+     -0.35,
+     2.278
+    ],
+    "pair_mean_same": 1.356,
+    "pair_mean_different": 0.511,
+    "ratio_same_vs_diff": 2.65,
+    "pct_same_target_pairs_sharing_none": 66.7,
+    "adjusted_same_target": {
+     "beta": -0.376,
+     "ci95": [
+      -1.973,
+      0.769
+     ],
+     "share_boot_le0": 0.763
+    }
+   },
+   "metabolic/nutritional": {
+    "n_molecules": 29,
+    "molecules_used": 24,
+    "same_target_pairs": 45,
+    "different_target_pairs": 361,
+    "delta": 1.924,
+    "ci95": [
+     0.978,
+     3.038
+    ],
+    "pair_mean_same": 2.289,
+    "pair_mean_different": 0.213,
+    "ratio_same_vs_diff": 10.73,
+    "pct_same_target_pairs_sharing_none": 22.2,
+    "adjusted_same_target": {
+     "beta": 4.566,
+     "ci95": [
+      0.047,
+      8.342
+     ],
+     "share_boot_le0": 0.025
+    }
+   },
+   "immune": {
+    "n_molecules": 27,
+    "molecules_used": 23,
+    "same_target_pairs": 31,
+    "different_target_pairs": 320,
+    "delta": 0.832,
+    "ci95": [
+     0.031,
+     1.715
+    ],
+    "pair_mean_same": 0.774,
+    "pair_mean_different": 0.128,
+    "ratio_same_vs_diff": 6.04,
+    "pct_same_target_pairs_sharing_none": 64.5,
+    "adjusted_same_target": {
+     "beta": -0.092,
+     "ci95": [
+      -1.113,
+      1.631
+     ],
+     "share_boot_le0": 0.638
+    }
+   },
+   "blood/lymphatic": {
+    "n_molecules": 23,
+    "molecules_used": 18,
+    "same_target_pairs": 19,
+    "different_target_pairs": 234,
+    "delta": 2.788,
+    "ci95": [
+     1.333,
+     4.969
+    ],
+    "pair_mean_same": 3.211,
+    "pair_mean_different": 0.188,
+    "ratio_same_vs_diff": 17.07,
+    "pct_same_target_pairs_sharing_none": 10.5
+   },
+   "eye": {
+    "n_molecules": 20,
+    "molecules_used": 16,
+    "same_target_pairs": 17,
+    "different_target_pairs": 173,
+    "delta": 2.527,
+    "ci95": [
+     0.49,
+     5.163
+    ],
+    "pair_mean_same": 3.235,
+    "pair_mean_different": 0.786,
+    "ratio_same_vs_diff": 4.12,
+    "pct_same_target_pairs_sharing_none": 17.6
+   },
+   "digestive": {
+    "n_molecules": 20,
+    "molecules_used": 11,
+    "same_target_pairs": 23,
+    "different_target_pairs": 167,
+    "delta": 2.169,
+    "ci95": [
+     0.371,
+     6.224
+    ],
+    "pair_mean_same": 3.043,
+    "pair_mean_different": 0.126,
+    "ratio_same_vs_diff": 24.2,
+    "pct_same_target_pairs_sharing_none": 30.4
+   }
+  },
+  "faers": {
+   "unknown": {
+    "n_molecules": 491,
+    "molecules_used": 471,
+    "same_target_pairs": 1779,
+    "different_target_pairs": 118516,
+    "delta": 1.066,
+    "ci95": [
+     0.781,
+     1.249
+    ],
+    "pair_mean_same": 0.781,
+    "pair_mean_different": 0.07,
+    "ratio_same_vs_diff": 11.11,
+    "pct_same_target_pairs_sharing_none": 68.6
+   },
+   "mixed": {
+    "n_molecules": 277,
+    "molecules_used": 251,
+    "same_target_pairs": 734,
+    "different_target_pairs": 37492,
+    "delta": 0.989,
+    "ci95": [
+     0.68,
+     1.316
+    ],
+    "pair_mean_same": 0.816,
+    "pair_mean_different": 0.085,
+    "ratio_same_vs_diff": 9.64,
+    "pct_same_target_pairs_sharing_none": 69.9
+   },
+   "cardiovascular": {
+    "n_molecules": 105,
+    "molecules_used": 95,
+    "same_target_pairs": 237,
+    "different_target_pairs": 5223,
+    "delta": 0.403,
+    "ci95": [
+     0.11,
+     0.643
+    ],
+    "pair_mean_same": 0.451,
+    "pair_mean_different": 0.214,
+    "ratio_same_vs_diff": 2.11,
+    "pct_same_target_pairs_sharing_none": 74.7,
+    "adjusted_same_target": {
+     "beta": 0.055,
+     "ci95": [
+      -0.179,
+      0.365
+     ],
+     "share_boot_le0": 0.33
+    }
+   },
+   "nervous system": {
+    "n_molecules": 54,
+    "molecules_used": 47,
+    "same_target_pairs": 132,
+    "different_target_pairs": 1299,
+    "delta": 1.232,
+    "ci95": [
+     0.463,
+     1.957
+    ],
+    "pair_mean_same": 1.015,
+    "pair_mean_different": 0.127,
+    "ratio_same_vs_diff": 7.99,
+    "pct_same_target_pairs_sharing_none": 55.3,
+    "adjusted_same_target": {
+     "beta": 0.258,
+     "ci95": [
+      -0.123,
+      0.753
+     ],
+     "share_boot_le0": 0.098
+    }
+   },
+   "mental disorders": {
+    "n_molecules": 27,
+    "molecules_used": 24,
+    "same_target_pairs": 183,
+    "different_target_pairs": 168,
+    "delta": 0.892,
+    "ci95": [
+     0.324,
+     1.621
+    ],
+    "pair_mean_same": 1.432,
+    "pair_mean_different": 0.351,
+    "ratio_same_vs_diff": 4.08,
+    "pct_same_target_pairs_sharing_none": 42.6,
+    "adjusted_same_target": {
+     "beta": 0.17,
+     "ci95": [
+      -0.579,
+      0.903
+     ],
+     "share_boot_le0": 0.288
+    }
+   },
+   "immune": {
+    "n_molecules": 19,
+    "molecules_used": 14,
+    "same_target_pairs": 58,
+    "different_target_pairs": 113,
+    "delta": 0.228,
+    "ci95": [
+     -0.174,
+     0.818
+    ],
+    "pair_mean_same": 0.431,
+    "pair_mean_different": 0.159,
+    "ratio_same_vs_diff": 2.71,
+    "pct_same_target_pairs_sharing_none": 72.4,
+    "adjusted_same_target": {
+     "beta": -0.04,
+     "ci95": [
+      -2.006,
+      0.801
+     ],
+     "share_boot_le0": 0.614
+    }
+   },
+   "skin": {
+    "n_molecules": 15,
+    "molecules_used": 8,
+    "same_target_pairs": 8,
+    "different_target_pairs": 97,
+    "delta": 0.112,
+    "ci95": [
+     -0.425,
+     0.919
+    ],
+    "pair_mean_same": 0.375,
+    "pair_mean_different": 0.165,
+    "ratio_same_vs_diff": 2.27,
+    "pct_same_target_pairs_sharing_none": 75.0,
+    "note": "fewer than 10 same-target pairs \u2014 not interpreted"
+   },
+   "endocrine": {
+    "n_molecules": 10,
+    "molecules_used": 7,
+    "same_target_pairs": 5,
+    "different_target_pairs": 40,
+    "delta": 0.066,
+    "ci95": [
+     -0.824,
+     1.761
+    ],
+    "pair_mean_same": 0.6,
+    "pair_mean_different": 0.3,
+    "ratio_same_vs_diff": 2.0,
+    "pct_same_target_pairs_sharing_none": 60.0,
+    "note": "fewer than 10 same-target pairs \u2014 not interpreted"
+   }
+  }
+ },
+ "ic025_clean2": {
+  "trials": {
+   "unknown": {
+    "n_molecules": 268,
+    "molecules_used": 239,
+    "same_target_pairs": 983,
+    "different_target_pairs": 34795,
+    "delta": 1.282,
+    "ci95": [
+     0.823,
+     1.628
+    ],
+    "pair_mean_same": 0.955,
+    "pair_mean_different": 0.271,
+    "ratio_same_vs_diff": 3.52,
+    "pct_same_target_pairs_sharing_none": 62.3
+   },
+   "neoplasms": {
+    "n_molecules": 169,
+    "molecules_used": 161,
+    "same_target_pairs": 452,
+    "different_target_pairs": 13744,
+    "delta": 2.473,
+    "ci95": [
+     1.918,
+     3.112
+    ],
+    "pair_mean_same": 2.814,
+    "pair_mean_different": 0.543,
+    "ratio_same_vs_diff": 5.18,
+    "pct_same_target_pairs_sharing_none": 22.1,
+    "adjusted_same_target": {
+     "beta": 1.273,
+     "ci95": [
+      0.729,
+      1.857
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "mixed": {
+    "n_molecules": 126,
+    "molecules_used": 99,
+    "same_target_pairs": 139,
+    "different_target_pairs": 7736,
+    "delta": 1.407,
+    "ci95": [
+     0.844,
+     2.175
+    ],
+    "pair_mean_same": 1.827,
+    "pair_mean_different": 0.219,
+    "ratio_same_vs_diff": 8.34,
+    "pct_same_target_pairs_sharing_none": 41.0
+   },
+   "nervous system": {
+    "n_molecules": 92,
+    "molecules_used": 76,
+    "same_target_pairs": 228,
+    "different_target_pairs": 3958,
+    "delta": 1.33,
+    "ci95": [
+     0.636,
+     2.159
+    ],
+    "pair_mean_same": 1.658,
+    "pair_mean_different": 0.463,
+    "ratio_same_vs_diff": 3.58,
+    "pct_same_target_pairs_sharing_none": 50.9,
+    "adjusted_same_target": {
+     "beta": -0.171,
+     "ci95": [
+      -0.745,
+      0.458
+     ],
+     "share_boot_le0": 0.718
+    }
+   },
+   "mental disorders": {
+    "n_molecules": 76,
+    "molecules_used": 63,
+    "same_target_pairs": 430,
+    "different_target_pairs": 2420,
+    "delta": 1.367,
+    "ci95": [
+     0.703,
+     1.953
+    ],
+    "pair_mean_same": 1.716,
+    "pair_mean_different": 0.391,
+    "ratio_same_vs_diff": 4.39,
+    "pct_same_target_pairs_sharing_none": 36.0,
+    "adjusted_same_target": {
+     "beta": 0.247,
+     "ci95": [
+      -0.116,
+      0.6
+     ],
+     "share_boot_le0": 0.089
+    }
+   },
+   "cardiovascular": {
+    "n_molecules": 65,
+    "molecules_used": 61,
+    "same_target_pairs": 97,
+    "different_target_pairs": 1983,
+    "delta": 1.459,
+    "ci95": [
+     0.472,
+     2.324
+    ],
+    "pair_mean_same": 1.608,
+    "pair_mean_different": 0.483,
+    "ratio_same_vs_diff": 3.33,
+    "pct_same_target_pairs_sharing_none": 54.6,
+    "adjusted_same_target": {
+     "beta": 0.593,
+     "ci95": [
+      -0.354,
+      1.928
+     ],
+     "share_boot_le0": 0.127
+    }
+   },
+   "urogenital": {
+    "n_molecules": 38,
+    "molecules_used": 31,
+    "same_target_pairs": 42,
+    "different_target_pairs": 661,
+    "delta": 2.038,
+    "ci95": [
+     0.498,
+     3.703
+    ],
+    "pair_mean_same": 2.524,
+    "pair_mean_different": 0.404,
+    "ratio_same_vs_diff": 6.25,
+    "pct_same_target_pairs_sharing_none": 38.1,
+    "adjusted_same_target": {
+     "beta": 1.056,
+     "ci95": [
+      -0.985,
+      3.654
+     ],
+     "share_boot_le0": 0.194
+    }
+   },
+   "respiratory": {
+    "n_molecules": 36,
+    "molecules_used": 29,
+    "same_target_pairs": 60,
+    "different_target_pairs": 570,
+    "delta": 2.18,
+    "ci95": [
+     0.741,
+     3.561
+    ],
+    "pair_mean_same": 2.867,
+    "pair_mean_different": 1.095,
+    "ratio_same_vs_diff": 2.62,
+    "pct_same_target_pairs_sharing_none": 28.3,
+    "adjusted_same_target": {
+     "beta": -1.165,
+     "ci95": [
+      -3.865,
+      1.607
+     ],
+     "share_boot_le0": 0.84
+    }
+   },
+   "skin": {
+    "n_molecules": 35,
+    "molecules_used": 29,
+    "same_target_pairs": 45,
+    "different_target_pairs": 550,
+    "delta": 1.688,
+    "ci95": [
+     -0.613,
+     4.665
+    ],
+    "pair_mean_same": 2.844,
+    "pair_mean_different": 1.075,
+    "ratio_same_vs_diff": 2.65,
+    "pct_same_target_pairs_sharing_none": 57.8,
+    "adjusted_same_target": {
+     "beta": -0.313,
+     "ci95": [
+      -3.076,
+      1.628
+     ],
+     "share_boot_le0": 0.642
+    }
+   },
+   "metabolic/nutritional": {
+    "n_molecules": 29,
+    "molecules_used": 24,
+    "same_target_pairs": 45,
+    "different_target_pairs": 361,
+    "delta": 4.925,
+    "ci95": [
+     3.037,
+     7.447
+    ],
+    "pair_mean_same": 5.8,
+    "pair_mean_different": 0.507,
+    "ratio_same_vs_diff": 11.44,
+    "pct_same_target_pairs_sharing_none": 8.9,
+    "adjusted_same_target": {
+     "beta": 7.18,
+     "ci95": [
+      0.324,
+      12.525
+     ],
+     "share_boot_le0": 0.018
+    }
+   },
+   "immune": {
+    "n_molecules": 27,
+    "molecules_used": 23,
+    "same_target_pairs": 31,
+    "different_target_pairs": 320,
+    "delta": 1.789,
+    "ci95": [
+     0.034,
+     3.118
+    ],
+    "pair_mean_same": 1.645,
+    "pair_mean_different": 0.559,
+    "ratio_same_vs_diff": 2.94,
+    "pct_same_target_pairs_sharing_none": 51.6,
+    "adjusted_same_target": {
+     "beta": 0.009,
+     "ci95": [
+      -1.682,
+      3.875
+     ],
+     "share_boot_le0": 0.443
+    }
+   },
+   "blood/lymphatic": {
+    "n_molecules": 23,
+    "molecules_used": 18,
+    "same_target_pairs": 19,
+    "different_target_pairs": 234,
+    "delta": 3.317,
+    "ci95": [
+     1.692,
+     5.276
+    ],
+    "pair_mean_same": 3.842,
+    "pair_mean_different": 0.389,
+    "ratio_same_vs_diff": 9.88,
+    "pct_same_target_pairs_sharing_none": 5.3
+   },
+   "eye": {
+    "n_molecules": 20,
+    "molecules_used": 16,
+    "same_target_pairs": 17,
+    "different_target_pairs": 173,
+    "delta": 2.868,
+    "ci95": [
+     0.767,
+     5.896
+    ],
+    "pair_mean_same": 5.294,
+    "pair_mean_different": 2.012,
+    "ratio_same_vs_diff": 2.63,
+    "pct_same_target_pairs_sharing_none": 5.9
+   },
+   "digestive": {
+    "n_molecules": 20,
+    "molecules_used": 11,
+    "same_target_pairs": 23,
+    "different_target_pairs": 167,
+    "delta": 4.399,
+    "ci95": [
+     1.287,
+     9.938
+    ],
+    "pair_mean_same": 5.87,
+    "pair_mean_different": 0.198,
+    "ratio_same_vs_diff": 29.7,
+    "pct_same_target_pairs_sharing_none": 26.1
+   }
+  },
+  "faers": {
+   "unknown": {
+    "n_molecules": 491,
+    "molecules_used": 471,
+    "same_target_pairs": 1779,
+    "different_target_pairs": 118516,
+    "delta": 2.093,
+    "ci95": [
+     1.691,
+     2.364
+    ],
+    "pair_mean_same": 1.785,
+    "pair_mean_different": 0.254,
+    "ratio_same_vs_diff": 7.03,
+    "pct_same_target_pairs_sharing_none": 46.9
+   },
+   "mixed": {
+    "n_molecules": 277,
+    "molecules_used": 251,
+    "same_target_pairs": 734,
+    "different_target_pairs": 37492,
+    "delta": 1.815,
+    "ci95": [
+     1.373,
+     2.312
+    ],
+    "pair_mean_same": 1.616,
+    "pair_mean_different": 0.214,
+    "ratio_same_vs_diff": 7.54,
+    "pct_same_target_pairs_sharing_none": 55.3
+   },
+   "cardiovascular": {
+    "n_molecules": 105,
+    "molecules_used": 95,
+    "same_target_pairs": 237,
+    "different_target_pairs": 5223,
+    "delta": 1.383,
+    "ci95": [
+     0.591,
+     2.04
+    ],
+    "pair_mean_same": 1.312,
+    "pair_mean_different": 0.412,
+    "ratio_same_vs_diff": 3.19,
+    "pct_same_target_pairs_sharing_none": 53.2,
+    "adjusted_same_target": {
+     "beta": 0.339,
+     "ci95": [
+      -0.131,
+      0.877
+     ],
+     "share_boot_le0": 0.08
+    }
+   },
+   "nervous system": {
+    "n_molecules": 54,
+    "molecules_used": 47,
+    "same_target_pairs": 132,
+    "different_target_pairs": 1299,
+    "delta": 2.173,
+    "ci95": [
+     1.065,
+     3.296
+    ],
+    "pair_mean_same": 1.955,
+    "pair_mean_different": 0.289,
+    "ratio_same_vs_diff": 6.77,
+    "pct_same_target_pairs_sharing_none": 34.1,
+    "adjusted_same_target": {
+     "beta": 0.488,
+     "ci95": [
+      -0.095,
+      1.195
+     ],
+     "share_boot_le0": 0.059
+    }
+   },
+   "mental disorders": {
+    "n_molecules": 27,
+    "molecules_used": 24,
+    "same_target_pairs": 183,
+    "different_target_pairs": 168,
+    "delta": 1.734,
+    "ci95": [
+     0.684,
+     2.983
+    ],
+    "pair_mean_same": 2.973,
+    "pair_mean_different": 1.06,
+    "ratio_same_vs_diff": 2.81,
+    "pct_same_target_pairs_sharing_none": 12.0,
+    "adjusted_same_target": {
+     "beta": 0.641,
+     "ci95": [
+      -0.793,
+      1.755
+     ],
+     "share_boot_le0": 0.18
+    }
+   },
+   "immune": {
+    "n_molecules": 19,
+    "molecules_used": 14,
+    "same_target_pairs": 58,
+    "different_target_pairs": 113,
+    "delta": -0.02,
+    "ci95": [
+     -0.841,
+     0.861
+    ],
+    "pair_mean_same": 0.483,
+    "pair_mean_different": 0.416,
+    "ratio_same_vs_diff": 1.16,
+    "pct_same_target_pairs_sharing_none": 79.3,
+    "adjusted_same_target": {
+     "beta": -0.442,
+     "ci95": [
+      -2.879,
+      0.995
+     ],
+     "share_boot_le0": 0.708
+    }
+   },
+   "skin": {
+    "n_molecules": 15,
+    "molecules_used": 8,
+    "same_target_pairs": 8,
+    "different_target_pairs": 97,
+    "delta": 0.173,
+    "ci95": [
+     -0.905,
+     1.395
+    ],
+    "pair_mean_same": 0.875,
+    "pair_mean_different": 0.454,
+    "ratio_same_vs_diff": 1.93,
+    "pct_same_target_pairs_sharing_none": 50.0,
+    "note": "fewer than 10 same-target pairs \u2014 not interpreted"
+   },
+   "endocrine": {
+    "n_molecules": 10,
+    "molecules_used": 7,
+    "same_target_pairs": 5,
+    "different_target_pairs": 40,
+    "delta": 0.949,
+    "ci95": [
+     -0.375,
+     3.0
+    ],
+    "pair_mean_same": 1.6,
+    "pair_mean_different": 0.3,
+    "ratio_same_vs_diff": 5.33,
+    "pct_same_target_pairs_sharing_none": 20.0,
+    "note": "fewer than 10 same-target pairs \u2014 not interpreted"
+   }
+  }
+ }
+}

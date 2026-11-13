@@ -1,0 +1,755 @@
+{
+ "wp": "WP5",
+ "amendment": "protocol/AMENDMENT_3.md",
+ "label": "prr_clean",
+ "profile": "data/derived/faers_q/b/profile_clean_prr_k20.csv",
+ "seed": "SeedSequence(20261113).spawn(15)[14]",
+ "note": "post hoc; counts = number of same-target pairs in which both molecules carry the reaction in their profile; group = both molecules in group (molecule labels)",
+ "reproduction_check": {
+  "expected": 1.2494,
+  "observed": 1.2494,
+  "targets": 180,
+  "status": "PASS"
+ },
+ "target_level": {
+  "targets": 180,
+  "mean_contrast": 1.2494,
+  "ci95_target_bootstrap": [
+   1.0273,
+   1.482
+  ],
+  "B": 5000,
+  "median": 0.611,
+  "share_targets_positive": 0.8889,
+  "by_target_family_descriptive": {
+   "GPCR": {
+    "targets": 42,
+    "mean_contrast": 1.1007,
+    "median": 0.4813,
+    "share_positive": 0.881
+   },
+   "other enzyme": {
+    "targets": 33,
+    "mean_contrast": 1.0183,
+    "median": 0.5988,
+    "share_positive": 0.8485
+   },
+   "kinase": {
+    "targets": 33,
+    "mean_contrast": 0.9036,
+    "median": 0.6076,
+    "share_positive": 0.9394
+   },
+   "ion channel": {
+    "targets": 18,
+    "mean_contrast": 2.1639,
+    "median": 0.774,
+    "share_positive": 0.8889
+   },
+   "nuclear receptor": {
+    "targets": 11,
+    "mean_contrast": 0.4902,
+    "median": 0.4024,
+    "share_positive": 0.9091
+   },
+   "other membrane receptor": {
+    "targets": 11,
+    "mean_contrast": 2.1685,
+    "median": 1.6672,
+    "share_positive": 0.9091
+   },
+   "protease": {
+    "targets": 9,
+    "mean_contrast": 1.212,
+    "median": 0.4365,
+    "share_positive": 0.7778
+   },
+   "transporter": {
+    "targets": 8,
+    "mean_contrast": 0.7901,
+    "median": 0.4502,
+    "share_positive": 1.0
+   },
+   "secreted protein": {
+    "targets": 8,
+    "mean_contrast": 2.2177,
+    "median": 1.8896,
+    "share_positive": 0.75
+   },
+   "other": {
+    "targets": 3,
+    "mean_contrast": 2.7393,
+    "median": 2.6338,
+    "share_positive": 1.0
+   },
+   "surface antigen": {
+    "targets": 2,
+    "mean_contrast": 1.4117,
+    "median": 1.4117,
+    "share_positive": 1.0
+   },
+   "structural protein": {
+    "targets": 1,
+    "mean_contrast": 0.2409,
+    "median": 0.2409,
+    "share_positive": 1.0
+   },
+   "epigenetic regulator": {
+    "targets": 1,
+    "mean_contrast": 0.7905,
+    "median": 0.7905,
+    "share_positive": 1.0
+   }
+  }
+ },
+ "shared_terms": {
+  "overall": {
+   "same_target_pairs": 7923,
+   "molecules_in_group": 1039,
+   "pairs_sharing_none": 6021,
+   "shared_slots": 4347,
+   "top25": [
+    [
+     "BLOOD PROLACTIN ABNORMAL",
+     66
+    ],
+    [
+     "ANOSOGNOSIA",
+     55
+    ],
+    [
+     "VAGINAL FLATULENCE",
+     51
+    ],
+    [
+     "LUPUS VULGARIS",
+     40
+    ],
+    [
+     "CYTOKINE RELEASE SYNDROME",
+     39
+    ],
+    [
+     "DERMATITIS ACNEIFORM",
+     39
+    ],
+    [
+     "AKATHISIA",
+     36
+    ],
+    [
+     "PARONYCHIA",
+     36
+    ],
+    [
+     "CONGENITAL HIATUS HERNIA",
+     34
+    ],
+    [
+     "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+     32
+    ],
+    [
+     "ANTIPSYCHOTIC DRUG LEVEL BELOW THERAPEUTIC",
+     28
+    ],
+    [
+     "PALMAR-PLANTAR ERYTHRODYSAESTHESIA SYNDROME",
+     26
+    ],
+    [
+     "MEDICATION OVERUSE HEADACHE",
+     25
+    ],
+    [
+     "DEEP VEIN THROMBOSIS POSTOPERATIVE",
+     24
+    ],
+    [
+     "MITOCHONDRIAL DNA MUTATION",
+     24
+    ],
+    [
+     "SWOLLEN JOINT COUNT",
+     23
+    ],
+    [
+     "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY",
+     22
+    ],
+    [
+     "MYELOSUPPRESSION",
+     20
+    ],
+    [
+     "TOTAL LUNG CAPACITY INCREASED",
+     20
+    ],
+    [
+     "APPENDICOLITH",
+     19
+    ],
+    [
+     "ASTHMA-CHRONIC OBSTRUCTIVE PULMONARY DISEASE OVERLAP SYNDROME",
+     19
+    ],
+    [
+     "GRIP STRENGTH",
+     19
+    ],
+    [
+     "ANTICHOLINERGIC SYNDROME",
+     18
+    ],
+    [
+     "FACET JOINT SYNDROME",
+     18
+    ],
+    [
+     "LEARNING DISABILITY",
+     18
+    ]
+   ]
+  },
+  "kinase": {
+   "same_target_pairs": 555,
+   "molecules_in_group": 108,
+   "pairs_sharing_none": 335,
+   "shared_slots": 572,
+   "top25": [
+    [
+     "DERMATITIS ACNEIFORM",
+     39
+    ],
+    [
+     "PARONYCHIA",
+     36
+    ],
+    [
+     "PALMAR-PLANTAR ERYTHRODYSAESTHESIA SYNDROME",
+     23
+    ],
+    [
+     "ANTI-INSULIN ANTIBODY POSITIVE",
+     15
+    ],
+    [
+     "ANTI-INSULIN ANTIBODY INCREASED",
+     10
+    ],
+    [
+     "BLAST CRISIS IN MYELOGENOUS LEUKAEMIA",
+     10
+    ],
+    [
+     "CHRONIC MYELOID LEUKAEMIA RECURRENT",
+     10
+    ],
+    [
+     "CYTOGENETIC ANALYSIS ABNORMAL",
+     10
+    ],
+    [
+     "HYPOGLYCAEMIA UNAWARENESS",
+     10
+    ],
+    [
+     "HYPOGLYCAEMIC UNCONSCIOUSNESS",
+     10
+    ],
+    [
+     "SKIN TOXICITY",
+     10
+    ],
+    [
+     "SEROUS RETINOPATHY",
+     9
+    ],
+    [
+     "AMYLASE INCREASED",
+     7
+    ],
+    [
+     "TYROSINE KINASE MUTATION",
+     7
+    ],
+    [
+     "ANTI-INSULIN ANTIBODY",
+     6
+    ],
+    [
+     "CHRONIC MYELOID LEUKAEMIA TRANSFORMATION",
+     6
+    ],
+    [
+     "DAWN PHENOMENON",
+     6
+    ],
+    [
+     "NAIL BED INFLAMMATION",
+     6
+    ],
+    [
+     "PHILADELPHIA CHROMOSOME POSITIVE",
+     6
+    ],
+    [
+     "SHOCK HYPOGLYCAEMIC",
+     6
+    ],
+    [
+     "TASTE DISORDER",
+     6
+    ],
+    [
+     "CARCINOEMBRYONIC ANTIGEN INCREASED",
+     5
+    ],
+    [
+     "DRUG RESISTANCE MUTATION",
+     5
+    ],
+    [
+     "ANAPLASTIC LYMPHOMA KINASE GENE MUTATION",
+     4
+    ],
+    [
+     "LYMPHANGIOSIS CARCINOMATOSA",
+     4
+    ]
+   ]
+  },
+  "GPCR": {
+   "same_target_pairs": 2468,
+   "molecules_in_group": 292,
+   "pairs_sharing_none": 1865,
+   "shared_slots": 1303,
+   "top25": [
+    [
+     "BLOOD PROLACTIN ABNORMAL",
+     66
+    ],
+    [
+     "ANOSOGNOSIA",
+     55
+    ],
+    [
+     "AKATHISIA",
+     28
+    ],
+    [
+     "ANTIPSYCHOTIC DRUG LEVEL BELOW THERAPEUTIC",
+     28
+    ],
+    [
+     "MEDICATION OVERUSE HEADACHE",
+     24
+    ],
+    [
+     "ANTICHOLINERGIC SYNDROME",
+     18
+    ],
+    [
+     "LEARNING DISABILITY",
+     18
+    ],
+    [
+     "ASTHMA-CHRONIC OBSTRUCTIVE PULMONARY DISEASE OVERLAP SYNDROME",
+     17
+    ],
+    [
+     "TOTAL LUNG CAPACITY INCREASED",
+     17
+    ],
+    [
+     "VAGINAL FLATULENCE",
+     17
+    ],
+    [
+     "CONGENITAL HIATUS HERNIA",
+     16
+    ],
+    [
+     "DISINHIBITION",
+     15
+    ],
+    [
+     "APPENDICOLITH",
+     12
+    ],
+    [
+     "OVARIAN HAEMORRHAGE",
+     12
+    ],
+    [
+     "VISION ABNORMAL NEONATAL",
+     11
+    ],
+    [
+     "ALLERGY TEST POSITIVE",
+     10
+    ],
+    [
+     "DISTURBANCE IN SOCIAL BEHAVIOUR",
+     10
+    ],
+    [
+     "NEGATIVE SYMPTOMS IN SCHIZOPHRENIA",
+     10
+    ],
+    [
+     "NEUROLEPTIC-INDUCED DEFICIT SYNDROME",
+     10
+    ],
+    [
+     "OVARIAN ENLARGEMENT",
+     10
+    ],
+    [
+     "OVARIAN HYPERSTIMULATION SYNDROME",
+     10
+    ],
+    [
+     "PARKINSONISM",
+     10
+    ],
+    [
+     "EUPHORIC MOOD",
+     8
+    ],
+    [
+     "MALIGNANT MELANOMA STAGE 0",
+     8
+    ],
+    [
+     "ECTOPIC PREGNANCY",
+     7
+    ]
+   ]
+  },
+  "ion_channel": {
+   "same_target_pairs": 1145,
+   "molecules_in_group": 115,
+   "pairs_sharing_none": 907,
+   "shared_slots": 454,
+   "top25": [
+    [
+     "HYPERTHERMIA MALIGNANT",
+     16
+    ],
+    [
+     "MITOCHONDRIAL DNA MUTATION",
+     16
+    ],
+    [
+     "HYPOGLYCAEMIC COMA",
+     15
+    ],
+    [
+     "AIRWAY COMPLICATION OF ANAESTHESIA",
+     12
+    ],
+    [
+     "MULTIPLE-DRUG RESISTANCE",
+     12
+    ],
+    [
+     "LOCAL ANAESTHETIC SYSTEMIC TOXICITY",
+     11
+    ],
+    [
+     "DYSTONIC TREMOR",
+     10
+    ],
+    [
+     "NEUROMUSCULAR BLOCK PROLONGED",
+     10
+    ],
+    [
+     "ACUTE POSTOPERATIVE SIALADENITIS",
+     9
+    ],
+    [
+     "ANAESTHETIC COMPLICATION NEUROLOGICAL",
+     9
+    ],
+    [
+     "NEGATIVE PRESSURE PULMONARY OEDEMA",
+     9
+    ],
+    [
+     "END-TIDAL CO2 INCREASED",
+     7
+    ],
+    [
+     "AIRWAY PEAK PRESSURE INCREASED",
+     6
+    ],
+    [
+     "ANAESTHETIC COMPLICATION",
+     6
+    ],
+    [
+     "ANAPHYLACTOID SHOCK",
+     6
+    ],
+    [
+     "CHANGE IN SEIZURE PRESENTATION",
+     6
+    ],
+    [
+     "CONGENITAL CLAVICULAR AGENESIS",
+     6
+    ],
+    [
+     "DELAYED RECOVERY FROM ANAESTHESIA",
+     6
+    ],
+    [
+     "HYPOGLYCAEMIA",
+     6
+    ],
+    [
+     "NEW ONSET REFRACTORY STATUS EPILEPTICUS",
+     6
+    ],
+    [
+     "TRIGEMINO-CARDIAC REFLEX",
+     6
+    ],
+    [
+     "UNWANTED AWARENESS DURING ANAESTHESIA",
+     6
+    ],
+    [
+     "SEIZURE CLUSTER",
+     4
+    ],
+    [
+     "SUDDEN UNEXPLAINED DEATH IN EPILEPSY",
+     4
+    ],
+    [
+     "ANALGESIC DRUG LEVEL",
+     3
+    ]
+   ]
+  },
+  "biologic": {
+   "same_target_pairs": 381,
+   "molecules_in_group": 151,
+   "pairs_sharing_none": 167,
+   "shared_slots": 697,
+   "top25": [
+    [
+     "CYTOKINE RELEASE SYNDROME",
+     39
+    ],
+    [
+     "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+     32
+    ],
+    [
+     "MYELOSUPPRESSION",
+     16
+    ],
+    [
+     "IMMUNE-MEDIATED LUNG DISEASE",
+     15
+    ],
+    [
+     "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+     10
+    ],
+    [
+     "ANTI-INSULIN ANTIBODY POSITIVE",
+     10
+    ],
+    [
+     "HYPOPHYSITIS",
+     10
+    ],
+    [
+     "PEMPHIGUS",
+     10
+    ],
+    [
+     "RED BLOOD CELL SEDIMENTATION RATE",
+     10
+    ],
+    [
+     "RHEUMATOID FACTOR POSITIVE",
+     10
+    ],
+    [
+     "TUMOUR FLARE",
+     10
+    ],
+    [
+     "HYPOGAMMAGLOBULINAEMIA",
+     8
+    ],
+    [
+     "ECTOPIC PREGNANCY",
+     7
+    ],
+    [
+     "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY",
+     6
+    ],
+    [
+     "ANTI-ERYTHROPOIETIN ANTIBODY POSITIVE",
+     6
+    ],
+    [
+     "ANTI-INSULIN ANTIBODY INCREASED",
+     6
+    ],
+    [
+     "APLASIA PURE RED CELL",
+     6
+    ],
+    [
+     "B-CELL APLASIA",
+     6
+    ],
+    [
+     "CYTOMEGALOVIRUS INFECTION REACTIVATION",
+     6
+    ],
+    [
+     "DAWN PHENOMENON",
+     6
+    ],
+    [
+     "DERMATITIS ACNEIFORM",
+     6
+    ],
+    [
+     "HYPOGLYCAEMIA UNAWARENESS",
+     6
+    ],
+    [
+     "HYPOGLYCAEMIC UNCONSCIOUSNESS",
+     6
+    ],
+    [
+     "HYPOTHYROIDISM",
+     6
+    ],
+    [
+     "IMMUNE-MEDIATED HEPATITIS",
+     6
+    ]
+   ]
+  },
+  "neoplasm": {
+   "same_target_pairs": 452,
+   "molecules_in_group": 169,
+   "pairs_sharing_none": 238,
+   "shared_slots": 514,
+   "top25": [
+    [
+     "DERMATITIS ACNEIFORM",
+     23
+    ],
+    [
+     "PARONYCHIA",
+     21
+    ],
+    [
+     "NAIL BED INFLAMMATION",
+     16
+    ],
+    [
+     "PALMAR-PLANTAR ERYTHRODYSAESTHESIA SYNDROME",
+     11
+    ],
+    [
+     "IMMUNE-MEDIATED LUNG DISEASE",
+     10
+    ],
+    [
+     "SEROUS RETINOPATHY",
+     9
+    ],
+    [
+     "PIK3CA-ACTIVATED MUTATION",
+     8
+    ],
+    [
+     "PROSTATIC SPECIFIC ANTIGEN ABNORMAL",
+     7
+    ],
+    [
+     "BLAST CRISIS IN MYELOGENOUS LEUKAEMIA",
+     6
+    ],
+    [
+     "CHRONIC MYELOID LEUKAEMIA RECURRENT",
+     6
+    ],
+    [
+     "CYTOGENETIC ANALYSIS ABNORMAL",
+     6
+    ],
+    [
+     "HYPOPHOSPHATAEMIA",
+     6
+    ],
+    [
+     "IMMUNE-MEDIATED HEPATITIS",
+     6
+    ],
+    [
+     "NASAL MUCOSAL DISORDER",
+     6
+    ],
+    [
+     "NEUROENDOCRINE CARCINOMA OF PROSTATE",
+     6
+    ],
+    [
+     "PHILADELPHIA CHROMOSOME POSITIVE",
+     6
+    ],
+    [
+     "PROSTATIC SPECIFIC ANTIGEN DECREASED",
+     6
+    ],
+    [
+     "PROSTATIC SPECIFIC ANTIGEN INCREASED",
+     6
+    ],
+    [
+     "TYROSINE KINASE MUTATION",
+     6
+    ],
+    [
+     "DRUG RESISTANCE MUTATION",
+     4
+    ],
+    [
+     "ENDOCRINE TOXICITY",
+     4
+    ],
+    [
+     "K-RAS GENE MUTATION",
+     4
+    ],
+    [
+     "LYMPHANGIOSIS CARCINOMATOSA",
+     4
+    ],
+    [
+     "PARANEOPLASTIC PLEURAL EFFUSION",
+     4
+    ],
+    [
+     "PERIPHERAL BLOOD STEM CELL APHERESIS",
+     4
+    ]
+   ]
+  }
+ }
+}

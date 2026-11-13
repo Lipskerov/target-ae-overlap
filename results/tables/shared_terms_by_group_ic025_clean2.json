@@ -1,0 +1,755 @@
+{
+ "wp": "WP5",
+ "amendment": "protocol/AMENDMENT_3.md",
+ "label": "ic025_clean2",
+ "profile": "data/derived/faers_q/b/profile_clean2_ic025_k20.csv",
+ "seed": "SeedSequence(20261113).spawn(15)[14]",
+ "note": "post hoc; counts = number of same-target pairs in which both molecules carry the reaction in their profile; group = both molecules in group (molecule labels)",
+ "reproduction_check": {
+  "expected": 1.2494,
+  "observed": 1.2494,
+  "targets": 180,
+  "status": "PASS"
+ },
+ "target_level": {
+  "targets": 180,
+  "mean_contrast": 2.2558,
+  "ci95_target_bootstrap": [
+   1.9494,
+   2.6007
+  ],
+  "B": 5000,
+  "median": 1.6336,
+  "share_targets_positive": 0.9611,
+  "by_target_family_descriptive": {
+   "GPCR": {
+    "targets": 42,
+    "mean_contrast": 2.0683,
+    "median": 1.3581,
+    "share_positive": 1.0
+   },
+   "other enzyme": {
+    "targets": 33,
+    "mean_contrast": 2.0593,
+    "median": 1.8436,
+    "share_positive": 0.8788
+   },
+   "kinase": {
+    "targets": 33,
+    "mean_contrast": 2.0139,
+    "median": 1.7559,
+    "share_positive": 1.0
+   },
+   "ion channel": {
+    "targets": 18,
+    "mean_contrast": 2.4655,
+    "median": 1.7186,
+    "share_positive": 1.0
+   },
+   "nuclear receptor": {
+    "targets": 11,
+    "mean_contrast": 0.8432,
+    "median": 0.7513,
+    "share_positive": 0.9091
+   },
+   "other membrane receptor": {
+    "targets": 11,
+    "mean_contrast": 3.3089,
+    "median": 2.7176,
+    "share_positive": 0.9091
+   },
+   "protease": {
+    "targets": 9,
+    "mean_contrast": 1.8749,
+    "median": 1.7762,
+    "share_positive": 1.0
+   },
+   "transporter": {
+    "targets": 8,
+    "mean_contrast": 1.976,
+    "median": 1.2414,
+    "share_positive": 0.875
+   },
+   "secreted protein": {
+    "targets": 8,
+    "mean_contrast": 4.2182,
+    "median": 3.0678,
+    "share_positive": 1.0
+   },
+   "other": {
+    "targets": 3,
+    "mean_contrast": 5.0786,
+    "median": 4.8501,
+    "share_positive": 1.0
+   },
+   "surface antigen": {
+    "targets": 2,
+    "mean_contrast": 3.7605,
+    "median": 3.7605,
+    "share_positive": 1.0
+   },
+   "structural protein": {
+    "targets": 1,
+    "mean_contrast": 1.0075,
+    "median": 1.0075,
+    "share_positive": 1.0
+   },
+   "epigenetic regulator": {
+    "targets": 1,
+    "mean_contrast": 4.5182,
+    "median": 4.5182,
+    "share_positive": 1.0
+   }
+  }
+ },
+ "shared_terms": {
+  "overall": {
+   "same_target_pairs": 7923,
+   "molecules_in_group": 1039,
+   "pairs_sharing_none": 4541,
+   "shared_slots": 9872,
+   "top25": [
+    [
+     "AKATHISIA",
+     211
+    ],
+    [
+     "SEROTONIN SYNDROME",
+     203
+    ],
+    [
+     "BRADYCARDIA",
+     104
+    ],
+    [
+     "NEUROLEPTIC MALIGNANT SYNDROME",
+     100
+    ],
+    [
+     "PALMAR-PLANTAR ERYTHRODYSAESTHESIA SYNDROME",
+     96
+    ],
+    [
+     "FEBRILE NEUTROPENIA",
+     94
+    ],
+    [
+     "DERMATITIS ACNEIFORM",
+     82
+    ],
+    [
+     "EXTRAPYRAMIDAL DISORDER",
+     79
+    ],
+    [
+     "DEEP VEIN THROMBOSIS POSTOPERATIVE",
+     75
+    ],
+    [
+     "FACET JOINT SYNDROME",
+     73
+    ],
+    [
+     "LUPUS VULGARIS",
+     71
+    ],
+    [
+     "PARONYCHIA",
+     70
+    ],
+    [
+     "PARKINSONISM",
+     67
+    ],
+    [
+     "PNEUMONITIS",
+     67
+    ],
+    [
+     "SKIN TOXICITY",
+     66
+    ],
+    [
+     "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+     61
+    ],
+    [
+     "CYTOKINE RELEASE SYNDROME",
+     59
+    ],
+    [
+     "DUODENAL ULCER PERFORATION",
+     57
+    ],
+    [
+     "SWOLLEN JOINT COUNT INCREASED",
+     56
+    ],
+    [
+     "BLOOD PROLACTIN ABNORMAL",
+     55
+    ],
+    [
+     "MYELOSUPPRESSION",
+     55
+    ],
+    [
+     "RHEUMATIC FEVER",
+     55
+    ],
+    [
+     "ADJUSTMENT DISORDER WITH DEPRESSED MOOD",
+     54
+    ],
+    [
+     "ELECTROCARDIOGRAM QT PROLONGED",
+     54
+    ],
+    [
+     "HYPOGAMMAGLOBULINAEMIA",
+     52
+    ]
+   ]
+  },
+  "kinase": {
+   "same_target_pairs": 555,
+   "molecules_in_group": 108,
+   "pairs_sharing_none": 179,
+   "shared_slots": 1322,
+   "top25": [
+    [
+     "PALMAR-PLANTAR ERYTHRODYSAESTHESIA SYNDROME",
+     87
+    ],
+    [
+     "DERMATITIS ACNEIFORM",
+     82
+    ],
+    [
+     "PARONYCHIA",
+     70
+    ],
+    [
+     "SKIN TOXICITY",
+     64
+    ],
+    [
+     "HYPOGLYCAEMIC UNCONSCIOUSNESS",
+     28
+    ],
+    [
+     "PNEUMONITIS",
+     26
+    ],
+    [
+     "HEPATIC FUNCTION ABNORMAL",
+     25
+    ],
+    [
+     "STOMATITIS",
+     23
+    ],
+    [
+     "MYELOSUPPRESSION",
+     22
+    ],
+    [
+     "BLOOD GLUCOSE DECREASED",
+     21
+    ],
+    [
+     "BLOOD GLUCOSE FLUCTUATION",
+     21
+    ],
+    [
+     "DIABETIC RETINOPATHY",
+     21
+    ],
+    [
+     "HYPOGLYCAEMIC COMA",
+     21
+    ],
+    [
+     "HYPOGLYCAEMIC SEIZURE",
+     21
+    ],
+    [
+     "PROTEINURIA",
+     21
+    ],
+    [
+     "HYPERKERATOSIS",
+     20
+    ],
+    [
+     "NAIL DISORDER",
+     18
+    ],
+    [
+     "CARCINOEMBRYONIC ANTIGEN INCREASED",
+     17
+    ],
+    [
+     "DIARRHOEA",
+     16
+    ],
+    [
+     "ANTI-INSULIN ANTIBODY POSITIVE",
+     15
+    ],
+    [
+     "HYPOGLYCAEMIA",
+     15
+    ],
+    [
+     "SECOND PRIMARY MALIGNANCY",
+     15
+    ],
+    [
+     "EJECTION FRACTION DECREASED",
+     13
+    ],
+    [
+     "PLEURAL EFFUSION",
+     13
+    ],
+    [
+     "HYPOTHYROIDISM",
+     12
+    ]
+   ]
+  },
+  "GPCR": {
+   "same_target_pairs": 2468,
+   "molecules_in_group": 292,
+   "pairs_sharing_none": 1456,
+   "shared_slots": 2842,
+   "top25": [
+    [
+     "AKATHISIA",
+     171
+    ],
+    [
+     "NEUROLEPTIC MALIGNANT SYNDROME",
+     94
+    ],
+    [
+     "EXTRAPYRAMIDAL DISORDER",
+     67
+    ],
+    [
+     "PARKINSONISM",
+     66
+    ],
+    [
+     "BLOOD PROLACTIN ABNORMAL",
+     55
+    ],
+    [
+     "BRADYCARDIA",
+     54
+    ],
+    [
+     "LEARNING DISABILITY",
+     50
+    ],
+    [
+     "ANOSOGNOSIA",
+     45
+    ],
+    [
+     "OCULOGYRIC CRISIS",
+     45
+    ],
+    [
+     "DYSTONIA",
+     36
+    ],
+    [
+     "GAMBLING DISORDER",
+     36
+    ],
+    [
+     "TARDIVE DYSKINESIA",
+     36
+    ],
+    [
+     "DRUG WITHDRAWAL SYNDROME NEONATAL",
+     35
+    ],
+    [
+     "DEVELOPMENTAL DELAY",
+     34
+    ],
+    [
+     "DISINHIBITION",
+     28
+    ],
+    [
+     "DYSKINESIA",
+     28
+    ],
+    [
+     "HYPERSEXUALITY",
+     28
+    ],
+    [
+     "VISION ABNORMAL NEONATAL",
+     24
+    ],
+    [
+     "MEDICATION OVERUSE HEADACHE",
+     23
+    ],
+    [
+     "SEDATION",
+     23
+    ],
+    [
+     "ASCITES",
+     22
+    ],
+    [
+     "EMOTIONAL POVERTY",
+     20
+    ],
+    [
+     "EUPHORIC MOOD",
+     18
+    ],
+    [
+     "ELECTROCARDIOGRAM QT PROLONGED",
+     17
+    ],
+    [
+     "TOTAL LUNG CAPACITY INCREASED",
+     17
+    ]
+   ]
+  },
+  "ion_channel": {
+   "same_target_pairs": 1145,
+   "molecules_in_group": 115,
+   "pairs_sharing_none": 699,
+   "shared_slots": 980,
+   "top25": [
+    [
+     "COMA",
+     36
+    ],
+    [
+     "DELAYED RECOVERY FROM ANAESTHESIA",
+     32
+    ],
+    [
+     "SUDDEN UNEXPLAINED DEATH IN EPILEPSY",
+     31
+    ],
+    [
+     "SOPOR",
+     29
+    ],
+    [
+     "HYPERTHERMIA MALIGNANT",
+     25
+    ],
+    [
+     "ANAPHYLACTIC SHOCK",
+     24
+    ],
+    [
+     "BRADYCARDIA",
+     22
+    ],
+    [
+     "ANAESTHETIC COMPLICATION",
+     20
+    ],
+    [
+     "BRONCHOSPASM",
+     18
+    ],
+    [
+     "TOXICITY TO VARIOUS AGENTS",
+     18
+    ],
+    [
+     "ATAXIA",
+     17
+    ],
+    [
+     "SOMNOLENCE",
+     17
+    ],
+    [
+     "ANAESTHETIC COMPLICATION NEUROLOGICAL",
+     16
+    ],
+    [
+     "CARDIAC ARREST",
+     16
+    ],
+    [
+     "DRUG REACTION WITH EOSINOPHILIA AND SYSTEMIC SYMPTOMS",
+     15
+    ],
+    [
+     "HYPOGLYCAEMIC COMA",
+     15
+    ],
+    [
+     "RESPIRATORY DEPRESSION",
+     15
+    ],
+    [
+     "UNWANTED AWARENESS DURING ANAESTHESIA",
+     15
+    ],
+    [
+     "ELECTROCARDIOGRAM QT PROLONGED",
+     13
+    ],
+    [
+     "PROPOFOL INFUSION SYNDROME",
+     13
+    ],
+    [
+     "DELIRIUM",
+     11
+    ],
+    [
+     "LOCAL ANAESTHETIC SYSTEMIC TOXICITY",
+     11
+    ],
+    [
+     "ALTERED STATE OF CONSCIOUSNESS",
+     10
+    ],
+    [
+     "DRUG RASH WITH EOSINOPHILIA AND SYSTEMIC SYMPTOMS",
+     10
+    ],
+    [
+     "LACTIC ACIDOSIS",
+     10
+    ]
+   ]
+  },
+  "biologic": {
+   "same_target_pairs": 381,
+   "molecules_in_group": 151,
+   "pairs_sharing_none": 71,
+   "shared_slots": 1477,
+   "top25": [
+    [
+     "CYTOKINE RELEASE SYNDROME",
+     59
+    ],
+    [
+     "HYPOGAMMAGLOBULINAEMIA",
+     52
+    ],
+    [
+     "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+     48
+    ],
+    [
+     "INFLUENZA LIKE ILLNESS",
+     36
+    ],
+    [
+     "PNEUMONITIS",
+     33
+    ],
+    [
+     "CYTOPENIA",
+     29
+    ],
+    [
+     "IMMUNE-MEDIATED LUNG DISEASE",
+     29
+    ],
+    [
+     "MYOCARDITIS",
+     29
+    ],
+    [
+     "NEUTROPHIL COUNT DECREASED",
+     26
+    ],
+    [
+     "IMMUNE-MEDIATED HEPATITIS",
+     24
+    ],
+    [
+     "MYELOSUPPRESSION",
+     23
+    ],
+    [
+     "CYTOMEGALOVIRUS INFECTION REACTIVATION",
+     21
+    ],
+    [
+     "HYPOGLYCAEMIC COMA",
+     21
+    ],
+    [
+     "HYPOGLYCAEMIC UNCONSCIOUSNESS",
+     21
+    ],
+    [
+     "IMMUNE-MEDIATED MYOCARDITIS",
+     21
+    ],
+    [
+     "TUMOUR LYSIS SYNDROME",
+     19
+    ],
+    [
+     "ANAEMIA",
+     16
+    ],
+    [
+     "BLOOD GLUCOSE DECREASED",
+     16
+    ],
+    [
+     "NEUROTOXICITY",
+     16
+    ],
+    [
+     "BLOOD GLUCOSE FLUCTUATION",
+     15
+    ],
+    [
+     "DIABETIC RETINOPATHY",
+     15
+    ],
+    [
+     "HEPATIC FUNCTION ABNORMAL",
+     15
+    ],
+    [
+     "HYPOGLYCAEMIC SEIZURE",
+     15
+    ],
+    [
+     "HYPOTHYROIDISM",
+     15
+    ],
+    [
+     "TUMOUR FLARE",
+     13
+    ]
+   ]
+  },
+  "neoplasm": {
+   "same_target_pairs": 452,
+   "molecules_in_group": 169,
+   "pairs_sharing_none": 100,
+   "shared_slots": 1272,
+   "top25": [
+    [
+     "PALMAR-PLANTAR ERYTHRODYSAESTHESIA SYNDROME",
+     62
+    ],
+    [
+     "FEBRILE NEUTROPENIA",
+     58
+    ],
+    [
+     "DERMATITIS ACNEIFORM",
+     57
+    ],
+    [
+     "PARONYCHIA",
+     49
+    ],
+    [
+     "SKIN TOXICITY",
+     45
+    ],
+    [
+     "EJECTION FRACTION DECREASED",
+     24
+    ],
+    [
+     "IMMUNE-MEDIATED HEPATITIS",
+     24
+    ],
+    [
+     "IMMUNE-MEDIATED LUNG DISEASE",
+     22
+    ],
+    [
+     "PNEUMONITIS",
+     22
+    ],
+    [
+     "NEUTROPHIL COUNT DECREASED",
+     21
+    ],
+    [
+     "MUCOSAL INFLAMMATION",
+     19
+    ],
+    [
+     "NAIL BED INFLAMMATION",
+     19
+    ],
+    [
+     "SECOND PRIMARY MALIGNANCY",
+     18
+    ],
+    [
+     "HYPERKERATOSIS",
+     16
+    ],
+    [
+     "IMMUNE-MEDIATED MYOCARDITIS",
+     15
+    ],
+    [
+     "PERIPHERAL SENSORY NEUROPATHY",
+     15
+    ],
+    [
+     "MYELOSUPPRESSION",
+     14
+    ],
+    [
+     "NAIL DISORDER",
+     13
+    ],
+    [
+     "PLATELET COUNT DECREASED",
+     13
+    ],
+    [
+     "PROTEINURIA",
+     12
+    ],
+    [
+     "MYOCARDITIS",
+     11
+    ],
+    [
+     "NASAL MUCOSAL DISORDER",
+     11
+    ],
+    [
+     "PROSTATIC SPECIFIC ANTIGEN ABNORMAL",
+     11
+    ],
+    [
+     "STREPTOCOCCAL SEPSIS",
+     11
+    ],
+    [
+     "THROMBOCYTOPENIA",
+     11
+    ]
+   ]
+  }
+ }
+}

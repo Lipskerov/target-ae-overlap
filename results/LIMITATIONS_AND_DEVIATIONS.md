@@ -51,6 +51,17 @@ Labels refer to `private/reviews/RESPONSE.md`. The review had seen the round-1 r
 | A11 | Estimation framing; testing sequence dropped | post hoc; measured (MS) |
 | A12 | Figures with intervals. K = all script and K re-run: not done. Fig. 1 legend overlaps the last row | post hoc; measured (figure viewed 2026-11-12) |
 
+## (b2) Post hoc effect-modification analyses, 2026-11-13 (not in SAP v1, not in amendment 2)
+
+| # | What was done | State |
+|---|---|---|
+| E1 | Primary Δ and the all-pairs adjusted model within strata of modality (biologic, peptide, small molecule), US route, ATC-1, approval era (`effect_modification.py`, `effect_modification_adjusted.py`) | post hoc, after all amendment-2 results were seen; measured (`EFFECT_MODIFICATION.md` §1–5) |
+| E2 | Within therapeutic area (dominant MeSH branch of the molecule's trials). The FAERS-indication definition failed and is not used | post hoc; measured (§6) |
+| E3 | Within ChEMBL target family (protein classification fetched from the public ChEMBL API) | post hoc; measured (§7) |
+| E4 | Biologic vs small molecule restricted to single-target molecules | post hoc; measured (§8) |
+| E5 | About 30 stratum comparisons across two rankings; no multiplicity correction; only modality, family and area were adjusted, one at a time | limitation; measured |
+| E6 | Further analyses specified in `protocol/AMENDMENT_3.md` *before* they were run: joint modifier model, modifiers in trial data, action direction, K/floor grid, per-target values | post hoc relative to SAP v1; pre-specified relative to their own results |
+
 ## (c) Planned or requested analyses not run, or not re-run on the rebuilt data
 
 Listed in MS 2.9 and RESPONSE §9:

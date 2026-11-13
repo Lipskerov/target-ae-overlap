@@ -1,0 +1,294 @@
+{
+ "amendment": "AMENDMENT_5 B-part",
+ "counts": {
+  "enzyme/blood factor": 9,
+  "other biologic": 18,
+  "cytokine/interferon": 17,
+  "monoclonal antibody": 85,
+  "fusion protein": 2,
+  "insulin/hormone": 14,
+  "cell/gene therapy": 6
+ },
+ "targets_by_biologic_pairs": [
+  [
+   "PDCD1",
+   78
+  ],
+  [
+   "IFNAR1",
+   45
+  ],
+  [
+   "CD3E",
+   45
+  ],
+  [
+   "MS4A1",
+   28
+  ],
+  [
+   "CD19",
+   28
+  ],
+  [
+   "INSR",
+   21
+  ],
+  [
+   "TUBB4B",
+   10
+  ],
+  [
+   "ERBB2",
+   10
+  ],
+  [
+   "VEGFA",
+   10
+  ],
+  [
+   "EGFR",
+   10
+  ],
+  [
+   "TNF",
+   10
+  ],
+  [
+   "IL12B",
+   10
+  ],
+  [
+   "TNFRSF17",
+   10
+  ],
+  [
+   "GHR",
+   10
+  ],
+  [
+   "KLKB1",
+   6
+  ]
+ ],
+ "prr_clean": {
+  "monoclonal antibody": {
+   "n_molecules": 85,
+   "molecules_used": 77,
+   "same_target_pairs": 217,
+   "different_target_pairs": 3353,
+   "delta": 1.976,
+   "ci95": [
+    1.195,
+    2.83
+   ],
+   "pair_mean_same": 1.742,
+   "pair_mean_different": 0.104,
+   "ratio_same_vs_diff": 16.69,
+   "pct_same_target_pairs_sharing_none": 44.2
+  },
+  "other biologic": {
+   "n_molecules": 18,
+   "molecules_used": 11,
+   "same_target_pairs": 11,
+   "different_target_pairs": 142,
+   "delta": 2.053,
+   "ci95": [
+    0.0,
+    5.2
+   ],
+   "pair_mean_same": 1.636,
+   "pair_mean_different": 0.021,
+   "ratio_same_vs_diff": 77.45,
+   "pct_same_target_pairs_sharing_none": 36.4
+  },
+  "cytokine/interferon": {
+   "n_molecules": 17,
+   "molecules_used": 17,
+   "same_target_pairs": 44,
+   "different_target_pairs": 92,
+   "delta": 1.467,
+   "ci95": [
+    0.621,
+    2.529
+   ],
+   "pair_mean_same": 1.227,
+   "pair_mean_different": 0.054,
+   "ratio_same_vs_diff": 22.58,
+   "pct_same_target_pairs_sharing_none": 54.5
+  },
+  "insulin/hormone": {
+   "n_molecules": 14,
+   "molecules_used": 12,
+   "same_target_pairs": 25,
+   "different_target_pairs": 66,
+   "delta": 3.669,
+   "ci95": [
+    2.338,
+    5.407
+   ],
+   "pair_mean_same": 4.0,
+   "pair_mean_different": 0.333,
+   "ratio_same_vs_diff": 12.0,
+   "pct_same_target_pairs_sharing_none": 0.0
+  },
+  "enzyme/blood factor": {
+   "n_molecules": 9,
+   "molecules_used": 5,
+   "same_target_pairs": 4,
+   "different_target_pairs": 32,
+   "delta": 2.971,
+   "ci95": [
+    0.5,
+    7.0
+   ],
+   "pair_mean_same": 3.5,
+   "pair_mean_different": 0.469,
+   "ratio_same_vs_diff": 7.47,
+   "pct_same_target_pairs_sharing_none": 0.0,
+   "note": "fewer than 10 same-target pairs - not interpreted"
+  },
+  "cell/gene therapy": {
+   "n_molecules": 6,
+   "molecules_used": 6,
+   "same_target_pairs": 7,
+   "different_target_pairs": 8,
+   "delta": 1.278,
+   "ci95": [
+    -2.0,
+    4.233
+   ],
+   "pair_mean_same": 4.857,
+   "pair_mean_different": 4.5,
+   "ratio_same_vs_diff": 1.08,
+   "pct_same_target_pairs_sharing_none": 0.0,
+   "note": "fewer than 10 same-target pairs - not interpreted"
+  },
+  "fusion protein": {
+   "n_molecules": 2,
+   "molecules_used": 0,
+   "same_target_pairs": 0,
+   "different_target_pairs": 1,
+   "delta": NaN,
+   "ci95": [
+    NaN,
+    NaN
+   ],
+   "pair_mean_same": NaN,
+   "pair_mean_different": 0.0,
+   "ratio_same_vs_diff": null,
+   "pct_same_target_pairs_sharing_none": NaN,
+   "note": "fewer than 10 same-target pairs - not interpreted"
+  }
+ },
+ "ic025_clean2": {
+  "monoclonal antibody": {
+   "n_molecules": 85,
+   "molecules_used": 77,
+   "same_target_pairs": 217,
+   "different_target_pairs": 3353,
+   "delta": 3.61,
+   "ci95": [
+    2.396,
+    4.651
+   ],
+   "pair_mean_same": 3.756,
+   "pair_mean_different": 0.46,
+   "ratio_same_vs_diff": 8.17,
+   "pct_same_target_pairs_sharing_none": 20.7
+  },
+  "other biologic": {
+   "n_molecules": 18,
+   "molecules_used": 11,
+   "same_target_pairs": 11,
+   "different_target_pairs": 142,
+   "delta": 3.169,
+   "ci95": [
+    -0.045,
+    7.625
+   ],
+   "pair_mean_same": 2.455,
+   "pair_mean_different": 0.092,
+   "ratio_same_vs_diff": 26.81,
+   "pct_same_target_pairs_sharing_none": 45.5
+  },
+  "cytokine/interferon": {
+   "n_molecules": 17,
+   "molecules_used": 17,
+   "same_target_pairs": 44,
+   "different_target_pairs": 92,
+   "delta": 2.806,
+   "ci95": [
+    1.572,
+    3.98
+   ],
+   "pair_mean_same": 2.545,
+   "pair_mean_different": 0.185,
+   "ratio_same_vs_diff": 13.78,
+   "pct_same_target_pairs_sharing_none": 0.0
+  },
+  "insulin/hormone": {
+   "n_molecules": 14,
+   "molecules_used": 12,
+   "same_target_pairs": 25,
+   "different_target_pairs": 66,
+   "delta": 7.242,
+   "ci95": [
+    5.504,
+    9.456
+   ],
+   "pair_mean_same": 7.8,
+   "pair_mean_different": 0.576,
+   "ratio_same_vs_diff": 13.55,
+   "pct_same_target_pairs_sharing_none": 0.0
+  },
+  "enzyme/blood factor": {
+   "n_molecules": 9,
+   "molecules_used": 5,
+   "same_target_pairs": 4,
+   "different_target_pairs": 32,
+   "delta": 2.919,
+   "ci95": [
+    -0.722,
+    8.758
+   ],
+   "pair_mean_same": 4.5,
+   "pair_mean_different": 1.344,
+   "ratio_same_vs_diff": 3.35,
+   "pct_same_target_pairs_sharing_none": 0.0,
+   "note": "fewer than 10 same-target pairs - not interpreted"
+  },
+  "cell/gene therapy": {
+   "n_molecules": 6,
+   "molecules_used": 6,
+   "same_target_pairs": 7,
+   "different_target_pairs": 8,
+   "delta": 2.014,
+   "ci95": [
+    -0.25,
+    5.0
+   ],
+   "pair_mean_same": 9.429,
+   "pair_mean_different": 6.875,
+   "ratio_same_vs_diff": 1.37,
+   "pct_same_target_pairs_sharing_none": 0.0,
+   "note": "fewer than 10 same-target pairs - not interpreted"
+  },
+  "fusion protein": {
+   "n_molecules": 2,
+   "molecules_used": 0,
+   "same_target_pairs": 0,
+   "different_target_pairs": 1,
+   "delta": NaN,
+   "ci95": [
+    NaN,
+    NaN
+   ],
+   "pair_mean_same": NaN,
+   "pair_mean_different": 0.0,
+   "ratio_same_vs_diff": null,
+   "pct_same_target_pairs_sharing_none": NaN,
+   "note": "fewer than 10 same-target pairs - not interpreted"
+  }
+ }
+}

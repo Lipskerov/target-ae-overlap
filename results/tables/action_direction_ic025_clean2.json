@@ -1,0 +1,308 @@
+{
+ "label": "ic025_clean2",
+ "amendment": "AMENDMENT_3 WP3",
+ "seed": "SeedSequence(20261113).spawn(15)[12]",
+ "post_hoc": true,
+ "repro": {
+  "same_target_pairs": 7923,
+  "expected": 7923,
+  "d4_set_identical": true,
+  "opposite_combos_cohort": 858,
+  "same_combos_cohort": 5097,
+  "reviewer_opposite_combos": 856,
+  "difference_vs_reviewer": 2,
+  "opposite_combos_unrestricted": 1036,
+  "same_combos_unrestricted": 8520,
+  "note": "difference documented, not forced; reviewer mapping not available here"
+ },
+ "join": {
+  "r3_rows": 4845,
+  "r3_rows_joined_rxcui": 2633,
+  "r3_rows_on_cohort_d4": 1590,
+  "cohort_molecule_target": 1434,
+  "molecule_target_with_direction": 1190,
+  "single_direction": 1190,
+  "conflicting_excluded": 0
+ },
+ "same_target_pairs_without_defined_direction": 2581,
+ "all_targets": {
+  "pair_counts": {
+   "same": 4495,
+   "opposite": 790,
+   "mixed": 57
+  },
+  "mean_overlap_same": 1.4928,
+  "mean_overlap_opposite": 0.3,
+  "mean_overlap_mixed": 1.6667,
+  "difference_opposite_minus_same": {
+   "diff": -1.1928,
+   "molecules": 848,
+   "B": 2000,
+   "n_boot_undefined": 0,
+   "ci95": [
+    -1.4721,
+    -0.9515
+   ]
+  },
+  "adjusted_ols": {
+   "n_pairs": 5285,
+   "molecules": 848,
+   "B": 500,
+   "dropped_constant": [],
+   "coefficients": {
+    "intercept": {
+     "beta": 1.126,
+     "ci95": [
+      -0.199,
+      2.428
+     ],
+     "share_boot_le0": 0.05
+    },
+    "opposite": {
+     "beta": -0.267,
+     "ci95": [
+      -0.477,
+      -0.043
+     ],
+     "share_boot_le0": 0.988
+    },
+    "same_atc4": {
+     "beta": 0.846,
+     "ci95": [
+      0.354,
+      1.313
+     ],
+     "share_boot_le0": 0.002
+    },
+    "same_atc3": {
+     "beta": 0.346,
+     "ci95": [
+      -0.052,
+      0.749
+     ],
+     "share_boot_le0": 0.05
+    },
+    "same_atc1": {
+     "beta": -0.014,
+     "ci95": [
+      -0.339,
+      0.271
+     ],
+     "share_boot_le0": 0.52
+    },
+    "atc_missing": {
+     "beta": 0.417,
+     "ci95": [
+      0.016,
+      0.975
+     ],
+     "share_boot_le0": 0.018
+    },
+    "same_epc": {
+     "beta": 0.282,
+     "ci95": [
+      -0.133,
+      0.746
+     ],
+     "share_boot_le0": 0.082
+    },
+    "epc_missing": {
+     "beta": -0.101,
+     "ci95": [
+      -0.387,
+      0.179
+     ],
+     "share_boot_le0": 0.75
+    },
+    "shared_indication": {
+     "beta": 0.494,
+     "ci95": [
+      0.261,
+      0.751
+     ],
+     "share_boot_le0": 0.0
+    },
+    "logrep_sum": {
+     "beta": 0.014,
+     "ci95": [
+      -0.164,
+      0.205
+     ],
+     "share_boot_le0": 0.494
+    },
+    "logrep_absdiff": {
+     "beta": -0.75,
+     "ci95": [
+      -0.964,
+      -0.577
+     ],
+     "share_boot_le0": 1.0
+    },
+    "year_gap": {
+     "beta": -0.013,
+     "ci95": [
+      -0.019,
+      -0.008
+     ],
+     "share_boot_le0": 1.0
+    },
+    "year_missing": {
+     "beta": 0.126,
+     "ci95": [
+      -0.315,
+      0.71
+     ],
+     "share_boot_le0": 0.334
+    },
+    "comention_share": {
+     "beta": 9.217,
+     "ci95": [
+      5.904,
+      13.145
+     ],
+     "share_boot_le0": 0.0
+    }
+   }
+  }
+ },
+ "gpcr_nuclear_receptor": {
+  "pair_counts": {
+   "same": 1729,
+   "opposite": 703,
+   "mixed": 57
+  },
+  "mean_overlap_same": 1.3233,
+  "mean_overlap_opposite": 0.2674,
+  "mean_overlap_mixed": 1.6667,
+  "difference_opposite_minus_same": {
+   "diff": -1.0559,
+   "molecules": 342,
+   "B": 2000,
+   "n_boot_undefined": 0,
+   "ci95": [
+    -1.4249,
+    -0.7297
+   ]
+  },
+  "adjusted_ols": {
+   "n_pairs": 2432,
+   "molecules": 342,
+   "B": 500,
+   "dropped_constant": [],
+   "coefficients": {
+    "intercept": {
+     "beta": 1.048,
+     "ci95": [
+      -0.63,
+      2.638
+     ],
+     "share_boot_le0": 0.108
+    },
+    "opposite": {
+     "beta": -0.099,
+     "ci95": [
+      -0.368,
+      0.152
+     ],
+     "share_boot_le0": 0.764
+    },
+    "same_atc4": {
+     "beta": 0.208,
+     "ci95": [
+      -0.64,
+      1.028
+     ],
+     "share_boot_le0": 0.32
+    },
+    "same_atc3": {
+     "beta": 0.8,
+     "ci95": [
+      0.139,
+      1.598
+     ],
+     "share_boot_le0": 0.006
+    },
+    "same_atc1": {
+     "beta": -0.044,
+     "ci95": [
+      -0.314,
+      0.218
+     ],
+     "share_boot_le0": 0.604
+    },
+    "atc_missing": {
+     "beta": 0.207,
+     "ci95": [
+      -0.197,
+      0.714
+     ],
+     "share_boot_le0": 0.166
+    },
+    "same_epc": {
+     "beta": 0.325,
+     "ci95": [
+      -0.194,
+      0.944
+     ],
+     "share_boot_le0": 0.108
+    },
+    "epc_missing": {
+     "beta": -0.071,
+     "ci95": [
+      -0.395,
+      0.28
+     ],
+     "share_boot_le0": 0.622
+    },
+    "shared_indication": {
+     "beta": 0.306,
+     "ci95": [
+      -0.043,
+      0.558
+     ],
+     "share_boot_le0": 0.032
+    },
+    "logrep_sum": {
+     "beta": -0.026,
+     "ci95": [
+      -0.245,
+      0.195
+     ],
+     "share_boot_le0": 0.6
+    },
+    "logrep_absdiff": {
+     "beta": -0.529,
+     "ci95": [
+      -0.826,
+      -0.303
+     ],
+     "share_boot_le0": 1.0
+    },
+    "year_gap": {
+     "beta": -0.009,
+     "ci95": [
+      -0.017,
+      -0.002
+     ],
+     "share_boot_le0": 0.986
+    },
+    "year_missing": {
+     "beta": -0.165,
+     "ci95": [
+      -0.648,
+      0.438
+     ],
+     "share_boot_le0": 0.69
+    },
+    "comention_share": {
+     "beta": 8.096,
+     "ci95": [
+      3.87,
+      14.883
+     ],
+     "share_boot_le0": 0.0
+    }
+   }
+  }
+ }
+}

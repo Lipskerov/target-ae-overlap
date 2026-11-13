@@ -1,0 +1,21 @@
+{
+ "amendment": "AMENDMENT_4 A4.4",
+ "B": 500,
+ "targets": 180,
+ "prr_clean": {
+  "point": 1.2494,
+  "ci95_molecule_bootstrap": [
+   0.9482,
+   1.38
+  ],
+  "boot_mean": 1.1667
+ },
+ "ic025_clean2": {
+  "point": 2.2558,
+  "ci95_molecule_bootstrap": [
+   1.9199,
+   2.4153
+  ],
+  "boot_mean": 2.1648
+ }
+}

@@ -1,0 +1,781 @@
+{
+ "note": "post hoc; not in SAP v1",
+ "family_counts": {
+  "GPCR": 292,
+  "nuclear receptor": 95,
+  "protease": 39,
+  "ion channel": 115,
+  "other enzyme": 154,
+  "transporter": 59,
+  "multi-family": 51,
+  "structural protein": 10,
+  "other membrane receptor": 42,
+  "kinase": 108,
+  "other": 9,
+  "secreted protein": 39,
+  "epigenetic regulator": 6,
+  "surface antigen": 20
+ },
+ "single_target_share": {
+  "biologic": 0.834,
+  "small_molecule": 0.764
+ },
+ "modality_x_area": {
+  "biologic": {
+   "ENT": 0,
+   "blood/lymphatic": 9,
+   "cardiovascular": 2,
+   "digestive": 2,
+   "endocrine": 0,
+   "eye": 5,
+   "immune": 10,
+   "infections": 1,
+   "mental disorders": 0,
+   "metabolic/nutritional": 8,
+   "mixed": 33,
+   "musculoskeletal": 1,
+   "neoplasms": 34,
+   "nervous system": 5,
+   "respiratory": 0,
+   "skin": 11,
+   "unknown": 26,
+   "urogenital": 4
+  },
+  "peptide": {
+   "ENT": 0,
+   "blood/lymphatic": 0,
+   "cardiovascular": 1,
+   "digestive": 0,
+   "endocrine": 0,
+   "eye": 0,
+   "immune": 0,
+   "infections": 0,
+   "mental disorders": 1,
+   "metabolic/nutritional": 3,
+   "mixed": 4,
+   "musculoskeletal": 0,
+   "neoplasms": 6,
+   "nervous system": 0,
+   "respiratory": 0,
+   "skin": 0,
+   "unknown": 3,
+   "urogenital": 5
+  },
+  "small_molecule": {
+   "ENT": 1,
+   "blood/lymphatic": 14,
+   "cardiovascular": 62,
+   "digestive": 18,
+   "endocrine": 5,
+   "eye": 15,
+   "immune": 17,
+   "infections": 1,
+   "mental disorders": 75,
+   "metabolic/nutritional": 18,
+   "mixed": 89,
+   "musculoskeletal": 6,
+   "neoplasms": 129,
+   "nervous system": 87,
+   "respiratory": 36,
+   "skin": 24,
+   "unknown": 239,
+   "urogenital": 29
+  }
+ },
+ "prr_clean": {
+  "family": {
+   "GPCR": {
+    "n_molecules": 292,
+    "molecules_used": 292,
+    "same_target_pairs": 2468,
+    "different_target_pairs": 40018,
+    "delta": 0.742,
+    "ci95": [
+     0.521,
+     0.958
+    ],
+    "pair_mean_same": 0.528,
+    "pair_mean_different": 0.085,
+    "ratio_same_vs_diff": 6.21,
+    "pct_same_target_pairs_sharing_none": 75.6,
+    "adjusted_same_target": {
+     "beta": 0.02,
+     "ci95": [
+      -0.069,
+      0.11
+     ],
+     "share_boot_le0": 0.329
+    }
+   },
+   "other enzyme": {
+    "n_molecules": 154,
+    "molecules_used": 154,
+    "same_target_pairs": 802,
+    "different_target_pairs": 10979,
+    "delta": 0.886,
+    "ci95": [
+     0.559,
+     1.18
+    ],
+    "pair_mean_same": 0.531,
+    "pair_mean_different": 0.071,
+    "ratio_same_vs_diff": 7.49,
+    "pct_same_target_pairs_sharing_none": 78.4,
+    "adjusted_same_target": {
+     "beta": 0.101,
+     "ci95": [
+      -0.101,
+      0.334
+     ],
+     "share_boot_le0": 0.176
+    }
+   },
+   "ion channel": {
+    "n_molecules": 115,
+    "molecules_used": 115,
+    "same_target_pairs": 1145,
+    "different_target_pairs": 5410,
+    "delta": 0.43,
+    "ci95": [
+     0.256,
+     0.655
+    ],
+    "pair_mean_same": 0.397,
+    "pair_mean_different": 0.13,
+    "ratio_same_vs_diff": 3.06,
+    "pct_same_target_pairs_sharing_none": 79.2,
+    "adjusted_same_target": {
+     "beta": 0.01,
+     "ci95": [
+      -0.088,
+      0.149
+     ],
+     "share_boot_le0": 0.408
+    }
+   },
+   "kinase": {
+    "n_molecules": 108,
+    "molecules_used": 108,
+    "same_target_pairs": 555,
+    "different_target_pairs": 5223,
+    "delta": 1.083,
+    "ci95": [
+     0.717,
+     1.518
+    ],
+    "pair_mean_same": 1.031,
+    "pair_mean_different": 0.145,
+    "ratio_same_vs_diff": 7.1,
+    "pct_same_target_pairs_sharing_none": 60.4,
+    "adjusted_same_target": {
+     "beta": 0.461,
+     "ci95": [
+      0.214,
+      0.755
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "nuclear receptor": {
+    "n_molecules": 95,
+    "molecules_used": 95,
+    "same_target_pairs": 723,
+    "different_target_pairs": 3742,
+    "delta": 0.462,
+    "ci95": [
+     0.231,
+     0.767
+    ],
+    "pair_mean_same": 0.534,
+    "pair_mean_different": 0.114,
+    "ratio_same_vs_diff": 4.7,
+    "pct_same_target_pairs_sharing_none": 79.4,
+    "adjusted_same_target": {
+     "beta": 0.074,
+     "ci95": [
+      -0.1,
+      0.296
+     ],
+     "share_boot_le0": 0.222
+    }
+   },
+   "transporter": {
+    "n_molecules": 59,
+    "molecules_used": 59,
+    "same_target_pairs": 476,
+    "different_target_pairs": 1235,
+    "delta": 0.664,
+    "ci95": [
+     0.261,
+     1.284
+    ],
+    "pair_mean_same": 0.468,
+    "pair_mean_different": 0.089,
+    "ratio_same_vs_diff": 5.26,
+    "pct_same_target_pairs_sharing_none": 76.7,
+    "adjusted_same_target": {
+     "beta": 0.084,
+     "ci95": [
+      -0.089,
+      0.293
+     ],
+     "share_boot_le0": 0.174
+    }
+   },
+   "multi-family": {
+    "n_molecules": 51,
+    "molecules_used": 47,
+    "same_target_pairs": 96,
+    "different_target_pairs": 1179,
+    "delta": 0.419,
+    "ci95": [
+     0.102,
+     0.921
+    ],
+    "pair_mean_same": 0.594,
+    "pair_mean_different": 0.057,
+    "ratio_same_vs_diff": 10.45,
+    "pct_same_target_pairs_sharing_none": 78.1,
+    "adjusted_same_target": {
+     "beta": 0.394,
+     "ci95": [
+      0.008,
+      0.941
+     ],
+     "share_boot_le0": 0.021
+    }
+   },
+   "other membrane receptor": {
+    "n_molecules": 42,
+    "molecules_used": 41,
+    "same_target_pairs": 92,
+    "different_target_pairs": 769,
+    "delta": 2.036,
+    "ci95": [
+     1.062,
+     3.027
+    ],
+    "pair_mean_same": 1.478,
+    "pair_mean_different": 0.055,
+    "ratio_same_vs_diff": 27.07,
+    "pct_same_target_pairs_sharing_none": 52.2,
+    "adjusted_same_target": {
+     "beta": 0.812,
+     "ci95": [
+      0.103,
+      2.041
+     ],
+     "share_boot_le0": 0.008
+    }
+   },
+   "protease": {
+    "n_molecules": 39,
+    "molecules_used": 39,
+    "same_target_pairs": 95,
+    "different_target_pairs": 646,
+    "delta": 1.307,
+    "ci95": [
+     0.313,
+     2.371
+    ],
+    "pair_mean_same": 0.747,
+    "pair_mean_different": 0.084,
+    "ratio_same_vs_diff": 8.94,
+    "pct_same_target_pairs_sharing_none": 63.2,
+    "adjusted_same_target": {
+     "beta": 0.612,
+     "ci95": [
+      -0.62,
+      5.511
+     ],
+     "share_boot_le0": 0.282
+    }
+   },
+   "secreted protein": {
+    "n_molecules": 39,
+    "molecules_used": 39,
+    "same_target_pairs": 82,
+    "different_target_pairs": 659,
+    "delta": 2.109,
+    "ci95": [
+     0.965,
+     3.519
+    ],
+    "pair_mean_same": 2.195,
+    "pair_mean_different": 0.179,
+    "ratio_same_vs_diff": 12.26,
+    "pct_same_target_pairs_sharing_none": 47.6,
+    "adjusted_same_target": {
+     "beta": 0.461,
+     "ci95": [
+      -1.443,
+      3.272
+     ],
+     "share_boot_le0": 0.33
+    }
+   },
+   "surface antigen": {
+    "n_molecules": 20,
+    "molecules_used": 20,
+    "same_target_pairs": 99,
+    "different_target_pairs": 91,
+    "delta": 1.528,
+    "ci95": [
+     0.696,
+     2.763
+    ],
+    "pair_mean_same": 1.616,
+    "pair_mean_different": 0.055,
+    "ratio_same_vs_diff": 29.41,
+    "pct_same_target_pairs_sharing_none": 44.4,
+    "adjusted_same_target": {
+     "beta": 0.173,
+     "ci95": [
+      -1.162,
+      1.095
+     ],
+     "share_boot_le0": 0.344
+    }
+   },
+   "structural protein": {
+    "n_molecules": 10,
+    "molecules_used": 0,
+    "same_target_pairs": 45,
+    "different_target_pairs": 0,
+    "delta": NaN,
+    "ci95": [
+     NaN,
+     NaN
+    ],
+    "pair_mean_same": 0.289,
+    "pair_mean_different": NaN,
+    "ratio_same_vs_diff": null,
+    "pct_same_target_pairs_sharing_none": 75.6,
+    "adjusted_same_target": {
+     "beta": null,
+     "ci95": null,
+     "note": "same_target constant in stratum"
+    }
+   }
+  },
+  "neoplasms_by_modality": {
+   "small_molecule": {
+    "n_molecules": 129,
+    "molecules_used": 122,
+    "same_target_pairs": 274,
+    "different_target_pairs": 7982,
+    "delta": 1.273,
+    "ci95": [
+     0.806,
+     1.836
+    ],
+    "pair_mean_same": 1.204,
+    "pair_mean_different": 0.149,
+    "ratio_same_vs_diff": 8.06,
+    "pct_same_target_pairs_sharing_none": 52.6
+   },
+   "biologic": {
+    "n_molecules": 34,
+    "molecules_used": 28,
+    "same_target_pairs": 69,
+    "different_target_pairs": 492,
+    "delta": 1.279,
+    "ci95": [
+     0.613,
+     2.2
+    ],
+    "pair_mean_same": 1.42,
+    "pair_mean_different": 0.165,
+    "ratio_same_vs_diff": 8.63,
+    "pct_same_target_pairs_sharing_none": 42.0
+   }
+  },
+  "single_target_only": {
+   "small_molecule": {
+    "n_molecules": 661,
+    "molecules_used": 632,
+    "same_target_pairs": 3387,
+    "different_target_pairs": 214743,
+    "delta": 0.794,
+    "ci95": [
+     0.596,
+     0.909
+    ],
+    "pair_mean_same": 0.529,
+    "pair_mean_different": 0.079,
+    "ratio_same_vs_diff": 6.74,
+    "pct_same_target_pairs_sharing_none": 76.0
+   },
+   "biologic": {
+    "n_molecules": 126,
+    "molecules_used": 113,
+    "same_target_pairs": 260,
+    "different_target_pairs": 7615,
+    "delta": 2.303,
+    "ci95": [
+     1.609,
+     2.98
+    ],
+    "pair_mean_same": 2.0,
+    "pair_mean_different": 0.073,
+    "ratio_same_vs_diff": 27.54,
+    "pct_same_target_pairs_sharing_none": 41.5
+   },
+   "difference": {
+    "diff": 1.509,
+    "ci95": [
+     0.857,
+     2.248
+    ]
+   }
+  }
+ },
+ "ic025_clean2": {
+  "family": {
+   "GPCR": {
+    "n_molecules": 292,
+    "molecules_used": 292,
+    "same_target_pairs": 2468,
+    "different_target_pairs": 40018,
+    "delta": 1.392,
+    "ci95": [
+     1.062,
+     1.717
+    ],
+    "pair_mean_same": 1.152,
+    "pair_mean_different": 0.216,
+    "ratio_same_vs_diff": 5.34,
+    "pct_same_target_pairs_sharing_none": 59.0,
+    "adjusted_same_target": {
+     "beta": 0.141,
+     "ci95": [
+      -0.028,
+      0.306
+     ],
+     "share_boot_le0": 0.051
+    }
+   },
+   "other enzyme": {
+    "n_molecules": 154,
+    "molecules_used": 154,
+    "same_target_pairs": 802,
+    "different_target_pairs": 10979,
+    "delta": 1.801,
+    "ci95": [
+     1.256,
+     2.29
+    ],
+    "pair_mean_same": 1.153,
+    "pair_mean_different": 0.258,
+    "ratio_same_vs_diff": 4.47,
+    "pct_same_target_pairs_sharing_none": 64.7,
+    "adjusted_same_target": {
+     "beta": -0.088,
+     "ci95": [
+      -0.459,
+      0.299
+     ],
+     "share_boot_le0": 0.691
+    }
+   },
+   "ion channel": {
+    "n_molecules": 115,
+    "molecules_used": 115,
+    "same_target_pairs": 1145,
+    "different_target_pairs": 5410,
+    "delta": 0.763,
+    "ci95": [
+     0.492,
+     1.076
+    ],
+    "pair_mean_same": 0.856,
+    "pair_mean_different": 0.311,
+    "ratio_same_vs_diff": 2.75,
+    "pct_same_target_pairs_sharing_none": 61.0,
+    "adjusted_same_target": {
+     "beta": 0.131,
+     "ci95": [
+      -0.019,
+      0.328
+     ],
+     "share_boot_le0": 0.046
+    }
+   },
+   "kinase": {
+    "n_molecules": 108,
+    "molecules_used": 108,
+    "same_target_pairs": 555,
+    "different_target_pairs": 5223,
+    "delta": 2.068,
+    "ci95": [
+     1.502,
+     2.707
+    ],
+    "pair_mean_same": 2.382,
+    "pair_mean_different": 0.566,
+    "ratio_same_vs_diff": 4.21,
+    "pct_same_target_pairs_sharing_none": 32.3,
+    "adjusted_same_target": {
+     "beta": 1.054,
+     "ci95": [
+      0.588,
+      1.588
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "nuclear receptor": {
+    "n_molecules": 95,
+    "molecules_used": 95,
+    "same_target_pairs": 723,
+    "different_target_pairs": 3742,
+    "delta": 0.757,
+    "ci95": [
+     0.423,
+     1.166
+    ],
+    "pair_mean_same": 0.979,
+    "pair_mean_different": 0.273,
+    "ratio_same_vs_diff": 3.59,
+    "pct_same_target_pairs_sharing_none": 70.4,
+    "adjusted_same_target": {
+     "beta": 0.017,
+     "ci95": [
+      -0.26,
+      0.305
+     ],
+     "share_boot_le0": 0.461
+    }
+   },
+   "transporter": {
+    "n_molecules": 59,
+    "molecules_used": 59,
+    "same_target_pairs": 476,
+    "different_target_pairs": 1235,
+    "delta": 1.699,
+    "ci95": [
+     0.872,
+     2.717
+    ],
+    "pair_mean_same": 1.244,
+    "pair_mean_different": 0.226,
+    "ratio_same_vs_diff": 5.51,
+    "pct_same_target_pairs_sharing_none": 51.9,
+    "adjusted_same_target": {
+     "beta": 0.298,
+     "ci95": [
+      -0.037,
+      0.707
+     ],
+     "share_boot_le0": 0.045
+    }
+   },
+   "multi-family": {
+    "n_molecules": 51,
+    "molecules_used": 47,
+    "same_target_pairs": 96,
+    "different_target_pairs": 1179,
+    "delta": 1.37,
+    "ci95": [
+     0.654,
+     2.291
+    ],
+    "pair_mean_same": 1.74,
+    "pair_mean_different": 0.288,
+    "ratio_same_vs_diff": 6.05,
+    "pct_same_target_pairs_sharing_none": 51.0,
+    "adjusted_same_target": {
+     "beta": 0.717,
+     "ci95": [
+      -0.109,
+      1.874
+     ],
+     "share_boot_le0": 0.053
+    }
+   },
+   "other membrane receptor": {
+    "n_molecules": 42,
+    "molecules_used": 41,
+    "same_target_pairs": 92,
+    "different_target_pairs": 769,
+    "delta": 3.108,
+    "ci95": [
+     1.862,
+     4.336
+    ],
+    "pair_mean_same": 2.641,
+    "pair_mean_different": 0.178,
+    "ratio_same_vs_diff": 14.83,
+    "pct_same_target_pairs_sharing_none": 19.6,
+    "adjusted_same_target": {
+     "beta": 0.961,
+     "ci95": [
+      0.056,
+      2.339
+     ],
+     "share_boot_le0": 0.021
+    }
+   },
+   "protease": {
+    "n_molecules": 39,
+    "molecules_used": 39,
+    "same_target_pairs": 95,
+    "different_target_pairs": 646,
+    "delta": 2.211,
+    "ci95": [
+     1.065,
+     3.218
+    ],
+    "pair_mean_same": 1.821,
+    "pair_mean_different": 0.303,
+    "ratio_same_vs_diff": 6.0,
+    "pct_same_target_pairs_sharing_none": 36.8,
+    "adjusted_same_target": {
+     "beta": 0.825,
+     "ci95": [
+      -1.556,
+      5.286
+     ],
+     "share_boot_le0": 0.264
+    }
+   },
+   "secreted protein": {
+    "n_molecules": 39,
+    "molecules_used": 39,
+    "same_target_pairs": 82,
+    "different_target_pairs": 659,
+    "delta": 4.175,
+    "ci95": [
+     2.354,
+     6.086
+    ],
+    "pair_mean_same": 4.524,
+    "pair_mean_different": 0.36,
+    "ratio_same_vs_diff": 12.58,
+    "pct_same_target_pairs_sharing_none": 25.6,
+    "adjusted_same_target": {
+     "beta": 1.015,
+     "ci95": [
+      -1.37,
+      4.071
+     ],
+     "share_boot_le0": 0.197
+    }
+   },
+   "surface antigen": {
+    "n_molecules": 20,
+    "molecules_used": 20,
+    "same_target_pairs": 99,
+    "different_target_pairs": 91,
+    "delta": 3.435,
+    "ci95": [
+     1.754,
+     5.426
+    ],
+    "pair_mean_same": 4.02,
+    "pair_mean_different": 0.615,
+    "ratio_same_vs_diff": 6.53,
+    "pct_same_target_pairs_sharing_none": 11.1,
+    "adjusted_same_target": {
+     "beta": 0.45,
+     "ci95": [
+      -1.404,
+      2.257
+     ],
+     "share_boot_le0": 0.26
+    }
+   },
+   "structural protein": {
+    "n_molecules": 10,
+    "molecules_used": 0,
+    "same_target_pairs": 45,
+    "different_target_pairs": 0,
+    "delta": NaN,
+    "ci95": [
+     NaN,
+     NaN
+    ],
+    "pair_mean_same": 1.533,
+    "pair_mean_different": NaN,
+    "ratio_same_vs_diff": null,
+    "pct_same_target_pairs_sharing_none": 37.8,
+    "adjusted_same_target": {
+     "beta": null,
+     "ci95": null,
+     "note": "same_target constant in stratum"
+    }
+   }
+  },
+  "neoplasms_by_modality": {
+   "small_molecule": {
+    "n_molecules": 129,
+    "molecules_used": 122,
+    "same_target_pairs": 274,
+    "different_target_pairs": 7982,
+    "delta": 2.565,
+    "ci95": [
+     1.917,
+     3.352
+    ],
+    "pair_mean_same": 2.898,
+    "pair_mean_different": 0.557,
+    "ratio_same_vs_diff": 5.21,
+    "pct_same_target_pairs_sharing_none": 20.4
+   },
+   "biologic": {
+    "n_molecules": 34,
+    "molecules_used": 28,
+    "same_target_pairs": 69,
+    "different_target_pairs": 492,
+    "delta": 2.883,
+    "ci95": [
+     1.558,
+     4.261
+    ],
+    "pair_mean_same": 3.623,
+    "pair_mean_different": 0.856,
+    "ratio_same_vs_diff": 4.23,
+    "pct_same_target_pairs_sharing_none": 11.6
+   }
+  },
+  "single_target_only": {
+   "small_molecule": {
+    "n_molecules": 661,
+    "molecules_used": 632,
+    "same_target_pairs": 3387,
+    "different_target_pairs": 214743,
+    "delta": 1.62,
+    "ci95": [
+     1.306,
+     1.791
+    ],
+    "pair_mean_same": 1.124,
+    "pair_mean_different": 0.208,
+    "ratio_same_vs_diff": 5.4,
+    "pct_same_target_pairs_sharing_none": 61.5
+   },
+   "biologic": {
+    "n_molecules": 126,
+    "molecules_used": 113,
+    "same_target_pairs": 260,
+    "different_target_pairs": 7615,
+    "delta": 3.995,
+    "ci95": [
+     3.043,
+     5.009
+    ],
+    "pair_mean_same": 4.127,
+    "pair_mean_different": 0.277,
+    "ratio_same_vs_diff": 14.92,
+    "pct_same_target_pairs_sharing_none": 16.5
+   },
+   "difference": {
+    "diff": 2.375,
+    "ci95": [
+     1.495,
+     3.513
+    ]
+   }
+  }
+ }
+}

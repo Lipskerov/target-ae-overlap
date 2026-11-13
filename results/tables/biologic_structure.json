@@ -1,0 +1,2443 @@
+{
+ "spec": "private/structure/SPEC.md",
+ "spec_sha256": "6bad6214153c4f978b40a70ca67b2061b81e95c7e3e3159be5f3cd368730e5ae",
+ "B": 2000,
+ "seeds": "SeedSequence(20261113).spawn(40)[30] PRR, [31] IC025",
+ "sources": {
+  "therasabdab": {
+   "url": "https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/static/downloads/TheraSAbDab_SeqStruc_OnlineDownload.csv",
+   "downloaded": "2026-11-13",
+   "sha256": "cc9402788297ed7b6ab3d676daa21953a6d28ebbd9cc78ec7248b19f74d49d6d"
+  },
+  "uniprot": {
+   "url": "https://rest.uniprot.org/uniprotkb/search (query in dl_uniprot/query_url.txt)",
+   "downloaded": "2026-11-13",
+   "sha256": "324e17877d1df30b48e87f384b0ae15d4dff2d4c41d4e414b7b5cb6547e89e8e"
+  }
+ },
+ "annotation": {
+  "n_biologics": 151,
+  "thera_matched": 86,
+  "format": {
+   "non_antibody_protein": 57,
+   "ADC": 8,
+   "whole_mAb": 62,
+   "Fc_fusion": 2,
+   "TCE": 8,
+   "CAR_T": 6,
+   "fragment": 5,
+   "bispecific_other": 3
+  },
+  "payload": {
+   "MMAE": 2,
+   "DM1": 1,
+   "DXd": 2,
+   "MMAF": 1,
+   "PBD": 1,
+   "DM4": 1
+  },
+  "isotype_used": {
+   "unknown/not used": 81,
+   "G1": 45,
+   "G4": 19,
+   "G2": 6
+  },
+  "origin_used": {
+   "unknown/not used": 78,
+   "chimeric": 9,
+   "humanized": 39,
+   "human": 23,
+   "murine": 2
+  },
+  "origin_source": {
+   "thera": 73
+  },
+  "target_class": {
+   "secreted": 33,
+   "membrane": 118
+  },
+  "origin_qc_thera_vs_inn": {
+   "n": 58,
+   "agree": 58,
+   "disagreements": {}
+  }
+ },
+ "prr_clean": {
+  "profile": "data/derived/faers_q/b/profile_clean_prr_k20.csv",
+  "H0_attribution": {
+   "reproduction_reference_delta": 2.043,
+   "reproduction_ok": true,
+   "S_any": {
+    "delta": 2.043,
+    "ci95": [
+     1.529,
+     2.625
+    ],
+    "same_target_bio_pairs": 381,
+    "pair_mean_same": 1.829,
+    "pair_mean_different": 0.074
+   },
+   "S_antigen": {
+    "delta": 2.096,
+    "ci95": [
+     1.57,
+     2.676
+    ],
+    "same_target_bio_pairs": 370,
+    "pair_mean_same": 1.865,
+    "pair_mean_different": 0.075,
+    "diff_vs_S_any": 0.053,
+    "diff_ci95": [
+     -0.058,
+     0.142
+    ]
+   },
+   "S_antigen_noCD3": {
+    "delta": 2.084,
+    "ci95": [
+     1.557,
+     2.682
+    ],
+    "same_target_bio_pairs": 330,
+    "pair_mean_same": 1.9,
+    "pair_mean_different": 0.08,
+    "diff_vs_S_any": 0.04,
+    "diff_ci95": [
+     -0.082,
+     0.178
+    ]
+   },
+   "bio_pairs_same_only_via_payload_target": 11,
+   "bio_pairs_same_only_via_CD3E_of_TCE": 40,
+   "mean_shared_payload_only_pairs": 0.636,
+   "mean_shared_CD3E_only_pairs": 1.575
+  },
+  "contrasts": {
+   "H1a_ADC_diff_antigen_same_vs_diff_payload_class": {
+    "group_1": "same payload class",
+    "group_0": "different payload class",
+    "pairs_1": 11,
+    "pairs_0": 16,
+    "molecules_1": 7,
+    "molecules_0": 8,
+    "mean_1": 0.636,
+    "mean_0": 0.188,
+    "diff": 0.449,
+    "ci95": [
+     -0.5,
+     2.796
+    ],
+    "share_boot_le0": 0.592,
+    "top_shared_terms_group_1": [
+     [
+      "CORNEAL CYST",
+      1
+     ],
+     [
+      "CORNEAL EPITHELIAL MICROCYSTS",
+      1
+     ],
+     [
+      "CORNEAL EPITHELIUM DEFECT",
+      1
+     ],
+     [
+      "CORNEAL TOXICITY",
+      1
+     ],
+     [
+      "KERATOPATHY",
+      1
+     ],
+     [
+      "OCULAR TOXICITY",
+      1
+     ],
+     [
+      "PUNCTATE KERATITIS",
+      1
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same payload class",
+     "group_0": "different payload class",
+     "pairs_1": 8,
+     "pairs_0": 12,
+     "molecules_1": 5,
+     "molecules_0": 7,
+     "mean_1": 0.875,
+     "mean_0": 0.25,
+     "diff": 0.625,
+     "ci95": [
+      -0.667,
+      4.075
+     ],
+     "share_boot_le0": 0.545,
+     "note": "fewer than 10 pairs in a group - reported, not interpreted"
+    }
+   },
+   "H1b_ADC_x_smallmol_payload_target_vs_no_shared_target": {
+    "group_1": "small molecule hits ADC payload target",
+    "group_0": "no shared target",
+    "pairs_1": 66,
+    "pairs_0": 6840,
+    "molecules_1": 22,
+    "molecules_0": 873,
+    "mean_1": 0.242,
+    "mean_0": 0.038,
+    "diff": 0.205,
+    "ci95": [
+     -0.041,
+     0.552
+    ],
+    "share_boot_le0": 0.076,
+    "top_shared_terms_group_1": [
+     [
+      "OCULAR TOXICITY",
+      2
+     ],
+     [
+      "PERIPHERAL BLOOD STEM CELL APHERESIS",
+      2
+     ],
+     [
+      "PUNCTATE KERATITIS",
+      2
+     ],
+     [
+      "CORNEAL DISORDER",
+      1
+     ],
+     [
+      "GRANULOCYTE-COLONY STIMULATING FACTOR LEVEL DECREASED",
+      1
+     ],
+     [
+      "HAEMATOPOIETIC STEM CELL MOBILISATION",
+      1
+     ],
+     [
+      "HER2 POSITIVE SALIVARY GLAND CANCER",
+      1
+     ],
+     [
+      "HODGKIN'S DISEASE MIXED CELLULARITY STAGE III",
+      1
+     ],
+     [
+      "KERATITIS",
+      1
+     ],
+     [
+      "MENINGOENCEPHALITIS AMOEBIC",
+      1
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "small molecule hits ADC payload target",
+     "group_0": "no shared target",
+     "pairs_1": 45,
+     "pairs_0": 6411,
+     "molecules_1": 21,
+     "molecules_0": 871,
+     "mean_1": 0.156,
+     "mean_0": 0.025,
+     "diff": 0.13,
+     "ci95": [
+      -0.034,
+      0.535
+     ],
+     "share_boot_le0": 0.326
+    }
+   },
+   "H2a_isotype_difftarget_same_vs_diff": {
+    "group_1": "same isotype",
+    "group_0": "different isotype",
+    "pairs_1": 1049,
+    "pairs_0": 1197,
+    "molecules_1": 70,
+    "molecules_0": 70,
+    "mean_1": 0.132,
+    "mean_0": 0.114,
+    "diff": 0.017,
+    "ci95": [
+     -0.083,
+     0.151
+    ],
+    "share_boot_le0": 0.427,
+    "top_shared_terms_group_1": [
+     [
+      "INFUSION RELATED REACTION",
+      15
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      7
+     ],
+     [
+      "RED BLOOD CELL SEDIMENTATION RATE",
+      7
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY",
+      5
+     ],
+     [
+      "BLOOD IMMUNOGLOBULIN G DECREASED",
+      5
+     ],
+     [
+      "LUPUS VULGARIS",
+      5
+     ],
+     [
+      "ACINIC CELL CARCINOMA OF SALIVARY GLAND",
+      3
+     ],
+     [
+      "ADJUSTMENT DISORDER WITH DEPRESSED MOOD",
+      3
+     ],
+     [
+      "C-REACTIVE PROTEIN",
+      3
+     ],
+     [
+      "DEEP VEIN THROMBOSIS POSTOPERATIVE",
+      3
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same isotype",
+     "group_0": "different isotype",
+     "pairs_1": 915,
+     "pairs_0": 985,
+     "molecules_1": 70,
+     "molecules_0": 70,
+     "mean_1": 0.055,
+     "mean_0": 0.051,
+     "diff": 0.004,
+     "ci95": [
+      -0.035,
+      0.052
+     ],
+     "share_boot_le0": 0.461
+    }
+   },
+   "H2b_isotype_sametarget_same_vs_diff": {
+    "group_1": "same isotype",
+    "group_0": "different isotype",
+    "pairs_1": 127,
+    "pairs_0": 42,
+    "molecules_1": 53,
+    "molecules_0": 41,
+    "mean_1": 1.646,
+    "mean_0": 2.19,
+    "diff": -0.545,
+    "ci95": [
+     -1.973,
+     0.911
+    ],
+    "share_boot_le0": 0.8,
+    "top_shared_terms_group_1": [
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      15
+     ],
+     [
+      "MYELOSUPPRESSION",
+      11
+     ],
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      7
+     ],
+     [
+      "HYPOPHYSITIS",
+      6
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      6
+     ],
+     [
+      "IMMUNE-MEDIATED MYOCARDITIS",
+      6
+     ],
+     [
+      "MYOCARDIAL INJURY",
+      6
+     ],
+     [
+      "REACTIVE CAPILLARY ENDOTHELIAL PROLIFERATION",
+      6
+     ],
+     [
+      "ENDOCRINE TOXICITY",
+      4
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      4
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same isotype",
+     "group_0": "different isotype",
+     "pairs_1": 16,
+     "pairs_0": 13,
+     "molecules_1": 19,
+     "molecules_0": 13,
+     "mean_1": 0.625,
+     "mean_0": 1.846,
+     "diff": -1.221,
+     "ci95": [
+      -2.911,
+      0.681
+     ],
+     "share_boot_le0": 0.868
+    }
+   },
+   "H2_desc_difftarget_by_isotype": {
+    "G1": {
+     "pairs": 931,
+     "mean": 0.143
+    },
+    "G2": {
+     "pairs": 14,
+     "mean": 0.0
+    },
+    "G4": {
+     "pairs": 104,
+     "mean": 0.048
+    }
+   },
+   "H3a_origin_difftarget_same_vs_diff": {
+    "group_1": "same origin",
+    "group_0": "different origin",
+    "pairs_1": 972,
+    "pairs_0": 1523,
+    "molecules_1": 71,
+    "molecules_0": 73,
+    "mean_1": 0.148,
+    "mean_0": 0.09,
+    "diff": 0.058,
+    "ci95": [
+     -0.035,
+     0.235
+    ],
+    "share_boot_le0": 0.147,
+    "top_shared_terms_group_1": [
+     [
+      "LUPUS VULGARIS",
+      9
+     ],
+     [
+      "PNEUMONITIS",
+      9
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      6
+     ],
+     [
+      "FACET JOINT SYNDROME",
+      6
+     ],
+     [
+      "FEBRILE NEUTROPENIA",
+      6
+     ],
+     [
+      "RHEUMATIC FEVER",
+      6
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY",
+      5
+     ],
+     [
+      "INFUSION RELATED REACTION",
+      4
+     ],
+     [
+      "MYELOSUPPRESSION",
+      4
+     ],
+     [
+      "ACINIC CELL CARCINOMA OF SALIVARY GLAND",
+      3
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same origin",
+     "group_0": "different origin",
+     "pairs_1": 822,
+     "pairs_0": 1306,
+     "molecules_1": 71,
+     "molecules_0": 73,
+     "mean_1": 0.036,
+     "mean_0": 0.044,
+     "diff": -0.007,
+     "ci95": [
+      -0.039,
+      0.029
+     ],
+     "share_boot_le0": 0.672
+    }
+   },
+   "H3b_origin_sametarget_same_vs_diff": {
+    "group_1": "same origin",
+    "group_0": "different origin",
+    "pairs_1": 59,
+    "pairs_0": 74,
+    "molecules_1": 50,
+    "molecules_0": 53,
+    "mean_1": 1.356,
+    "mean_0": 1.689,
+    "diff": -0.333,
+    "ci95": [
+     -1.834,
+     1.009
+    ],
+    "share_boot_le0": 0.684,
+    "top_shared_terms_group_1": [
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      4
+     ],
+     [
+      "DERMATITIS ACNEIFORM",
+      3
+     ],
+     [
+      "HEART FAILURE WITH MIDRANGE EJECTION FRACTION",
+      3
+     ],
+     [
+      "HEMIPLEGIC MIGRAINE",
+      3
+     ],
+     [
+      "MYELOSUPPRESSION",
+      3
+     ],
+     [
+      "NAIL BED INFLAMMATION",
+      3
+     ],
+     [
+      "PARONYCHIA",
+      3
+     ],
+     [
+      "PLATELET AGGREGATION TEST",
+      3
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      2
+     ],
+     [
+      "ANGIOGRAM RETINA ABNORMAL",
+      1
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same origin",
+     "group_0": "different origin",
+     "pairs_1": 12,
+     "pairs_0": 11,
+     "molecules_1": 18,
+     "molecules_0": 14,
+     "mean_1": 0.667,
+     "mean_0": 0.909,
+     "diff": -0.242,
+     "ci95": [
+      -2.571,
+      1.602
+     ],
+     "share_boot_le0": 0.484
+    }
+   },
+   "H3_desc_difftarget_both_chimeric_vs_both_human": {
+    "group_1": "both chimeric",
+    "group_0": "both human",
+    "pairs_1": 34,
+    "pairs_0": 241,
+    "molecules_1": 9,
+    "molecules_0": 23,
+    "mean_1": 0.088,
+    "mean_0": 0.378,
+    "diff": -0.289,
+    "ci95": [
+     -0.969,
+     0.243
+    ],
+    "share_boot_le0": 0.9,
+    "top_shared_terms_group_1": [
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      1
+     ],
+     [
+      "RED BLOOD CELL SEDIMENTATION RATE",
+      1
+     ],
+     [
+      "X-LINKED LYMPHOPROLIFERATIVE SYNDROME",
+      1
+     ]
+    ]
+   },
+   "H4a_format_difftarget_same_vs_diff": {
+    "group_1": "same format",
+    "group_0": "different format",
+    "pairs_1": 1801,
+    "pairs_0": 2307,
+    "molecules_1": 86,
+    "molecules_0": 94,
+    "mean_1": 0.147,
+    "mean_0": 0.11,
+    "diff": 0.037,
+    "ci95": [
+     -0.036,
+     0.138
+    ],
+    "share_boot_le0": 0.171,
+    "top_shared_terms_group_1": [
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      12
+     ],
+     [
+      "MYELOSUPPRESSION",
+      12
+     ],
+     [
+      "INFUSION RELATED REACTION",
+      11
+     ],
+     [
+      "LUPUS VULGARIS",
+      9
+     ],
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      8
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      8
+     ],
+     [
+      "RED BLOOD CELL SEDIMENTATION RATE",
+      7
+     ],
+     [
+      "ENDOCRINE TOXICITY",
+      6
+     ],
+     [
+      "FACET JOINT SYNDROME",
+      6
+     ],
+     [
+      "FEBRILE NEUTROPENIA",
+      6
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same format",
+     "group_0": "different format",
+     "pairs_1": 1496,
+     "pairs_0": 2015,
+     "molecules_1": 79,
+     "molecules_0": 94,
+     "mean_1": 0.041,
+     "mean_0": 0.062,
+     "diff": -0.021,
+     "ci95": [
+      -0.063,
+      0.023
+     ],
+     "share_boot_le0": 0.833
+    }
+   },
+   "H4b_format_sametarget_same_vs_diff": {
+    "group_1": "same format",
+    "group_0": "different format",
+    "pairs_1": 175,
+    "pairs_0": 88,
+    "molecules_1": 78,
+    "molecules_0": 45,
+    "mean_1": 1.954,
+    "mean_0": 1.511,
+    "diff": 0.443,
+    "ci95": [
+     -1.492,
+     1.795
+    ],
+    "share_boot_le0": 0.27,
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      28
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      28
+     ],
+     [
+      "MYELOSUPPRESSION",
+      16
+     ],
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      15
+     ],
+     [
+      "HYPOPHYSITIS",
+      10
+     ],
+     [
+      "TUMOUR FLARE",
+      10
+     ],
+     [
+      "CYTOMEGALOVIRUS INFECTION REACTIVATION",
+      6
+     ],
+     [
+      "HYPOTHYROIDISM",
+      6
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      6
+     ],
+     [
+      "IMMUNE-MEDIATED MYOCARDITIS",
+      6
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same format",
+     "group_0": "different format",
+     "pairs_1": 34,
+     "pairs_0": 31,
+     "molecules_1": 27,
+     "molecules_0": 25,
+     "mean_1": 1.382,
+     "mean_0": 0.548,
+     "diff": 0.834,
+     "ci95": [
+      -0.348,
+      2.022
+     ],
+     "share_boot_le0": 0.103
+    }
+   },
+   "H4_desc_difftarget_same_format_by_format": {
+    "ADC": {
+     "pairs": 16,
+     "mean": 0.188
+    },
+    "CAR_T": {
+     "pairs": 8,
+     "mean": 4.5
+    },
+    "Fc_fusion": {
+     "pairs": 1,
+     "mean": 0.0
+    },
+    "TCE": {
+     "pairs": 0,
+     "mean": null
+    },
+    "bispecific_other": {
+     "pairs": 3,
+     "mean": 0.333
+    },
+    "fragment": {
+     "pairs": 9,
+     "mean": 0.0
+    },
+    "other_antibody": {
+     "pairs": 0,
+     "mean": null
+    },
+    "whole_mAb": {
+     "pairs": 1764,
+     "mean": 0.128
+    }
+   },
+   "H4_desc_CD3E_pairs_TCE_TCE_vs_TCE_monospecific": {
+    "group_1": "TCE-TCE",
+    "group_0": "TCE-anti-CD3 monospecific",
+    "pairs_1": 28,
+    "pairs_0": 16,
+    "molecules_1": 8,
+    "molecules_0": 10,
+    "mean_1": 2.429,
+    "mean_0": 0.562,
+    "diff": 1.866,
+    "ci95": [
+     0.485,
+     3.642
+    ],
+    "share_boot_le0": 0.001,
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      21
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      21
+     ],
+     [
+      "TUMOUR FLARE",
+      10
+     ],
+     [
+      "CYTOMEGALOVIRUS INFECTION REACTIVATION",
+      6
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      3
+     ],
+     [
+      "B-CELL LYMPHOMA RECURRENT",
+      1
+     ],
+     [
+      "CAMPYLOBACTER GASTROENTERITIS",
+      1
+     ],
+     [
+      "CONGENITAL APLASIA",
+      1
+     ],
+     [
+      "ENCEPHALITIS CYTOMEGALOVIRUS",
+      1
+     ],
+     [
+      "PARVOVIRUS INFECTION",
+      1
+     ]
+    ]
+   },
+   "H4_desc_CD19_pairs_CART_CART_vs_CART_antibody": {
+    "group_1": "CAR_T-CAR_T",
+    "group_0": "CAR_T-antibody",
+    "pairs_1": 6,
+    "pairs_0": 16,
+    "molecules_1": 4,
+    "molecules_0": 8,
+    "mean_1": 4.167,
+    "mean_0": 0.562,
+    "diff": 3.604,
+    "ci95": [
+     1.125,
+     8.8
+    ],
+    "share_boot_le0": 0.0,
+    "note": "fewer than 10 pairs in a group - reported, not interpreted",
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      6
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      6
+     ],
+     [
+      "B-CELL APLASIA",
+      3
+     ],
+     [
+      "HUMAN HERPESVIRUS 6 ENCEPHALITIS",
+      3
+     ],
+     [
+      "NEUROTOXICITY",
+      3
+     ],
+     [
+      "GENITOURINARY TRACT NEOPLASM",
+      1
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED HAEMATOTOXICITY",
+      1
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED HLH-LIKE SYNDROME",
+      1
+     ],
+     [
+      "MALIGNANT GENITOURINARY TRACT NEOPLASM",
+      1
+     ]
+    ]
+   },
+   "H4_desc_CD19_pairs_antibody_antibody_vs_CART_antibody": {
+    "group_1": "antibody-antibody",
+    "group_0": "CAR_T-antibody",
+    "pairs_1": 6,
+    "pairs_0": 16,
+    "molecules_1": 4,
+    "molecules_0": 8,
+    "mean_1": 0.167,
+    "mean_0": 0.562,
+    "diff": -0.396,
+    "ci95": [
+     -1.333,
+     0.733
+    ],
+    "share_boot_le0": 0.777,
+    "note": "fewer than 10 pairs in a group - reported, not interpreted",
+    "top_shared_terms_group_1": [
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      1
+     ]
+    ]
+   },
+   "H4_desc_difftarget_CART_CART_vs_other_difftarget": {
+    "group_1": "CAR_T-CAR_T different target",
+    "group_0": "other different-target",
+    "pairs_1": 8,
+    "pairs_0": 4100,
+    "molecules_1": 6,
+    "molecules_0": 94,
+    "mean_1": 4.5,
+    "mean_0": 0.118,
+    "diff": 4.382,
+    "ci95": [
+     2.292,
+     5.905
+    ],
+    "share_boot_le0": 0.0,
+    "note": "fewer than 10 pairs in a group - reported, not interpreted",
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      8
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      8
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED HAEMATOTOXICITY",
+      4
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED HLH-LIKE SYNDROME",
+      4
+     ],
+     [
+      "NEUROTOXICITY",
+      3
+     ],
+     [
+      "GENITOURINARY TRACT NEOPLASM",
+      2
+     ],
+     [
+      "MALIGNANT GENITOURINARY TRACT NEOPLASM",
+      2
+     ],
+     [
+      "ALANINE AMINOTRANSFERASE",
+      1
+     ],
+     [
+      "CYTOMEGALOVIRUS CHORIORETINITIS",
+      1
+     ],
+     [
+      "HAEMOPHAGOCYTIC LYMPHOHISTIOCYTOSIS",
+      1
+     ]
+    ]
+   },
+   "H5a_sametarget_membrane_vs_secreted": {
+    "group_1": "membrane target",
+    "group_0": "secreted target",
+    "pairs_1": 339,
+    "pairs_0": 42,
+    "molecules_1": 108,
+    "molecules_0": 33,
+    "mean_1": 1.867,
+    "mean_0": 1.524,
+    "diff": 0.343,
+    "ci95": [
+     -1.481,
+     1.786
+    ],
+    "share_boot_le0": 0.321,
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      39
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      32
+     ],
+     [
+      "MYELOSUPPRESSION",
+      16
+     ],
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      15
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      10
+     ],
+     [
+      "ANTI-INSULIN ANTIBODY POSITIVE",
+      10
+     ],
+     [
+      "HYPOPHYSITIS",
+      10
+     ],
+     [
+      "PEMPHIGUS",
+      10
+     ],
+     [
+      "RED BLOOD CELL SEDIMENTATION RATE",
+      10
+     ],
+     [
+      "RHEUMATOID FACTOR POSITIVE",
+      10
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "membrane target",
+     "group_0": "secreted target",
+     "pairs_1": 84,
+     "pairs_0": 9,
+     "molecules_1": 52,
+     "molecules_0": 13,
+     "mean_1": 0.762,
+     "mean_0": 0.222,
+     "diff": 0.54,
+     "ci95": [
+      -0.26,
+      1.336
+     ],
+     "share_boot_le0": 0.089,
+     "note": "fewer than 10 pairs in a group - reported, not interpreted"
+    }
+   },
+   "H5b_difftarget_same_vs_diff_class": {
+    "group_1": "same class",
+    "group_0": "different class",
+    "pairs_1": 7050,
+    "pairs_0": 3894,
+    "molecules_1": 151,
+    "molecules_0": 151,
+    "mean_1": 0.084,
+    "mean_0": 0.057,
+    "diff": 0.026,
+    "ci95": [
+     -0.028,
+     0.071
+    ],
+    "share_boot_le0": 0.13,
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      66
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      46
+     ],
+     [
+      "INFUSION RELATED REACTION",
+      21
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      20
+     ],
+     [
+      "MYELOSUPPRESSION",
+      12
+     ],
+     [
+      "NEUROTOXICITY",
+      12
+     ],
+     [
+      "PNEUMONITIS",
+      12
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      11
+     ],
+     [
+      "BLOOD IMMUNOGLOBULIN G DECREASED",
+      8
+     ],
+     [
+      "ENDOCRINE TOXICITY",
+      6
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same class",
+     "group_0": "different class",
+     "pairs_1": 6309,
+     "pairs_0": 3671,
+     "molecules_1": 151,
+     "molecules_0": 151,
+     "mean_1": 0.041,
+     "mean_0": 0.024,
+     "diff": 0.017,
+     "ci95": [
+      -0.004,
+      0.039
+     ],
+     "share_boot_le0": 0.049
+    }
+   },
+   "H5_desc_membrane_same_minus_diff_within_class": {
+    "pairs_same": 339,
+    "pairs_diff": 6564,
+    "mean_same": 1.867,
+    "mean_diff": 0.081
+   },
+   "H5_desc_secreted_same_minus_diff_within_class": {
+    "pairs_same": 42,
+    "pairs_diff": 486,
+    "mean_same": 1.524,
+    "mean_diff": 0.119
+   },
+   "H5_desc_PD1_x_PDL1_vs_other_difftarget_antibody": {
+    "group_1": "PD-1 x PD-L1 (different target)",
+    "group_0": "other different-target antibody pairs",
+    "pairs_1": 39,
+    "pairs_0": 3390,
+    "molecules_1": 16,
+    "molecules_0": 86,
+    "mean_1": 0.897,
+    "mean_0": 0.094,
+    "diff": 0.803,
+    "ci95": [
+     0.167,
+     1.917
+    ],
+    "share_boot_le0": 0.001,
+    "top_shared_terms_group_1": [
+     [
+      "ENDOCRINE TOXICITY",
+      6
+     ],
+     [
+      "HYPOPHYSITIS",
+      5
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      4
+     ],
+     [
+      "REACTIVE CAPILLARY ENDOTHELIAL PROLIFERATION",
+      4
+     ],
+     [
+      "AUTOIMMUNE ENDOCRINE DISORDER",
+      3
+     ],
+     [
+      "MYOCARDITIS-MYOSITIS-MYASTHENIA GRAVIS OVERLAP SYNDROME",
+      3
+     ],
+     [
+      "AUTOIMMUNE MYOCARDITIS",
+      2
+     ],
+     [
+      "IMMUNE-MEDIATED NEPHRITIS",
+      2
+     ],
+     [
+      "IMMUNE-MEDIATED NEUROLOGICAL DISORDER",
+      2
+     ],
+     [
+      "BLOOD CORTICOTROPHIN INCREASED",
+      1
+     ]
+    ]
+   }
+  }
+ },
+ "ic025_clean2": {
+  "profile": "data/derived/faers_q/b/profile_clean2_ic025_k20.csv",
+  "H0_attribution": {
+   "reproduction_reference_delta": 3.721,
+   "reproduction_ok": true,
+   "S_any": {
+    "delta": 3.721,
+    "ci95": [
+     2.975,
+     4.589
+    ],
+    "same_target_bio_pairs": 381,
+    "pair_mean_same": 3.877,
+    "pair_mean_different": 0.295
+   },
+   "S_antigen": {
+    "delta": 3.812,
+    "ci95": [
+     3.07,
+     4.695
+    ],
+    "same_target_bio_pairs": 370,
+    "pair_mean_same": 3.957,
+    "pair_mean_different": 0.296,
+    "diff_vs_S_any": 0.091,
+    "diff_ci95": [
+     -0.03,
+     0.232
+    ]
+   },
+   "S_antigen_noCD3": {
+    "delta": 3.791,
+    "ci95": [
+     3.038,
+     4.74
+    ],
+    "same_target_bio_pairs": 330,
+    "pair_mean_same": 4.024,
+    "pair_mean_different": 0.307,
+    "diff_vs_S_any": 0.07,
+    "diff_ci95": [
+     -0.071,
+     0.282
+    ]
+   },
+   "bio_pairs_same_only_via_payload_target": 11,
+   "bio_pairs_same_only_via_CD3E_of_TCE": 40,
+   "mean_shared_payload_only_pairs": 1.182,
+   "mean_shared_CD3E_only_pairs": 3.4
+  },
+  "contrasts": {
+   "H1a_ADC_diff_antigen_same_vs_diff_payload_class": {
+    "group_1": "same payload class",
+    "group_0": "different payload class",
+    "pairs_1": 11,
+    "pairs_0": 16,
+    "molecules_1": 7,
+    "molecules_0": 8,
+    "mean_1": 1.182,
+    "mean_0": 0.812,
+    "diff": 0.369,
+    "ci95": [
+     -1.11,
+     2.809
+    ],
+    "share_boot_le0": 0.363,
+    "top_shared_terms_group_1": [
+     [
+      "CORNEAL DEPOSITS",
+      1
+     ],
+     [
+      "CORNEAL EPITHELIAL MICROCYSTS",
+      1
+     ],
+     [
+      "DRY EYE",
+      1
+     ],
+     [
+      "FEBRILE NEUTROPENIA",
+      1
+     ],
+     [
+      "INTERSTITIAL LUNG DISEASE",
+      1
+     ],
+     [
+      "KERATITIS",
+      1
+     ],
+     [
+      "KERATOPATHY",
+      1
+     ],
+     [
+      "MYELOSUPPRESSION",
+      1
+     ],
+     [
+      "NEUROPATHY PERIPHERAL",
+      1
+     ],
+     [
+      "OCULAR TOXICITY",
+      1
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same payload class",
+     "group_0": "different payload class",
+     "pairs_1": 8,
+     "pairs_0": 12,
+     "molecules_1": 5,
+     "molecules_0": 7,
+     "mean_1": 1.0,
+     "mean_0": 1.0,
+     "diff": 0.0,
+     "ci95": [
+      -1.6,
+      3.5
+     ],
+     "share_boot_le0": 0.614,
+     "note": "fewer than 10 pairs in a group - reported, not interpreted"
+    }
+   },
+   "H1b_ADC_x_smallmol_payload_target_vs_no_shared_target": {
+    "group_1": "small molecule hits ADC payload target",
+    "group_0": "no shared target",
+    "pairs_1": 66,
+    "pairs_0": 6840,
+    "molecules_1": 22,
+    "molecules_0": 873,
+    "mean_1": 1.136,
+    "mean_0": 0.18,
+    "diff": 0.956,
+    "ci95": [
+     0.159,
+     1.891
+    ],
+    "share_boot_le0": 0.007,
+    "top_shared_terms_group_1": [
+     [
+      "FEBRILE NEUTROPENIA",
+      16
+     ],
+     [
+      "MYELOSUPPRESSION",
+      6
+     ],
+     [
+      "NEUROPATHY PERIPHERAL",
+      6
+     ],
+     [
+      "PERIPHERAL SENSORY NEUROPATHY",
+      5
+     ],
+     [
+      "NEUTROPHIL COUNT DECREASED",
+      3
+     ],
+     [
+      "PERIPHERAL MOTOR NEUROPATHY",
+      3
+     ],
+     [
+      "CYTOMEGALOVIRUS CHORIORETINITIS",
+      2
+     ],
+     [
+      "DRY EYE",
+      2
+     ],
+     [
+      "FEBRILE BONE MARROW APLASIA",
+      2
+     ],
+     [
+      "FOLATE DEFICIENCY",
+      2
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "small molecule hits ADC payload target",
+     "group_0": "no shared target",
+     "pairs_1": 45,
+     "pairs_0": 6411,
+     "molecules_1": 21,
+     "molecules_0": 871,
+     "mean_1": 1.0,
+     "mean_0": 0.14,
+     "diff": 0.86,
+     "ci95": [
+      0.075,
+      1.761
+     ],
+     "share_boot_le0": 0.014
+    }
+   },
+   "H2a_isotype_difftarget_same_vs_diff": {
+    "group_1": "same isotype",
+    "group_0": "different isotype",
+    "pairs_1": 1049,
+    "pairs_0": 1197,
+    "molecules_1": 70,
+    "molecules_0": 70,
+    "mean_1": 0.474,
+    "mean_0": 0.5,
+    "diff": -0.027,
+    "ci95": [
+     -0.294,
+     0.296
+    ],
+    "share_boot_le0": 0.621,
+    "top_shared_terms_group_1": [
+     [
+      "INFUSION RELATED REACTION",
+      43
+     ],
+     [
+      "PNEUMONITIS",
+      33
+     ],
+     [
+      "MYELOSUPPRESSION",
+      23
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      17
+     ],
+     [
+      "NEUTROPENIA",
+      17
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY",
+      12
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      12
+     ],
+     [
+      "C-REACTIVE PROTEIN",
+      12
+     ],
+     [
+      "DEEP VEIN THROMBOSIS POSTOPERATIVE",
+      12
+     ],
+     [
+      "DUODENAL ULCER PERFORATION",
+      12
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same isotype",
+     "group_0": "different isotype",
+     "pairs_1": 915,
+     "pairs_0": 985,
+     "molecules_1": 70,
+     "molecules_0": 70,
+     "mean_1": 0.258,
+     "mean_0": 0.273,
+     "diff": -0.015,
+     "ci95": [
+      -0.129,
+      0.111
+     ],
+     "share_boot_le0": 0.623
+    }
+   },
+   "H2b_isotype_sametarget_same_vs_diff": {
+    "group_1": "same isotype",
+    "group_0": "different isotype",
+    "pairs_1": 127,
+    "pairs_0": 42,
+    "molecules_1": 53,
+    "molecules_0": 41,
+    "mean_1": 3.693,
+    "mean_0": 3.881,
+    "diff": -0.188,
+    "ci95": [
+     -1.938,
+     2.11
+    ],
+    "share_boot_le0": 0.567,
+    "top_shared_terms_group_1": [
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      29
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      24
+     ],
+     [
+      "PNEUMONITIS",
+      23
+     ],
+     [
+      "MYOCARDITIS",
+      22
+     ],
+     [
+      "NEUTROPHIL COUNT DECREASED",
+      22
+     ],
+     [
+      "IMMUNE-MEDIATED MYOCARDITIS",
+      21
+     ],
+     [
+      "MYELOSUPPRESSION",
+      15
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      12
+     ],
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      10
+     ],
+     [
+      "HEPATIC FUNCTION ABNORMAL",
+      10
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same isotype",
+     "group_0": "different isotype",
+     "pairs_1": 16,
+     "pairs_0": 13,
+     "molecules_1": 19,
+     "molecules_0": 13,
+     "mean_1": 1.812,
+     "mean_0": 3.308,
+     "diff": -1.495,
+     "ci95": [
+      -4.18,
+      1.125
+     ],
+     "share_boot_le0": 0.828
+    }
+   },
+   "H2_desc_difftarget_by_isotype": {
+    "G1": {
+     "pairs": 931,
+     "mean": 0.512
+    },
+    "G2": {
+     "pairs": 14,
+     "mean": 0.0
+    },
+    "G4": {
+     "pairs": 104,
+     "mean": 0.192
+    }
+   },
+   "H3a_origin_difftarget_same_vs_diff": {
+    "group_1": "same origin",
+    "group_0": "different origin",
+    "pairs_1": 972,
+    "pairs_0": 1523,
+    "molecules_1": 71,
+    "molecules_0": 73,
+    "mean_1": 0.462,
+    "mean_0": 0.429,
+    "diff": 0.033,
+    "ci95": [
+     -0.149,
+     0.297
+    ],
+    "share_boot_le0": 0.379,
+    "top_shared_terms_group_1": [
+     [
+      "PNEUMONITIS",
+      50
+     ],
+     [
+      "MYELOSUPPRESSION",
+      32
+     ],
+     [
+      "INFUSION RELATED REACTION",
+      17
+     ],
+     [
+      "NEUTROPHIL COUNT DECREASED",
+      12
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      10
+     ],
+     [
+      "DUODENAL ULCER PERFORATION",
+      10
+     ],
+     [
+      "FACET JOINT SYNDROME",
+      10
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      10
+     ],
+     [
+      "LUPUS VULGARIS",
+      10
+     ],
+     [
+      "RHEUMATIC FEVER",
+      10
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same origin",
+     "group_0": "different origin",
+     "pairs_1": 822,
+     "pairs_0": 1306,
+     "molecules_1": 71,
+     "molecules_0": 73,
+     "mean_1": 0.213,
+     "mean_0": 0.233,
+     "diff": -0.02,
+     "ci95": [
+      -0.123,
+      0.108
+     ],
+     "share_boot_le0": 0.696
+    }
+   },
+   "H3b_origin_sametarget_same_vs_diff": {
+    "group_1": "same origin",
+    "group_0": "different origin",
+    "pairs_1": 59,
+    "pairs_0": 74,
+    "molecules_1": 50,
+    "molecules_0": 53,
+    "mean_1": 3.186,
+    "mean_0": 3.824,
+    "diff": -0.638,
+    "ci95": [
+     -3.234,
+     1.482
+    ],
+    "share_boot_le0": 0.732,
+    "top_shared_terms_group_1": [
+     [
+      "EJECTION FRACTION DECREASED",
+      10
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      10
+     ],
+     [
+      "PNEUMONITIS",
+      10
+     ],
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      9
+     ],
+     [
+      "MYOCARDITIS",
+      8
+     ],
+     [
+      "IMMUNE-MEDIATED MYOCARDITIS",
+      6
+     ],
+     [
+      "MYELOSUPPRESSION",
+      6
+     ],
+     [
+      "NAIL BED INFLAMMATION",
+      6
+     ],
+     [
+      "NEUTROPHIL COUNT DECREASED",
+      4
+     ],
+     [
+      "BRAIN FOG",
+      3
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same origin",
+     "group_0": "different origin",
+     "pairs_1": 12,
+     "pairs_0": 11,
+     "molecules_1": 18,
+     "molecules_0": 14,
+     "mean_1": 1.25,
+     "mean_0": 1.455,
+     "diff": -0.205,
+     "ci95": [
+      -2.867,
+      2.374
+     ],
+     "share_boot_le0": 0.533
+    }
+   },
+   "H3_desc_difftarget_both_chimeric_vs_both_human": {
+    "group_1": "both chimeric",
+    "group_0": "both human",
+    "pairs_1": 34,
+    "pairs_0": 241,
+    "molecules_1": 9,
+    "molecules_0": 23,
+    "mean_1": 0.529,
+    "mean_0": 0.838,
+    "diff": -0.309,
+    "ci95": [
+     -1.384,
+     1.744
+    ],
+    "share_boot_le0": 0.759,
+    "top_shared_terms_group_1": [
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY",
+      1
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      1
+     ],
+     [
+      "C-REACTIVE PROTEIN",
+      1
+     ],
+     [
+      "DEEP VEIN THROMBOSIS POSTOPERATIVE",
+      1
+     ],
+     [
+      "DUODENAL ULCER PERFORATION",
+      1
+     ],
+     [
+      "FACET JOINT SYNDROME",
+      1
+     ],
+     [
+      "GRANULOMA SKIN",
+      1
+     ],
+     [
+      "HAND DEFORMITY",
+      1
+     ],
+     [
+      "INFUSION RELATED REACTION",
+      1
+     ],
+     [
+      "LUPUS VULGARIS",
+      1
+     ]
+    ]
+   },
+   "H4a_format_difftarget_same_vs_diff": {
+    "group_1": "same format",
+    "group_0": "different format",
+    "pairs_1": 1801,
+    "pairs_0": 2307,
+    "molecules_1": 86,
+    "molecules_0": 94,
+    "mean_1": 0.495,
+    "mean_0": 0.5,
+    "diff": -0.005,
+    "ci95": [
+     -0.225,
+     0.238
+    ],
+    "share_boot_le0": 0.51,
+    "top_shared_terms_group_1": [
+     [
+      "PNEUMONITIS",
+      52
+     ],
+     [
+      "MYELOSUPPRESSION",
+      49
+     ],
+     [
+      "INFUSION RELATED REACTION",
+      36
+     ],
+     [
+      "MYOCARDITIS",
+      26
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      21
+     ],
+     [
+      "NEUTROPENIA",
+      19
+     ],
+     [
+      "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+      18
+     ],
+     [
+      "DUODENAL ULCER PERFORATION",
+      18
+     ],
+     [
+      "FACET JOINT SYNDROME",
+      18
+     ],
+     [
+      "LUPUS VULGARIS",
+      18
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same format",
+     "group_0": "different format",
+     "pairs_1": 1496,
+     "pairs_0": 2015,
+     "molecules_1": 79,
+     "molecules_0": 94,
+     "mean_1": 0.208,
+     "mean_0": 0.305,
+     "diff": -0.097,
+     "ci95": [
+      -0.239,
+      0.04
+     ],
+     "share_boot_le0": 0.928
+    }
+   },
+   "H4b_format_sametarget_same_vs_diff": {
+    "group_1": "same format",
+    "group_0": "different format",
+    "pairs_1": 175,
+    "pairs_0": 88,
+    "molecules_1": 78,
+    "molecules_0": 45,
+    "mean_1": 4.171,
+    "mean_0": 3.545,
+    "diff": 0.626,
+    "ci95": [
+     -2.636,
+     2.831
+    ],
+    "share_boot_le0": 0.295,
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      35
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      35
+     ],
+     [
+      "PNEUMONITIS",
+      31
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      29
+     ],
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      29
+     ],
+     [
+      "MYOCARDITIS",
+      29
+     ],
+     [
+      "NEUTROPHIL COUNT DECREASED",
+      25
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      24
+     ],
+     [
+      "IMMUNE-MEDIATED MYOCARDITIS",
+      21
+     ],
+     [
+      "MYELOSUPPRESSION",
+      20
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same format",
+     "group_0": "different format",
+     "pairs_1": 34,
+     "pairs_0": 31,
+     "molecules_1": 27,
+     "molecules_0": 25,
+     "mean_1": 2.971,
+     "mean_0": 1.226,
+     "diff": 1.745,
+     "ci95": [
+      -0.23,
+      3.318
+     ],
+     "share_boot_le0": 0.036
+    }
+   },
+   "H4_desc_difftarget_same_format_by_format": {
+    "ADC": {
+     "pairs": 16,
+     "mean": 0.812
+    },
+    "CAR_T": {
+     "pairs": 8,
+     "mean": 6.875
+    },
+    "Fc_fusion": {
+     "pairs": 1,
+     "mean": 0.0
+    },
+    "TCE": {
+     "pairs": 0,
+     "mean": null
+    },
+    "bispecific_other": {
+     "pairs": 3,
+     "mean": 0.667
+    },
+    "fragment": {
+     "pairs": 9,
+     "mean": 0.111
+    },
+    "other_antibody": {
+     "pairs": 0,
+     "mean": null
+    },
+    "whole_mAb": {
+     "pairs": 1764,
+     "mean": 0.465
+    }
+   },
+   "H4_desc_CD3E_pairs_TCE_TCE_vs_TCE_monospecific": {
+    "group_1": "TCE-TCE",
+    "group_0": "TCE-anti-CD3 monospecific",
+    "pairs_1": 28,
+    "pairs_0": 16,
+    "molecules_1": 8,
+    "molecules_0": 10,
+    "mean_1": 5.357,
+    "mean_0": 1.312,
+    "diff": 4.045,
+    "ci95": [
+     2.582,
+     5.492
+    ],
+    "share_boot_le0": 0.0,
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      28
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      28
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      21
+     ],
+     [
+      "CYTOMEGALOVIRUS INFECTION REACTIVATION",
+      15
+     ],
+     [
+      "TUMOUR LYSIS SYNDROME",
+      15
+     ],
+     [
+      "TUMOUR FLARE",
+      10
+     ],
+     [
+      "CYTOPENIA",
+      6
+     ],
+     [
+      "CYTOMEGALOVIRUS INFECTION",
+      3
+     ],
+     [
+      "HAEMOPHAGOCYTIC LYMPHOHISTIOCYTOSIS",
+      3
+     ],
+     [
+      "NEUROTOXICITY",
+      3
+     ]
+    ]
+   },
+   "H4_desc_CD19_pairs_CART_CART_vs_CART_antibody": {
+    "group_1": "CAR_T-CAR_T",
+    "group_0": "CAR_T-antibody",
+    "pairs_1": 6,
+    "pairs_0": 16,
+    "molecules_1": 4,
+    "molecules_0": 8,
+    "mean_1": 9.833,
+    "mean_0": 2.875,
+    "diff": 6.958,
+    "ci95": [
+     4.447,
+     9.625
+    ],
+    "share_boot_le0": 0.0,
+    "note": "fewer than 10 pairs in a group - reported, not interpreted",
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      6
+     ],
+     [
+      "CYTOPENIA",
+      6
+     ],
+     [
+      "HAEMOPHAGOCYTIC LYMPHOHISTIOCYTOSIS",
+      6
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      6
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      6
+     ],
+     [
+      "NEUROTOXICITY",
+      6
+     ],
+     [
+      "SERUM FERRITIN INCREASED",
+      6
+     ],
+     [
+      "B-CELL APLASIA",
+      3
+     ],
+     [
+      "ENCEPHALOPATHY",
+      3
+     ],
+     [
+      "MYELODYSPLASTIC SYNDROME",
+      3
+     ]
+    ]
+   },
+   "H4_desc_CD19_pairs_antibody_antibody_vs_CART_antibody": {
+    "group_1": "antibody-antibody",
+    "group_0": "CAR_T-antibody",
+    "pairs_1": 6,
+    "pairs_0": 16,
+    "molecules_1": 4,
+    "molecules_0": 8,
+    "mean_1": 1.333,
+    "mean_0": 2.875,
+    "diff": -1.542,
+    "ci95": [
+     -2.733,
+     -0.5
+    ],
+    "share_boot_le0": 0.91,
+    "note": "fewer than 10 pairs in a group - reported, not interpreted",
+    "top_shared_terms_group_1": [
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      3
+     ],
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      1
+     ],
+     [
+      "CYTOPENIA",
+      1
+     ],
+     [
+      "FUSARIUM INFECTION",
+      1
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      1
+     ],
+     [
+      "NEUTROPENIA",
+      1
+     ]
+    ]
+   },
+   "H4_desc_difftarget_CART_CART_vs_other_difftarget": {
+    "group_1": "CAR_T-CAR_T different target",
+    "group_0": "other different-target",
+    "pairs_1": 8,
+    "pairs_0": 4100,
+    "molecules_1": 6,
+    "molecules_0": 94,
+    "mean_1": 6.875,
+    "mean_0": 0.485,
+    "diff": 6.39,
+    "ci95": [
+     4.569,
+     8.061
+    ],
+    "share_boot_le0": 0.0,
+    "note": "fewer than 10 pairs in a group - reported, not interpreted",
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      8
+     ],
+     [
+      "CYTOPENIA",
+      8
+     ],
+     [
+      "HAEMOPHAGOCYTIC LYMPHOHISTIOCYTOSIS",
+      8
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      8
+     ],
+     [
+      "NEUROTOXICITY",
+      8
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      4
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED HAEMATOTOXICITY",
+      4
+     ],
+     [
+      "MYELODYSPLASTIC SYNDROME",
+      3
+     ],
+     [
+      "HYPOALBUMINAEMIA",
+      2
+     ],
+     [
+      "SQUAMOUS CELL CARCINOMA OF SKIN",
+      2
+     ]
+    ]
+   },
+   "H5a_sametarget_membrane_vs_secreted": {
+    "group_1": "membrane target",
+    "group_0": "secreted target",
+    "pairs_1": 339,
+    "pairs_0": 42,
+    "molecules_1": 108,
+    "molecules_0": 33,
+    "mean_1": 4.024,
+    "mean_0": 2.69,
+    "diff": 1.333,
+    "ci95": [
+     -1.059,
+     3.537
+    ],
+    "share_boot_le0": 0.132,
+    "top_shared_terms_group_1": [
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      59
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      52
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      48
+     ],
+     [
+      "INFLUENZA LIKE ILLNESS",
+      36
+     ],
+     [
+      "PNEUMONITIS",
+      33
+     ],
+     [
+      "CYTOPENIA",
+      29
+     ],
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      29
+     ],
+     [
+      "MYOCARDITIS",
+      29
+     ],
+     [
+      "NEUTROPHIL COUNT DECREASED",
+      26
+     ],
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      24
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "membrane target",
+     "group_0": "secreted target",
+     "pairs_1": 84,
+     "pairs_0": 9,
+     "molecules_1": 52,
+     "molecules_0": 13,
+     "mean_1": 1.798,
+     "mean_0": 1.222,
+     "diff": 0.575,
+     "ci95": [
+      -1.223,
+      2.021
+     ],
+     "share_boot_le0": 0.231,
+     "note": "fewer than 10 pairs in a group - reported, not interpreted"
+    }
+   },
+   "H5b_difftarget_same_vs_diff_class": {
+    "group_1": "same class",
+    "group_0": "different class",
+    "pairs_1": 7050,
+    "pairs_0": 3894,
+    "molecules_1": 151,
+    "molecules_0": 151,
+    "mean_1": 0.372,
+    "mean_0": 0.156,
+    "diff": 0.216,
+    "ci95": [
+     0.086,
+     0.351
+    ],
+    "share_boot_le0": 0.001,
+    "top_shared_terms_group_1": [
+     [
+      "PNEUMONITIS",
+      157
+     ],
+     [
+      "CYTOKINE RELEASE SYNDROME",
+      131
+     ],
+     [
+      "HYPOGAMMAGLOBULINAEMIA",
+      119
+     ],
+     [
+      "NEUTROPHIL COUNT DECREASED",
+      110
+     ],
+     [
+      "FEBRILE NEUTROPENIA",
+      98
+     ],
+     [
+      "MYELOSUPPRESSION",
+      97
+     ],
+     [
+      "CYTOPENIA",
+      76
+     ],
+     [
+      "INFUSION RELATED REACTION",
+      76
+     ],
+     [
+      "IMMUNE EFFECTOR CELL-ASSOCIATED NEUROTOXICITY SYNDROME",
+      72
+     ],
+     [
+      "NEUTROPENIA",
+      72
+     ]
+    ],
+    "no_shared_indication": {
+     "group_1": "same class",
+     "group_0": "different class",
+     "pairs_1": 6309,
+     "pairs_0": 3671,
+     "molecules_1": 151,
+     "molecules_0": 151,
+     "mean_1": 0.227,
+     "mean_0": 0.087,
+     "diff": 0.14,
+     "ci95": [
+      0.068,
+      0.227
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "H5_desc_membrane_same_minus_diff_within_class": {
+    "pairs_same": 339,
+    "pairs_diff": 6564,
+    "mean_same": 4.024,
+    "mean_diff": 0.379
+   },
+   "H5_desc_secreted_same_minus_diff_within_class": {
+    "pairs_same": 42,
+    "pairs_diff": 486,
+    "mean_same": 2.69,
+    "mean_diff": 0.278
+   },
+   "H5_desc_PD1_x_PDL1_vs_other_difftarget_antibody": {
+    "group_1": "PD-1 x PD-L1 (different target)",
+    "group_0": "other different-target antibody pairs",
+    "pairs_1": 39,
+    "pairs_0": 3390,
+    "molecules_1": 16,
+    "molecules_0": 86,
+    "mean_1": 3.538,
+    "mean_0": 0.418,
+    "diff": 3.12,
+    "ci95": [
+     1.406,
+     5.003
+    ],
+    "share_boot_le0": 0.0,
+    "top_shared_terms_group_1": [
+     [
+      "IMMUNE-MEDIATED HEPATITIS",
+      21
+     ],
+     [
+      "IMMUNE-MEDIATED LUNG DISEASE",
+      16
+     ],
+     [
+      "MYOCARDITIS",
+      16
+     ],
+     [
+      "PNEUMONITIS",
+      16
+     ],
+     [
+      "HYPOPHYSITIS",
+      9
+     ],
+     [
+      "IMMUNE-MEDIATED ENTEROCOLITIS",
+      8
+     ],
+     [
+      "IMMUNE-MEDIATED MYOCARDITIS",
+      7
+     ],
+     [
+      "HYPOTHYROIDISM",
+      6
+     ],
+     [
+      "NEPHRITIS",
+      6
+     ],
+     [
+      "ADRENAL INSUFFICIENCY",
+      4
+     ]
+    ]
+   }
+  }
+ },
+ "post_spec_addendum": {
+  "note": "added after results were seen; not in SPEC.md",
+  "seeds": "spawn(40)[32] PRR, [33] IC025",
+  "prr_clean": {
+   "biologic_all": {
+    "n_molecules": 151,
+    "same_target_pairs": 381,
+    "delta": 2.043,
+    "ci95": [
+     1.54,
+     2.584
+    ]
+   },
+   "excl_CAR_T_TCE": {
+    "n_molecules": 137,
+    "same_target_pairs": 288,
+    "delta": 2.066,
+    "ci95": [
+     1.507,
+     2.724
+    ]
+   },
+   "excl_CAR_T_TCE_ADC": {
+    "n_molecules": 129,
+    "same_target_pairs": 268,
+    "delta": 2.151,
+    "ci95": [
+     1.567,
+     2.804
+    ]
+   }
+  },
+  "ic025_clean2": {
+   "biologic_all": {
+    "n_molecules": 151,
+    "same_target_pairs": 381,
+    "delta": 3.721,
+    "ci95": [
+     3.0,
+     4.526
+    ]
+   },
+   "excl_CAR_T_TCE": {
+    "n_molecules": 137,
+    "same_target_pairs": 288,
+    "delta": 3.701,
+    "ci95": [
+     2.934,
+     4.631
+    ]
+   },
+   "excl_CAR_T_TCE_ADC": {
+    "n_molecules": 129,
+    "same_target_pairs": 268,
+    "delta": 3.832,
+    "ci95": [
+     3.01,
+     4.902
+    ]
+   }
+  }
+ }
+}

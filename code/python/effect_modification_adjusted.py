@@ -56,32 +56,33 @@ def contrasts(P, mols, seed):
                         mean_different=round(float(y[m0].mean()), 3), difference=round(float(d()), 3), ci95=[round(float(lo), 3), round(float(hi), 3)])
     return out
 
-for label in ("prr_clean", "ic025_clean2"):
-    P = pd.read_csv(f"{T}/pairs_all_R2_{label}.csv.gz", dtype={"rx_i": str, "rx_j": str}); P["atc_missing"] = 1 - P.atc_both
-    P["mi"], P["mj"] = P.rx_i.map(mt), P.rx_j.map(mt)
-    assert P.mi.notna().all() and P.mj.notna().all()
-    paper = json.load(open(f"{T}/target_vs_class_R2_{label}.json"))["model_full"]["same_target"]
-    out = dict(label=label, B=B, paper_model_full_same_target=paper, strata={})
-    for nm, sel in (("all_pairs_refit", np.ones(len(P), bool)),
-                    ("biologic_pairs", (P.mi == "biologic") & (P.mj == "biologic")),
-                    ("small_molecule_pairs", (P.mi == "small_molecule") & (P.mj == "small_molecule")),
-                    ("peptide_pairs", (P.mi == "peptide") & (P.mj == "peptide"))):
-        Q = P[np.asarray(sel)].reset_index(drop=True)
-        mols = sorted(set(Q.rx_i) | set(Q.rx_j)); ix = {m: k for k, m in enumerate(mols)}; Q["ii"], Q["jj"] = Q.rx_i.map(ix), Q.rx_j.map(ix)
-        res = dict(molecules=len(mols), pairs=int(len(Q)), same_target_pairs=int(Q.same_target.sum()))
-        if res["same_target_pairs"] < 10: res["note"] = "too few same-target pairs"; out["strata"][nm] = res; continue
-        res["unadjusted"], _, _ = fit(Q, ["same_target"], mols, 1)
-        res["class_only"], _, _ = fit(Q, ["same_target", "same_atc4", "same_atc3", "same_atc1", "atc_missing", "same_epc", "epc_missing"], mols, 2)
-        res["full"], _, _ = fit(Q, COLS, mols, 3)
-        res["within_class_contrasts"] = contrasts(Q, mols, 4)
-        out["strata"][nm] = res
-        f = res["full"]["same_target"]; u = res["unadjusted"]["same_target"]
-        print(label, nm, res["molecules"], res["same_target_pairs"], "unadj", u["beta"], u["ci95"], "| full", f["beta"], f["ci95"], flush=True)
-    # pooled interaction model: does the adjusted same-target coefficient differ for biologic-biologic pairs?
-    Q = P.copy(); mols = sorted(set(Q.rx_i) | set(Q.rx_j)); ix = {m: k for k, m in enumerate(mols)}; Q["ii"], Q["jj"] = Q.rx_i.map(ix), Q.rx_j.map(ix)
-    Q["bio_pair"] = ((Q.mi == "biologic") & (Q.mj == "biologic")).astype(int)
-    Q["mixed_pair"] = (((Q.mi == "biologic") & (Q.mj != "biologic")) | ((Q.mj == "biologic") & (Q.mi != "biologic"))).astype(int)
-    Q["target_x_bio"] = Q.same_target * Q.bio_pair; Q["target_x_mixed"] = Q.same_target * Q.mixed_pair
-    out["pooled_interaction"], _, _ = fit(Q, COLS + ["bio_pair", "mixed_pair", "target_x_bio", "target_x_mixed"], mols, 5)
-    print(label, "interaction target_x_bio", out["pooled_interaction"]["target_x_bio"], flush=True)
-    json.dump(out, open(f"{T}/effect_modification_adjusted_{label}.json", "w"), indent=1)
+if __name__ == "__main__":
+    for label in ("prr_clean", "ic025_clean2"):
+        P = pd.read_csv(f"{T}/pairs_all_R2_{label}.csv.gz", dtype={"rx_i": str, "rx_j": str}); P["atc_missing"] = 1 - P.atc_both
+        P["mi"], P["mj"] = P.rx_i.map(mt), P.rx_j.map(mt)
+        assert P.mi.notna().all() and P.mj.notna().all()
+        paper = json.load(open(f"{T}/target_vs_class_R2_{label}.json"))["model_full"]["same_target"]
+        out = dict(label=label, B=B, paper_model_full_same_target=paper, strata={})
+        for nm, sel in (("all_pairs_refit", np.ones(len(P), bool)),
+                        ("biologic_pairs", (P.mi == "biologic") & (P.mj == "biologic")),
+                        ("small_molecule_pairs", (P.mi == "small_molecule") & (P.mj == "small_molecule")),
+                        ("peptide_pairs", (P.mi == "peptide") & (P.mj == "peptide"))):
+            Q = P[np.asarray(sel)].reset_index(drop=True)
+            mols = sorted(set(Q.rx_i) | set(Q.rx_j)); ix = {m: k for k, m in enumerate(mols)}; Q["ii"], Q["jj"] = Q.rx_i.map(ix), Q.rx_j.map(ix)
+            res = dict(molecules=len(mols), pairs=int(len(Q)), same_target_pairs=int(Q.same_target.sum()))
+            if res["same_target_pairs"] < 10: res["note"] = "too few same-target pairs"; out["strata"][nm] = res; continue
+            res["unadjusted"], _, _ = fit(Q, ["same_target"], mols, 1)
+            res["class_only"], _, _ = fit(Q, ["same_target", "same_atc4", "same_atc3", "same_atc1", "atc_missing", "same_epc", "epc_missing"], mols, 2)
+            res["full"], _, _ = fit(Q, COLS, mols, 3)
+            res["within_class_contrasts"] = contrasts(Q, mols, 4)
+            out["strata"][nm] = res
+            f = res["full"]["same_target"]; u = res["unadjusted"]["same_target"]
+            print(label, nm, res["molecules"], res["same_target_pairs"], "unadj", u["beta"], u["ci95"], "| full", f["beta"], f["ci95"], flush=True)
+        # pooled interaction model: does the adjusted same-target coefficient differ for biologic-biologic pairs?
+        Q = P.copy(); mols = sorted(set(Q.rx_i) | set(Q.rx_j)); ix = {m: k for k, m in enumerate(mols)}; Q["ii"], Q["jj"] = Q.rx_i.map(ix), Q.rx_j.map(ix)
+        Q["bio_pair"] = ((Q.mi == "biologic") & (Q.mj == "biologic")).astype(int)
+        Q["mixed_pair"] = (((Q.mi == "biologic") & (Q.mj != "biologic")) | ((Q.mj == "biologic") & (Q.mi != "biologic"))).astype(int)
+        Q["target_x_bio"] = Q.same_target * Q.bio_pair; Q["target_x_mixed"] = Q.same_target * Q.mixed_pair
+        out["pooled_interaction"], _, _ = fit(Q, COLS + ["bio_pair", "mixed_pair", "target_x_bio", "target_x_mixed"], mols, 5)
+        print(label, "interaction target_x_bio", out["pooled_interaction"]["target_x_bio"], flush=True)
+        json.dump(out, open(f"{T}/effect_modification_adjusted_{label}.json", "w"), indent=1)
