@@ -1,115 +1,140 @@
 # Target-level overlap of adverse event signals (FAERS + ClinicalTrials.gov)
 
-Analysis code, pre-specified protocol and aggregate results for the study:
+Analysis code, pre-specified protocol and amendments, aggregate results and figures for the study:
 
 > **Overlap of Adverse Event Signals Among Marketed Drugs That Share a Molecular Target, Within and Across Drug Classes: A Disproportionality Analysis of the FDA Adverse Event Reporting System and a Parallel Analysis of Trial-Reported Adverse Events**
 > Fedor Lipskerov. *Manuscript in preparation.* The article text is not in this repository.
 
-**Question.** Do two marketed molecules that act on the same human protein target share more of their top-ranked spontaneous-report safety signals than two molecules that do not? And how much of that excess is left after accounting for drug class, shared indication and co-reporting?
-
-**Data.** FDA Adverse Event Reporting System quarterly files from 2004Q1 to 2026Q3. A parallel analysis uses adverse events reported in the results of ClinicalTrials.gov trials.
+**Question.** Do two marketed molecules that act on the same human protein target share more of their top-ranked spontaneous-report safety signals than two molecules that do not? How much of that excess remains after drug class, shared indication and co-reporting are accounted for? And for which kinds of drugs does it remain?
 
 ## Repository layout
 
 ```
 .
-├── protocol/            Statistical analysis plan (SAP v1, fixed before the confirmatory analysis)
+├── protocol/
+│   ├── SAP.md                 Statistical analysis plan v1 (fixed before the confirmatory analysis)
+│   └── AMENDMENT_3–5.md       Later analyses, each fixed and hashed before its own results (see protocol/README.md)
 ├── code/
-│   ├── python/          Every analysis step, from the FAERS quarterly files to figures
-│   ├── run_revision.sh  End-to-end driver (amendment 2 analysis)
-│   └── run_revision_resume.sh
+│   ├── python/                Every analysis step, from the FDA quarterly files to the figures
+│   └── run_revision*.sh       End-to-end driver for the amendment-2 analysis
 ├── data/
-│   ├── README.md        Data sources, data dictionary, availability   ← start here
-│   ├── MANIFEST.tsv     Row counts and sha256 of the frozen input tables
-│   └── raw/faers_quarterly/MANIFEST.tsv   URL, size and sha256 of every FDA quarterly file used
+│   ├── README.md              Sources, availability, column dictionary  ← start here for data
+│   ├── MANIFEST.tsv           Row counts and sha256 of the frozen input tables (freeze v1, 2026-11-13)
+│   └── raw/faers_quarterly/MANIFEST.tsv   URL, size and sha256 of the 91 FDA quarterly files used
 ├── results/
-│   ├── RESULTS_SUMMARY.md               All reported numbers, generated from the files in tables/
-│   ├── LIMITATIONS_AND_DEVIATIONS.md    Deviations from the SAP, post hoc amendments, analyses not run
-│   ├── EFFECT_MODIFICATION.md           Post hoc: biologic vs small molecule, route, ATC group, era
-│   ├── tables/          Aggregate results (JSON)
-│   └── figures/         Main figures (PNG 300 dpi + SVG)
-├── requirements.txt
-├── CITATION.cff
-└── LICENSE              MIT (code); results/ and protocol/ are CC BY 4.0
+│   ├── RESULTS_SUMMARY.md     Every reported number, generated from tables/ (sections 1–9 main, 10 post hoc)
+│   ├── EFFECT_MODIFICATION.md Post hoc analyses explained (§1–12)
+│   ├── POST_HOC_COMPARISONS.md Every post hoc estimate (212 rows) with source and specification
+│   ├── LIMITATIONS_AND_DEVIATIONS.md  Deviations from the SAP, amendments, analyses not run
+│   ├── tables/                Aggregate results (JSON only)
+│   └── figures/v3/            Current figures (PNG 300 dpi + SVG); figures/round2/ = superseded
+├── requirements.txt · CITATION.cff · LICENSE (MIT, code) · results/LICENSE.md (CC BY 4.0)
 ```
 
 ## Results at a glance
 
-These numbers come from [`results/RESULTS_SUMMARY.md`](results/RESULTS_SUMMARY.md), the only source of numbers for the article.
+**Source.** All numbers are from [`results/RESULTS_SUMMARY.md`](results/RESULTS_SUMMARY.md). Each pair shows the PRR ranking (SAP v1) first, then the IC025 ranking (amendment 2).
 
-- **Primary contrast.** 1,039 molecules, extraction b, top 20 signals per molecule. A same-target pair shares more signals than a different-target pair by **0.872** (95% CI 0.731–0.985) under PRR ranking with standard cleaning, and by **1.740** (1.523–1.906) under IC025 ranking with extended cleaning.
-- **Adjusted pair model.** Run on all 539,241 pairs. It adjusts for ATC levels 4/3/1, FDA established pharmacologic class (EPC), shared indication, report volume, approval-year gap and co-mention. The same-target coefficient is **0.143** (0.078–0.213) under PRR and **0.299** (0.175–0.435) under IC025.
-- **Post hoc** (see [`results/EFFECT_MODIFICATION.md`](results/EFFECT_MODIFICATION.md)). After the same adjustment, the effect is larger among biologics than among small molecules: 0.85 vs 0.11 under PRR. Route of administration adds nothing beyond modality.
+**Main analyses:**
+- **Primary contrast.** Data: 1,039 molecules; 7,923 same-target pairs. A same-target pair shares more top-20 signals than a different-target pair: Δ **0.872** (95% CI 0.731–0.985) / 1.740 (1.523–1.906).
+- **All drivers fitted together.** On 539,241 pairs, adjusted for class, indication, volume, year and co-mention, the same-target coefficient falls 0.48 → 0.25 → **0.143** (0.078–0.213) / 0.299 (0.175–0.435).
 
-All analyses are hypothesis-generating. A shared signal in spontaneous reports does not establish a shared causal adverse effect.
+**Post hoc analyses** (exploratory; [`EFFECT_MODIFICATION.md`](results/EFFECT_MODIFICATION.md)):
+- **Where the adjusted remainder sits.** A joint model ([`AMENDMENT_3`](protocol/AMENDMENT_3.md)) places it in biologic pairs (interaction +0.94, 0.46–1.48) and in pairs of drugs approved from 2000 onward (+0.32, 0.10–0.58).
+- **Kinase-family and oncology.** Neither interaction is separable from the others.
+- **Reporting.** The biologic interaction persists in late-only, FAERS-era, health-professional-only and non-US reports ([`AMENDMENT_5`](protocol/AMENDMENT_5.md)).
+- **Antibody structure.** Isotype, origin and format show no association.
+- **Trial-reported adverse events.** The overall effect is present: Δ 1.21 (0.99–1.45). The biologic modifier is not: −0.16 (−0.74 to 0.54).
+
+**Caveat.** All analyses are hypothesis-generating. A shared signal in spontaneous reports does not establish a shared causal adverse effect.
+
+## Figures (`results/figures/v3/`)
+
+| file | content |
+|---|---|
+| `fig1_design_flow` | Design schematic and data flow |
+| `fig2_overall_and_adjustment` | Primary Δ and the adjustment ladder |
+| `fig3_what_explains` | Within-class and indication strata, co-reporting, as-of (hindsight) test |
+| `fig4_forest_adjusted_modifiers` | Adjusted same-target coefficient by target family, therapeutic area and drug type, plus the joint model |
+| `fig5_biologic_robustness` | Biologic vs small molecule: adjustment ladder, robustness checks, oncology split |
+| `fig6a_trials`, `fig6b_positive_control`, `fig6c_trial_modifiers` | Trial-reported adverse events |
+| `figS1`, `figS3`, `figS4_*`, `figS9`–`figS12` | All extractions and rankings; target waterfall; shared reactions by group; structure analysis (S9–S11); reporting-artefact test (S12). S2 and S5–S8 are planned and not yet drawn |
 
 ## Data sources and availability
 
 | Source | Used for | Public? |
 |---|---|---|
-| FDA FAERS / legacy AERS quarterly ASCII files, 2004Q1–2026Q3 (`fis.fda.gov`) | Reports, drugs, reactions, indications. URLs and checksums are in `data/raw/faers_quarterly/MANIFEST.tsv` | Yes |
-| ClinicalTrials.gov results via AACT (September 2026 snapshot) | Trial arms and reported adverse events | Yes |
-| ChEMBL drug mechanisms | Molecule → target membership | Yes (CC BY-SA 3.0) |
-| RxNorm, WHO ATC via RxNorm | Ingredient identity, ATC groups | Yes (subject to the UMLS/RxNorm licence terms) |
+| FDA FAERS / legacy AERS quarterly ASCII files, 2004Q1–2026Q3 (`fis.fda.gov`) | Reports, drugs, reactions, indications, reporter, country, dates | Yes |
+| ClinicalTrials.gov results via AACT (September 2026 snapshot) | Trial arms, reported adverse events, MeSH conditions | Yes |
+| ChEMBL mechanisms and protein classification (REST API) | Molecule → target; target family | Yes (CC BY-SA 3.0) |
+| RxNorm; WHO ATC via RxNorm | Ingredient identity, ATC groups | Yes (subject to the UMLS/RxNorm licence terms) |
 | openFDA, FDA NDC directory, FDA Purple Book, Drugs@FDA | Pharmacologic class, approval dates, routes, BLA status | Yes |
-| **Trialytic database** ([trialytic.ai](https://trialytic.ai)) | Curated drug-name → RxNorm-ingredient resolution, drug ↔ trial bridge, assembled target membership and the FDA crosswalk. These were exported once, as a frozen snapshot, on 2026-11-12 | **No.** These are proprietary curated tables and are not redistributed |
+| Thera-SAbDab (Oxford OPIG) | Antibody format, isotype and origin (structure analysis) | Yes |
+| UniProt | Target cellular location (structure analysis) | Yes (CC BY 4.0) |
+| **Trialytic database** ([trialytic.ai](https://trialytic.ai)) | Curated drug-name → RxNorm-ingredient resolution, drug ↔ trial bridge, assembled target membership and the FDA crosswalk. Frozen exports, final freeze v1 on 2026-11-13 | **No.** Proprietary curated tables, not redistributed |
 
-**What is and is not in this repository:**
-- **Not here:** row-level inputs and intermediate tables, i.e. anything exported from or built with the Trialytic database (per-molecule profiles, pair tables, name maps).
-- **Here:** their structure (column dictionary) and checksums, in [`data/README.md`](data/README.md) and `data/MANIFEST.tsv`.
+**What is and is not here:**
+- **Not here:** row-level inputs and intermediate tables, i.e. anything exported from or built with the Trialytic database.
+- **Here:** their structure and checksums, in [`data/README.md`](data/README.md) and `data/MANIFEST.tsv`.
 - **Access:** contact the author about access to the frozen snapshot for verification.
 
 ## Reproducing the analysis
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+export FAERS_STORE=~/faers_quarterly          # parsed FAERS DuckDB store
+export TRIALYTIC_ROOT=/path/to/trialytic      # only for steps that import Trialytic modules (see below)
+export REF_DIR=/path/to/reference_exports     # ndc.csv, pb.csv (FDA NDC directory, Purple Book), mesh_tree.csv (MeSH tree numbers)
 
-# 1. Download and parse the FDA quarterly files (public). Stores a DuckDB file in $FAERS_STORE (default ~/faers_quarterly)
-python3 code/python/faers_quarterly_ingest.py
-
-# 2. Place the frozen input tables in data/ (see data/README.md), then run the full pipeline:
-export FAERS_STORE=~/faers_quarterly
-export TRIALYTIC_ROOT=/path/to/trialytic     # only needed for steps importing Trialytic modules (see below)
-sh code/run_revision.sh                      # logs to logs/rev_*.log; results to results/tables/
-
-# 3. Summary and figures from saved results
-python3 code/python/make_results_summary_r2.py
-python3 code/python/make_paper_figures.py
+python3 code/python/faers_quarterly_ingest.py         # 1. download + parse the FDA quarterly files (public)
+sh code/run_revision.sh                                # 2. main analysis (needs the frozen inputs in data/, see data/README.md)
+python3 code/python/effect_modification.py             # 3. post hoc analyses, in this order:
+python3 code/python/effect_modification_adjusted.py
+python3 code/python/effect_modification_indication.py
+python3 code/python/fetch_target_family.py && python3 code/python/effect_modification_target.py
+python3 code/python/modifier_joint_model.py            #    amendment 3 (WP1–WP5) ...
+python3 code/python/modifier_trials.py && python3 code/python/action_direction.py
+python3 code/python/sensitivity_grid_R2.py && python3 code/python/target_level_terms.py
+python3 code/python/modifier_joint_model_a4.py && python3 code/python/action_direction_a4.py && python3 code/python/target_level_molboot_a4.py   # amendment 4
+python3 code/python/era_reporting.py && python3 code/python/biologic_subtypes.py   # amendment 5
+python3 code/python/biologic_structure.py              #    structure analysis (spec fixed first)
+python3 code/python/make_post_hoc_summary.py           # 4. RESULTS_SUMMARY.md + POST_HOC_COMPARISONS.md
+python3 code/python/make_figures_v3.py && python3 code/python/make_figures_structure.py && python3 code/python/make_figures_main_v3.py   # 5. figures
 ```
 
-**Environment variables.**
+**Built-in checks.** Every post hoc script first reproduces a known number and stops if it fails, for example 0.143 / 0.299, 1.2142, 0.8718 / 1.7401, 1.2494. The amendment-5 rebuild reproduces the stored profiles exactly.
 
-| variable | meaning |
-|---|---|
-| `FAERS_STORE` | Location of the parsed FAERS DuckDB store |
-| `COHORT_DIR` | Which extraction's cohort to use (set by the driver) |
-| `B` | Number of bootstrap resamples |
-| `FDA_API_KEY` | Optional openFDA key, only for the openFDA fetch scripts. Never committed |
-| `REF_DIR` | Folder holding `ndc.csv` and `pb.csv`: exports of the public FDA NDC directory and Purple Book. Used by `effect_modification.py` |
-| `TRIALYTIC_ROOT` | Path to a Trialytic code checkout |
+**Seeds.** Every resampling uses `numpy.random.SeedSequence` with a registered spawn index:
+- master seed 20261112 for the main analysis;
+- 20261113 for the post hoc analyses, with indices listed in the amendments.
 
-**`TRIALYTIC_ROOT` is needed by some steps.** Shared Trialytic modules are not included here: the drug-name normaliser (`build_drug_fda_crosswalk.normalize`), the FAERS reporting-artefact term list (`compute_faers_prr.BLACKLIST`) and the openFDA client. The steps that import them are `faers_q_build.py`, `faers_q_profiles.py`, `comention.py`, `asof_q.py`, `ctgov_profiles.py`, `ctgov_within_trial.py`, `full_rank_fetch.py`, `coreport_sample.py`, the seed script `asof_faers.py` and the `_v1` scripts. The artefact term list and the normaliser rules are described in the article's supplementary methods.
+**`TRIALYTIC_ROOT`.** Shared Trialytic modules are not included here:
+- the drug-name normaliser `build_drug_fda_crosswalk.normalize`;
+- the FAERS reporting-artefact term list `compute_faers_prr.BLACKLIST`;
+- the openFDA client.
 
-**Seeds.** Every resampling step uses a fixed seed (master seed 20261112; post hoc analyses 20261113). The output JSON files record their seed, B and input file.
+The steps that import them are `faers_q_build.py`, `faers_q_profiles.py`, `era_reporting.py`, `comention.py`, `asof_q.py`, `ctgov_profiles.py`, `ctgov_within_trial.py`, `full_rank_fetch.py` and `coreport_sample.py`, plus the seed and `_v1` scripts. The artefact term list and the normaliser rules are described in the article's supplementary methods.
 
 ## Analysis map
 
 | step | script | output |
 |---|---|---|
 | FAERS ingest, deduplication, drug mapping | `faers_quarterly_ingest.py`, `faers_q_build.py` | `$FAERS_STORE/faers.duckdb` |
-| Signals, cleaning, cohort, top-K profiles per extraction | `faers_q_profiles.py` | `data/derived/faers_q/<a–e>/` |
-| Primary estimand (node permutation, molecule bootstrap) | `primary_inference.py` | `results/tables/primary_*.json` |
-| Target vs class on all pairs, adjusted models | `pairs_all.py`, `h2_regression.py` | `results/tables/target_vs_class_*.json` |
-| Co-mention exclusion | `comention.py` | `results/tables/comention_summary_*.json` |
-| As-of-date (hindsight) test | `asof_q.py` | `results/tables/asof_summary_*.json` |
-| Trial adverse-event replication | `ctgov_arm_attribution_v2.py`, `ctgov_profiles.py`, `ctgov_within_trial.py`, `positive_control.py` | `results/tables/primary_R2_ctgov_*.json`, `positive_control_*.json` |
-| Null coverage, sensitivity grid | `null_coverage.py`, `sensitivity_grid.py` | `results/tables/` |
-| Post hoc effect modification | `effect_modification.py`, `effect_modification_adjusted.py` | `results/tables/effect_modification_*.json` |
-| Summary and figures | `make_results_summary_r2.py`, `make_paper_figures.py` | `results/RESULTS_SUMMARY.md`, `results/figures/` |
+| Signals, cleaning, cohort, top-K profiles | `faers_q_profiles.py` | `data/derived/faers_q/<a–e>/` |
+| Primary estimand (node permutation, molecule bootstrap) | `primary_inference.py` | `primary_*.json` |
+| Target vs class on all pairs, adjusted models | `pairs_all.py` | `target_vs_class_*.json` |
+| Co-mention exclusion; as-of test | `comention.py`; `asof_q.py` | `comention_summary_*`, `asof_summary_*` |
+| Trial adverse-event parallel analysis | `ctgov_arm_attribution_v2.py`, `ctgov_profiles.py`, `ctgov_within_trial.py`, `positive_control.py` | `primary_R2_ctgov_*`, `positive_control_*` |
+| Effect modification, one factor at a time | `effect_modification*.py` | `effect_modification_*.json` |
+| Joint modifier model; trial modifiers; opposite action; K/floor grid; per-target terms | `modifier_joint_model.py`, `modifier_trials.py`, `action_direction.py`, `sensitivity_grid_R2.py`, `target_level_terms.py` (+ `_a4` sensitivities) | `modifier_*`, `action_direction_*`, `sensitivity_grid_R2.*`, `shared_terms_by_group_*` |
+| Reporting-artefact test; biologic subtypes; structure | `era_reporting.py`, `biologic_subtypes.py`, `biologic_structure.py` | `era_reporting.json`, `biologic_subtypes.json`, `biologic_structure.json` |
+| Number source and figures | `make_results_summary_r2.py` + `make_post_hoc_summary.py`; `make_figures_*.py` | `RESULTS_SUMMARY.md`, `POST_HOC_COMPARISONS.md`, `figures/v3/` |
 
-Paths under `private/` named in code or documents (manuscript, internal reviews, audit samples) are unpublished working files and are not part of this repository.
+**Older script versions:**
+- `_v1.py` files are the round-1 versions, kept so changes after internal review stay traceable.
+- `h2_regression.py`, `asof_faers.py`, `make_paper_figures.py` and `make_figures_article.py` are superseded and kept for the record.
 
-Files ending in `_v1.py` are the round-1 versions, kept so the record of what changed after internal review stays traceable.
+**Unpublished working files.** Paths under `private/` that are named in code or documents (manuscript, internal reviews, specifications) point to unpublished working files and are not part of this repository.
 
 ## Citation
 
@@ -117,4 +142,6 @@ See [`CITATION.cff`](CITATION.cff). The article reference will be added on publi
 
 ## Licence
 
-Code: MIT ([`LICENSE`](LICENSE)). Results, figures and protocol: CC BY 4.0 ([`results/LICENSE.md`](results/LICENSE.md)). Third-party source data remain under their own terms.
+**Code:** MIT ([`LICENSE`](LICENSE)).
+**Results, figures, protocol:** CC BY 4.0 ([`results/LICENSE.md`](results/LICENSE.md)).
+**Third-party source data:** under their own terms.

@@ -3,7 +3,7 @@
 import json, glob, os
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-P = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")); T = os.path.join(P, "results/tables"); F = os.path.join(P, "results/figures"); os.makedirs(F, exist_ok=True)
+P = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")); T = os.path.join(P, "results/tables"); F = os.path.join(P, "results/figures/round2"); os.makedirs(F, exist_ok=True)   # round-2 figures, superseded by results/figures/v3
 J = lambda f: json.load(open(os.path.join(T, f)))
 SURF, INK, INK2, MUT, GRID, ACC, ACC2 = "#ffffff", "#0b0b0b", "#52514e", "#8a8880", "#e3e2dd", "#2a78d6", "#d9822b"
 plt.rcParams.update({"font.family": "Arial", "font.size": 9, "axes.edgecolor": GRID, "text.color": INK, "axes.labelcolor": INK2, "xtick.color": INK2, "ytick.color": INK})

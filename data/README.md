@@ -9,11 +9,15 @@ The row-level data used in this study are **not redistributed in this repository
 | FDA AERS/FAERS quarterly ASCII files, 2004Q1–2026Q3 (91 files) | `code/python/faers_quarterly_ingest.py` downloads them from `https://fis.fda.gov/content/Exports/`. URL, size, sha256 and parsed row counts of every file are in `raw/faers_quarterly/MANIFEST.tsv` | Reports, suspect drugs, reactions (MedDRA PT), indications, case characteristics |
 | ClinicalTrials.gov results, AACT September 2026 snapshot (`https://aact.ctti-clinicaltrials.org`) | AACT download | Trial arms, reported adverse events, conditions, interventions (`raw/ctgov/C1–C8`) |
 | FDA NDC directory, FDA Purple Book | FDA downloads | US routes of administration and BLA status (post hoc effect-modification analysis; `REF_DIR`) |
+| Thera-SAbDab (`opig.stats.ox.ac.uk`, downloaded 2026-11-13; sha256 recorded in `results/tables/biologic_structure.json`) | `code/python/biologic_structure.py` | Antibody format, isotype, origin |
+| UniProt REST (keywords for 64 targets, downloaded 2026-11-13) | `code/python/biologic_structure.py` | Target membrane vs secreted |
+| ChEMBL REST protein classification (263 targets, 2026-11-13) | `code/python/fetch_target_family.py` | Target family |
+| MeSH tree numbers (from AACT `mesh_terms`) → `REF_DIR/mesh_tree.csv` | AACT | Therapeutic area of each molecule's trials |
 | openFDA (`https://open.fda.gov`) | API | Report-count profiles for the stored-profile analysis (`raw/openfda_full/`) |
 
 ## 2. Trialytic database exports (not public)
 
-Several inputs were exported once from the **Trialytic database** ([trialytic.ai](https://trialytic.ai)), a curated clinical-trial and drug-safety database built from AACT, openFDA, ChEMBL and RxNorm. The frozen snapshot was taken on 2026-11-12 and is marked provisional in the project record. The tables hold:
+Several inputs were exported once from the **Trialytic database** ([trialytic.ai](https://trialytic.ai)), a curated clinical-trial and drug-safety database built from AACT, openFDA, ChEMBL and RxNorm. The final snapshot (freeze v1) was taken on 2026-11-13. It replaced a provisional freeze of 2026-11-12; all analysis inputs are identical between the two. The tables hold:
 - curated drug-name → RxNorm ingredient resolution
 - drug ↔ trial bridges
 - ChEMBL-derived target membership

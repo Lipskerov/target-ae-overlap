@@ -75,7 +75,7 @@ Labels refer to `private/reviews/RESPONSE.md`. The review had seen the round-1 r
 | F7 | Reporting-artefact test: profiles rebuilt from late-only, FAERS-era, health-professional, consumer and non-US reports; biologic subtypes | `protocol/AMENDMENT_5.md` (sha256 `839ce2f6…`) | measured; full-data rebuild reproduces the stored profiles exactly |
 | F8 | Biologic structure test (isotype, origin, format, ADC payload, target class; Thera-SAbDab and UniProt downloads) | `private/structure/SPEC.md` (sha256 `6bad6214…`); one labelled post-spec addendum | measured; reproduction biologic Δ 2.043 PASS |
 | F9 | Therapeutic-area labels: FAERS-indication definition failed (271/1,039 labelled) and was dropped; the trial-MeSH definition is used | `EFFECT_MODIFICATION.md` §6 | measured |
-| F10 | Data freeze v1 (2026-11-13) replaces provisional v0. Analysis inputs are identical; three raw files differ only in unused columns | `data/raw/trialytic_db/PROVENANCE.md` | measured |
+| F10 | Data freeze v1 of the Trialytic database exports ([trialytic.ai](https://trialytic.ai)), 2026-11-13, replaces provisional v0. Analysis inputs are identical; three raw files differ only in unused columns | `data/README.md`, `data/MANIFEST.tsv` | measured |
 
 **Multiplicity.** Across sections (b2) and (b3) there are 212 post hoc estimates (strata, differences and coefficients; most under both rankings, the trial analyses under one). No correction was applied. They are listed in `results/POST_HOC_COMPARISONS.md`. Only estimates with CIs are reported. The headline remains the SAP v1 primary estimate.
 
