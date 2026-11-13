@@ -511,6 +511,8 @@ def fig6c():
                 n = v.get("same_target_pairs")
                 yy = -y - si * 0.32
                 low_n = "note" in v
+                if key.startswith("difference"):   # a difference is not interpreted if either stratum has < 10 same-target pairs
+                    low_n = low_n or any("note" in A[sk][g][k2] for k2, _ in items if not k2.startswith("difference"))
                 ax1.plot([max(ci[0], xl[0]), min(ci[1], xl[1])], [yy, yy], color=col, lw=1.0,
                          ls=":" if low_n else "-")
                 ax1.plot(b, yy, mk, color=col, ms=3.2, mfc="white" if low_n else col, mec=col)

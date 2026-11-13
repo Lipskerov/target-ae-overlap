@@ -3478,6 +3478,441 @@
      }
     ]
    }
+  },
+  "fig2_overall_and_adjustment": {
+   "files": [
+    "results/figures/v3/fig2_overall_and_adjustment.png",
+    "results/figures/v3/fig2_overall_and_adjustment.svg"
+   ],
+   "sources": [
+    "primary_R2_b_*.json",
+    "target_vs_class_R2_*.json"
+   ],
+   "values": {
+    "prr_clean": [
+     {
+      "label": "same-target minus different-target \u0394 (7,923 same-target pairs)",
+      "beta": 0.8718,
+      "ci": [
+       0.7306,
+       0.9847
+      ]
+     },
+     {
+      "label": "unadjusted",
+      "beta": 0.4844,
+      "ci": [
+       0.4141,
+       0.5803
+      ]
+     },
+     {
+      "label": "+ class (ATC 4/3/1, FDA EPC)",
+      "beta": 0.2543,
+      "ci": [
+       0.1835,
+       0.3364
+      ]
+     },
+     {
+      "label": "+ indication, volume, year gap, co-mention",
+      "beta": 0.143,
+      "ci": [
+       0.078,
+       0.2127
+      ]
+     }
+    ],
+    "ic025_clean2": [
+     {
+      "label": "same-target minus different-target \u0394 (7,923 same-target pairs)",
+      "beta": 1.7401,
+      "ci": [
+       1.5232,
+       1.9061
+      ]
+     },
+     {
+      "label": "unadjusted",
+      "beta": 1.0518,
+      "ci": [
+       0.9198,
+       1.2314
+      ]
+     },
+     {
+      "label": "+ class (ATC 4/3/1, FDA EPC)",
+      "beta": 0.5169,
+      "ci": [
+       0.396,
+       0.6669
+      ]
+     },
+     {
+      "label": "+ indication, volume, year gap, co-mention",
+      "beta": 0.2993,
+      "ci": [
+       0.1747,
+       0.4345
+      ]
+     }
+    ]
+   }
+  },
+  "fig3_what_explains": {
+   "files": [
+    "results/figures/v3/fig3_what_explains.png",
+    "results/figures/v3/fig3_what_explains.svg"
+   ],
+   "sources": [
+    "target_vs_class_R2_*.json",
+    "comention_summary_*.json",
+    "asof_summary_*.json"
+   ],
+   "values": {
+    "prr_clean": [
+     {
+      "label": "same ATC level-4 group (1,800)",
+      "beta": 0.556,
+      "ci": [
+       0.2872,
+       0.8227
+      ]
+     },
+     {
+      "label": "different ATC level-4 group (5,087)",
+      "beta": 0.2836,
+      "ci": [
+       0.2158,
+       0.364
+      ]
+     },
+     {
+      "label": "same FDA class (1,267)",
+      "beta": 1.0014,
+      "ci": [
+       0.7508,
+       1.304
+      ]
+     },
+     {
+      "label": "different FDA class (1,553)",
+      "beta": 0.2774,
+      "ci": [
+       0.1741,
+       0.397
+      ]
+     },
+     {
+      "label": "shared indication (5,009)",
+      "beta": 0.5467,
+      "ci": [
+       0.4378,
+       0.6745
+      ]
+     },
+     {
+      "label": "no shared indication (2,914)",
+      "beta": 0.1051,
+      "ci": [
+       0.0627,
+       0.1521
+      ]
+     },
+     {
+      "label": "all reports",
+      "beta": 0.483,
+      "ci": [
+       0.403,
+       0.576
+      ]
+     },
+     {
+      "label": "reports naming both molecules removed",
+      "beta": 0.281,
+      "ci": [
+       0.227,
+       0.344
+      ]
+     },
+     {
+      "label": "vs volume-matched first molecules",
+      "beta": 0.7727,
+      "ci": [
+       0.5889,
+       1.2204
+      ]
+     },
+     {
+      "label": "vs other successors",
+      "beta": 0.7625,
+      "ci": [
+       0.5827,
+       1.1949
+      ]
+     },
+     {
+      "label": "vs class-matched first molecules",
+      "beta": 0.7447,
+      "ci": [
+       0.5586,
+       1.1738
+      ]
+     }
+    ],
+    "ic025_clean2": [
+     {
+      "label": "same ATC level-4 group (1,800)",
+      "beta": 1.0344,
+      "ci": [
+       0.55,
+       1.4801
+      ]
+     },
+     {
+      "label": "different ATC level-4 group (5,087)",
+      "beta": 0.6653,
+      "ci": [
+       0.5284,
+       0.8356
+      ]
+     },
+     {
+      "label": "same FDA class (1,267)",
+      "beta": 1.6674,
+      "ci": [
+       1.2084,
+       2.1605
+      ]
+     },
+     {
+      "label": "different FDA class (1,553)",
+      "beta": 0.7728,
+      "ci": [
+       0.5717,
+       1.0127
+      ]
+     },
+     {
+      "label": "shared indication (5,009)",
+      "beta": 1.1199,
+      "ci": [
+       0.909,
+       1.3574
+      ]
+     },
+     {
+      "label": "no shared indication (2,914)",
+      "beta": 0.3165,
+      "ci": [
+       0.2271,
+       0.4226
+      ]
+     },
+     {
+      "label": "all reports",
+      "beta": 1.055,
+      "ci": [
+       0.903,
+       1.222
+      ]
+     },
+     {
+      "label": "reports naming both molecules removed",
+      "beta": 0.801,
+      "ci": [
+       0.676,
+       0.938
+      ]
+     },
+     {
+      "label": "vs volume-matched first molecules",
+      "beta": 1.6005,
+      "ci": [
+       1.3271,
+       2.1327
+      ]
+     },
+     {
+      "label": "vs other successors",
+      "beta": 1.5846,
+      "ci": [
+       1.3373,
+       2.1006
+      ]
+     },
+     {
+      "label": "vs class-matched first molecules",
+      "beta": 1.4352,
+      "ci": [
+       1.1472,
+       1.9425
+      ]
+     }
+    ]
+   }
+  },
+  "fig6a_trials": {
+   "files": [
+    "results/figures/v3/fig6a_trials.png",
+    "results/figures/v3/fig6a_trials.svg"
+   ],
+   "sources": [
+    "primary_R2_ctgov_*.json"
+   ],
+   "values": [
+    {
+     "label": "all pairs (1,187)",
+     "beta": 1.2142,
+     "ci": [
+      0.9877,
+      1.448
+     ]
+    },
+    {
+     "label": "pairs sharing a trial removed (1,024)",
+     "beta": 0.996,
+     "ci": [
+      0.7916,
+      1.2345
+     ]
+    },
+    {
+     "label": "pairs sharing a trial condition removed (196)",
+     "beta": 0.5712,
+     "ci": [
+      0.2532,
+      0.9062
+     ]
+    }
+   ]
+  },
+  "figS1_all_extractions": {
+   "files": [
+    "results/figures/v3/figS1_all_extractions.png",
+    "results/figures/v3/figS1_all_extractions.svg"
+   ],
+   "sources": [
+    "primary_R2_*.json"
+   ],
+   "values": {
+    "prr_clean": [
+     {
+      "label": "primary + secondary suspect",
+      "beta": 0.8718,
+      "ci": [
+       0.7306,
+       0.9847
+      ]
+     },
+     {
+      "label": "primary suspect only",
+      "beta": 1.0844,
+      "ci": [
+       0.926,
+       1.2112
+      ]
+     },
+     {
+      "label": "health-professional reports",
+      "beta": 0.8044,
+      "ci": [
+       0.6684,
+       0.9221
+      ]
+     },
+     {
+      "label": "sole suspect",
+      "beta": 1.1796,
+      "ci": [
+       1.0099,
+       1.3164
+      ]
+     },
+     {
+      "label": "all ChEMBL targets",
+      "beta": 0.9102,
+      "ci": [
+       0.7772,
+       1.0158
+      ]
+     },
+     {
+      "label": "ROR025, standard cleaning",
+      "beta": 1.1016,
+      "ci": [
+       0.9382,
+       1.2415
+      ]
+     },
+     {
+      "label": "ROR025, extended cleaning",
+      "beta": 1.0496,
+      "ci": [
+       0.8916,
+       1.1732
+      ]
+     }
+    ],
+    "ic025_clean2": [
+     {
+      "label": "primary + secondary suspect",
+      "beta": 1.7401,
+      "ci": [
+       1.5232,
+       1.9061
+      ]
+     },
+     {
+      "label": "primary suspect only",
+      "beta": 2.2151,
+      "ci": [
+       2.0024,
+       2.4058
+      ]
+     },
+     {
+      "label": "health-professional reports",
+      "beta": 1.647,
+      "ci": [
+       1.4281,
+       1.8143
+      ]
+     },
+     {
+      "label": "sole suspect",
+      "beta": 2.2051,
+      "ci": [
+       1.9564,
+       2.392
+      ]
+     },
+     {
+      "label": "all ChEMBL targets",
+      "beta": 1.791,
+      "ci": [
+       1.5988,
+       1.9626
+      ]
+     },
+     {
+      "label": "ROR025, standard cleaning",
+      "beta": 1.1016,
+      "ci": [
+       0.9382,
+       1.2415
+      ]
+     },
+     {
+      "label": "ROR025, extended cleaning",
+      "beta": 1.0496,
+      "ci": [
+       0.8916,
+       1.1732
+      ]
+     }
+    ]
+   }
   }
  },
  "skipped": {

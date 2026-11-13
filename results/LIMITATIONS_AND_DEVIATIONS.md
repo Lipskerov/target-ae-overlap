@@ -60,7 +60,24 @@ Labels refer to `private/reviews/RESPONSE.md`. The review had seen the round-1 r
 | E3 | Within ChEMBL target family (protein classification fetched from the public ChEMBL API) | post hoc; measured (§7) |
 | E4 | Biologic vs small molecule restricted to single-target molecules | post hoc; measured (§8) |
 | E5 | About 30 stratum comparisons across two rankings; no multiplicity correction; only modality, family and area were adjusted, one at a time | limitation; measured |
-| E6 | Further analyses specified in `protocol/AMENDMENT_3.md` *before* they were run: joint modifier model, modifiers in trial data, action direction, K/floor grid, per-target values | post hoc relative to SAP v1; pre-specified relative to their own results |
+| E6 | Further analyses specified before they were run: see section (b3) | — |
+
+## (b3) Amendments 3–5 and the structure test, 2026-11-13 (each fixed and hashed before its own results; all post hoc relative to SAP v1)
+
+| # | Analysis | Specification | State |
+|---|---|---|---|
+| F1 | WP1 joint modifier model (biologic, kinase-family, oncology and approved-≥2000 pairs × same target) | `protocol/AMENDMENT_3.md` (sha256 `90e34dfa…`) | measured; reproduction 0.143 / 0.299 PASS; independent re-derivation 69/69 |
+| F2 | WP2 modifiers in trial-reported AEs | amendment 3 | measured; reproduction 1.2142 PASS |
+| F3 | WP3 same target, opposite action (ChEMBL action_type direction map) | amendment 3; INVERSE AGONIST = inhibiting, RELEASING and DISRUPTING AGENT excluded (lead's default, not chosen by the author) | measured |
+| F4 | WP4 K = 10/20/50 × evidence floor a ≥ 10 | amendment 3; replaces the SAP K-sensitivity that was not re-run (A12) | measured; cells share random draws (A4.5) |
+| F5 | WP5 per-target contrasts, shared reactions by group | amendment 3 | measured |
+| F6 | Corrections after the adversarial methods review: era_missing aliased with year_missing; kinase label includes 21 biologics (small-molecule-only sensitivity); WP3 join misses 146/1,434 links (D4-consistent sensitivity); WP5 CI resampled targets (molecule bootstrap added) | `protocol/AMENDMENT_4.md` (sha256 `84ce901d…`) | measured; amendment-3 results stay primary |
+| F7 | Reporting-artefact test: profiles rebuilt from late-only, FAERS-era, health-professional, consumer and non-US reports; biologic subtypes | `protocol/AMENDMENT_5.md` (sha256 `839ce2f6…`) | measured; full-data rebuild reproduces the stored profiles exactly |
+| F8 | Biologic structure test (isotype, origin, format, ADC payload, target class; Thera-SAbDab and UniProt downloads) | `private/structure/SPEC.md` (sha256 `6bad6214…`); one labelled post-spec addendum | measured; reproduction biologic Δ 2.043 PASS |
+| F9 | Therapeutic-area labels: FAERS-indication definition failed (271/1,039 labelled) and was dropped; the trial-MeSH definition is used | `EFFECT_MODIFICATION.md` §6 | measured |
+| F10 | Data freeze v1 (2026-11-13) replaces provisional v0. Analysis inputs are identical; three raw files differ only in unused columns | `data/raw/trialytic_db/PROVENANCE.md` | measured |
+
+**Multiplicity.** Across sections (b2) and (b3) there are 212 post hoc estimates (strata, differences and coefficients; most under both rankings, the trial analyses under one). No correction was applied. They are listed in `results/POST_HOC_COMPARISONS.md`. Only estimates with CIs are reported. The headline remains the SAP v1 primary estimate.
 
 ## (c) Planned or requested analyses not run, or not re-run on the rebuilt data
 
