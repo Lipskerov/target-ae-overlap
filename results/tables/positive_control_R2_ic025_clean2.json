@@ -1,0 +1,12 @@
+{
+ "label": "R2_ic025_clean2",
+ "molecules_in_both": 351,
+ "mean_own_overlap": 1.4074,
+ "mean_other_overlap": 0.0812,
+ "difference": 1.3262,
+ "ci95": [
+  1.1468,
+  1.5095
+ ],
+ "pct_molecules_own_gt_other": 56.4
+}

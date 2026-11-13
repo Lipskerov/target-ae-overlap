@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite the article (in preparation) and this repository."
+title: "Overlap of adverse event signals among marketed drugs that share a molecular target — analysis code and results"
+authors:
+  - family-names: Lipskerov
+    given-names: Fedor
+type: software
+license: MIT
+repository-code: "https://github.com/Lipskerov/target-ae-overlap"
+date-released: "2026-11-13"
+keywords:
+  - pharmacovigilance
+  - FAERS
+  - disproportionality analysis
+  - drug targets
+  - ClinicalTrials.gov

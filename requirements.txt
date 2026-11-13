@@ -1,0 +1,5 @@
+# Versions used for the reported results (Python 3.12.11, macOS arm64)
+numpy==2.5.4
+pandas==2.3.3
+duckdb==1.5.4
+matplotlib==3.10.7

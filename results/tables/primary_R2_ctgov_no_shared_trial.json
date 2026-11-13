@@ -1,0 +1,31 @@
+{
+ "label": "R2_ctgov_no_shared_trial",
+ "signals_file": "02_data/derived/ctgov/profile/profile_clean_k20.csv",
+ "n_molecules": 357,
+ "n_targets": 157,
+ "molecules_with_signals": 357,
+ "mean_signals_per_molecule": 16.891,
+ "same_target_pairs": 1024,
+ "different_target_pairs": 62202,
+ "B_perm": 9999,
+ "B_boot": 10000,
+ "master_seed": 20261112,
+ "excess_cap_ratio": 0.14,
+ "shared_signals": {
+  "delta": 0.996,
+  "molecules_used": 346,
+  "ci95": [
+   0.7916,
+   1.2345
+  ],
+  "boot_bias": 0.0058,
+  "boot_sd": 0.1145,
+  "p_perm_one_sided": 0.0001,
+  "perm_null_mean": -0.0001,
+  "perm_null_sd": 0.0254,
+  "z_perm": 39.15,
+  "perm_null_max": 0.1157,
+  "pair_mean_same": 1.3662,
+  "pair_mean_different": 0.1778
+ }
+}

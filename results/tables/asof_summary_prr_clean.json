@@ -1,0 +1,87 @@
+{
+ "measure": "prr",
+ "flag": "clean",
+ "largest_cluster_sets": 145,
+ "clusters_with_1_set": 28,
+ "eA_clean_without_largest_cluster": 0.9155,
+ "eA_clean_unweighted_cluster_mean": 1.2761,
+ "sets_with_control_C": 385,
+ "min_reports": 100,
+ "candidate_sets": 437,
+ "matched_sets": 403,
+ "dropped": {
+  "F_under_min_reports": 34,
+  "fewer_than_2_controls": 0
+ },
+ "clusters": 81,
+ "distinct_F": 120,
+ "distinct_S": 325,
+ "clean": {
+  "mean_O_F": 0.801,
+  "mean_control_A": 0.029,
+  "mean_control_B": 0.039,
+  "share_sets_F_ge1": 0.35,
+  "share_control_A_ge1": 0.027,
+  "eA": {
+   "estimate": 0.7727,
+   "ci95": [
+    0.5889,
+    1.2204
+   ],
+   "p_signflip_one_sided": 0.0001
+  },
+  "eB": {
+   "estimate": 0.7625,
+   "ci95": [
+    0.5827,
+    1.1949
+   ],
+   "p_signflip_one_sided": 0.0001
+  },
+  "thetaA": {
+   "estimate": 0.6635,
+   "ci95": [
+    0.6397,
+    0.7152
+   ]
+  },
+  "eC": {
+   "estimate": 0.7447,
+   "ci95": [
+    0.5586,
+    1.1738
+   ],
+   "p_signflip_one_sided": 0.0001
+  }
+ },
+ "raw": {
+  "mean_O_F": 0.831,
+  "mean_control_A": 0.031,
+  "mean_control_B": 0.035,
+  "share_sets_F_ge1": 0.342,
+  "share_control_A_ge1": 0.026,
+  "eA": {
+   "estimate": 0.8005,
+   "ci95": [
+    0.62,
+    1.1627
+   ],
+   "p_signflip_one_sided": 0.0001
+  },
+  "eB": {
+   "estimate": 0.7963,
+   "ci95": [
+    0.6184,
+    1.1412
+   ],
+   "p_signflip_one_sided": 0.0001
+  },
+  "thetaA": {
+   "estimate": 0.66,
+   "ci95": [
+    0.6331,
+    0.7005
+   ]
+  }
+ }
+}

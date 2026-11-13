@@ -1,0 +1,20 @@
+{
+ "latest_fda_receipt_date": 20260930,
+ "earliest_initial_receipt_date": 19861224,
+ "distinct_primary_ids": 21052364,
+ "cases_health_professional_reporter": 9875563,
+ "cohort_reports_median": 3987.0,
+ "cohort_reports_q1": 1097.25,
+ "cohort_reports_q3": 17210.0,
+ "cohort_reports_min": 102,
+ "cohort_reports_max": 534830,
+ "ctgov_trials_in_extract": 34726,
+ "software": {
+  "python": "3.12.11",
+  "numpy": "2.5.4",
+  "pandas": "2.3.3",
+  "duckdb": "1.5.4",
+  "matplotlib": "3.10.7",
+  "os": "macOS-26.5.2-arm64-arm-64bit"
+ }
+}

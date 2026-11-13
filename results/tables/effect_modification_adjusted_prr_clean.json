@@ -1,0 +1,1186 @@
+{
+ "label": "prr_clean",
+ "B": 500,
+ "paper_model_full_same_target": {
+  "beta": 0.143,
+  "ci95": [
+   0.078,
+   0.2127
+  ],
+  "share_bootstrap_le0": 0.0
+ },
+ "strata": {
+  "all_pairs_refit": {
+   "molecules": 1039,
+   "pairs": 539241,
+   "same_target_pairs": 7923,
+   "unadjusted": {
+    "intercept": {
+     "beta": 0.064,
+     "ci95": [
+      0.058,
+      0.072
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_target": {
+     "beta": 0.484,
+     "ci95": [
+      0.411,
+      0.572
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "class_only": {
+    "intercept": {
+     "beta": 0.057,
+     "ci95": [
+      0.047,
+      0.072
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_target": {
+     "beta": 0.254,
+     "ci95": [
+      0.189,
+      0.325
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc4": {
+     "beta": 0.457,
+     "ci95": [
+      0.301,
+      0.617
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc3": {
+     "beta": 0.166,
+     "ci95": [
+      0.105,
+      0.239
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc1": {
+     "beta": 0.065,
+     "ci95": [
+      0.052,
+      0.077
+     ],
+     "share_boot_le0": 0.0
+    },
+    "atc_missing": {
+     "beta": 0.028,
+     "ci95": [
+      0.013,
+      0.045
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_epc": {
+     "beta": 0.175,
+     "ci95": [
+      0.052,
+      0.354
+     ],
+     "share_boot_le0": 0.004
+    },
+    "epc_missing": {
+     "beta": -0.017,
+     "ci95": [
+      -0.032,
+      -0.006
+     ],
+     "share_boot_le0": 0.996
+    }
+   },
+   "full": {
+    "intercept": {
+     "beta": 0.172,
+     "ci95": [
+      0.118,
+      0.217
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_target": {
+     "beta": 0.143,
+     "ci95": [
+      0.077,
+      0.213
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc4": {
+     "beta": 0.384,
+     "ci95": [
+      0.242,
+      0.54
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc3": {
+     "beta": 0.109,
+     "ci95": [
+      0.053,
+      0.173
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc1": {
+     "beta": 0.016,
+     "ci95": [
+      0.002,
+      0.033
+     ],
+     "share_boot_le0": 0.006
+    },
+    "atc_missing": {
+     "beta": 0.018,
+     "ci95": [
+      0.002,
+      0.033
+     ],
+     "share_boot_le0": 0.012
+    },
+    "same_epc": {
+     "beta": 0.168,
+     "ci95": [
+      0.054,
+      0.301
+     ],
+     "share_boot_le0": 0.0
+    },
+    "epc_missing": {
+     "beta": -0.007,
+     "ci95": [
+      -0.02,
+      0.005
+     ],
+     "share_boot_le0": 0.878
+    },
+    "shared_indication": {
+     "beta": 0.099,
+     "ci95": [
+      0.076,
+      0.124
+     ],
+     "share_boot_le0": 0.0
+    },
+    "logrep_sum": {
+     "beta": -0.013,
+     "ci95": [
+      -0.019,
+      -0.005
+     ],
+     "share_boot_le0": 1.0
+    },
+    "logrep_absdiff": {
+     "beta": -0.065,
+     "ci95": [
+      -0.076,
+      -0.057
+     ],
+     "share_boot_le0": 1.0
+    },
+    "year_gap": {
+     "beta": -0.0,
+     "ci95": [
+      -0.001,
+      -0.0
+     ],
+     "share_boot_le0": 0.988
+    },
+    "year_missing": {
+     "beta": 0.011,
+     "ci95": [
+      -0.002,
+      0.024
+     ],
+     "share_boot_le0": 0.042
+    },
+    "comention_share": {
+     "beta": 4.695,
+     "ci95": [
+      3.642,
+      6.219
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "within_class_contrasts": {
+    "same_atc4": {
+     "same_target_pairs": 1800,
+     "different_target_pairs": 846,
+     "mean_same": 1.141,
+     "mean_different": 0.585,
+     "difference": 0.556,
+     "ci95": [
+      0.265,
+      0.816
+     ]
+    },
+    "different_atc4": {
+     "same_target_pairs": 5087,
+     "different_target_pairs": 460295,
+     "mean_same": 0.346,
+     "mean_different": 0.062,
+     "difference": 0.284,
+     "ci95": [
+      0.217,
+      0.365
+     ]
+    },
+    "shared_indication": {
+     "same_target_pairs": 5009,
+     "different_target_pairs": 68221,
+     "mean_same": 0.784,
+     "mean_different": 0.238,
+     "difference": 0.547,
+     "ci95": [
+      0.445,
+      0.678
+     ]
+    },
+    "no_shared_indication": {
+     "same_target_pairs": 2914,
+     "different_target_pairs": 463097,
+     "mean_same": 0.144,
+     "mean_different": 0.039,
+     "difference": 0.105,
+     "ci95": [
+      0.067,
+      0.16
+     ]
+    },
+    "no_comention": {
+     "same_target_pairs": 1467,
+     "different_target_pairs": 231026,
+     "mean_same": 0.223,
+     "mean_different": 0.037,
+     "difference": 0.186,
+     "ci95": [
+      0.116,
+      0.275
+     ]
+    }
+   }
+  },
+  "biologic_pairs": {
+   "molecules": 151,
+   "pairs": 11325,
+   "same_target_pairs": 381,
+   "unadjusted": {
+    "intercept": {
+     "beta": 0.074,
+     "ci95": [
+      0.053,
+      0.102
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_target": {
+     "beta": 1.755,
+     "ci95": [
+      1.238,
+      2.471
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "class_only": {
+    "intercept": {
+     "beta": 0.017,
+     "ci95": [
+      -0.027,
+      0.062
+     ],
+     "share_boot_le0": 0.206
+    },
+    "same_target": {
+     "beta": 1.115,
+     "ci95": [
+      0.603,
+      1.742
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc4": {
+     "beta": 0.628,
+     "ci95": [
+      0.203,
+      1.272
+     ],
+     "share_boot_le0": 0.002
+    },
+    "same_atc3": {
+     "beta": 0.114,
+     "ci95": [
+      -0.008,
+      0.314
+     ],
+     "share_boot_le0": 0.032
+    },
+    "same_atc1": {
+     "beta": 0.034,
+     "ci95": [
+      -0.009,
+      0.083
+     ],
+     "share_boot_le0": 0.072
+    },
+    "atc_missing": {
+     "beta": 0.067,
+     "ci95": [
+      -0.002,
+      0.155
+     ],
+     "share_boot_le0": 0.032
+    },
+    "same_epc": {
+     "beta": 0.93,
+     "ci95": [
+      -0.373,
+      2.541
+     ],
+     "share_boot_le0": 0.098
+    },
+    "epc_missing": {
+     "beta": 0.019,
+     "ci95": [
+      -0.045,
+      0.073
+     ],
+     "share_boot_le0": 0.234
+    }
+   },
+   "full": {
+    "intercept": {
+     "beta": 0.179,
+     "ci95": [
+      -0.128,
+      0.435
+     ],
+     "share_boot_le0": 0.092
+    },
+    "same_target": {
+     "beta": 0.846,
+     "ci95": [
+      0.334,
+      1.366
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc4": {
+     "beta": 0.533,
+     "ci95": [
+      0.119,
+      1.08
+     ],
+     "share_boot_le0": 0.008
+    },
+    "same_atc3": {
+     "beta": 0.004,
+     "ci95": [
+      -0.093,
+      0.152
+     ],
+     "share_boot_le0": 0.462
+    },
+    "same_atc1": {
+     "beta": 0.002,
+     "ci95": [
+      -0.043,
+      0.047
+     ],
+     "share_boot_le0": 0.434
+    },
+    "atc_missing": {
+     "beta": 0.011,
+     "ci95": [
+      -0.061,
+      0.084
+     ],
+     "share_boot_le0": 0.384
+    },
+    "same_epc": {
+     "beta": 0.597,
+     "ci95": [
+      -0.49,
+      1.891
+     ],
+     "share_boot_le0": 0.192
+    },
+    "epc_missing": {
+     "beta": 0.023,
+     "ci95": [
+      -0.021,
+      0.07
+     ],
+     "share_boot_le0": 0.158
+    },
+    "shared_indication": {
+     "beta": 0.324,
+     "ci95": [
+      0.176,
+      0.539
+     ],
+     "share_boot_le0": 0.0
+    },
+    "logrep_sum": {
+     "beta": -0.006,
+     "ci95": [
+      -0.04,
+      0.034
+     ],
+     "share_boot_le0": 0.694
+    },
+    "logrep_absdiff": {
+     "beta": -0.096,
+     "ci95": [
+      -0.134,
+      -0.059
+     ],
+     "share_boot_le0": 1.0
+    },
+    "year_gap": {
+     "beta": -0.003,
+     "ci95": [
+      -0.005,
+      -0.001
+     ],
+     "share_boot_le0": 0.998
+    },
+    "year_missing": {
+     "beta": 0.059,
+     "ci95": [
+      -0.019,
+      0.13
+     ],
+     "share_boot_le0": 0.078
+    },
+    "comention_share": {
+     "beta": 5.375,
+     "ci95": [
+      2.167,
+      11.629
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "within_class_contrasts": {
+    "same_atc4": {
+     "same_target_pairs": 225,
+     "different_target_pairs": 210,
+     "mean_same": 2.258,
+     "mean_different": 0.767,
+     "difference": 1.491,
+     "ci95": [
+      0.646,
+      2.449
+     ]
+    },
+    "different_atc4": {
+     "same_target_pairs": 101,
+     "different_target_pairs": 9475,
+     "mean_same": 0.891,
+     "mean_different": 0.059,
+     "difference": 0.832,
+     "ci95": [
+      0.285,
+      1.807
+     ]
+    },
+    "shared_indication": {
+     "same_target_pairs": 288,
+     "different_target_pairs": 964,
+     "mean_same": 2.191,
+     "mean_different": 0.485,
+     "difference": 1.705,
+     "ci95": [
+      1.048,
+      2.541
+     ]
+    },
+    "no_shared_indication": {
+     "same_target_pairs": 93,
+     "different_target_pairs": 9980,
+     "mean_same": 0.71,
+     "mean_different": 0.035,
+     "difference": 0.675,
+     "ci95": [
+      0.207,
+      1.234
+     ]
+    },
+    "no_comention": {
+     "same_target_pairs": 109,
+     "different_target_pairs": 7470,
+     "mean_same": 0.771,
+     "mean_different": 0.045,
+     "difference": 0.726,
+     "ci95": [
+      0.297,
+      1.218
+     ]
+    }
+   }
+  },
+  "small_molecule_pairs": {
+   "molecules": 865,
+   "pairs": 373680,
+   "same_target_pairs": 7189,
+   "unadjusted": {
+    "intercept": {
+     "beta": 0.07,
+     "ci95": [
+      0.063,
+      0.078
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_target": {
+     "beta": 0.393,
+     "ci95": [
+      0.324,
+      0.474
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "class_only": {
+    "intercept": {
+     "beta": 0.063,
+     "ci95": [
+      0.053,
+      0.076
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_target": {
+     "beta": 0.192,
+     "ci95": [
+      0.13,
+      0.26
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc4": {
+     "beta": 0.351,
+     "ci95": [
+      0.207,
+      0.528
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc3": {
+     "beta": 0.169,
+     "ci95": [
+      0.091,
+      0.274
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc1": {
+     "beta": 0.076,
+     "ci95": [
+      0.061,
+      0.09
+     ],
+     "share_boot_le0": 0.0
+    },
+    "atc_missing": {
+     "beta": 0.022,
+     "ci95": [
+      0.004,
+      0.04
+     ],
+     "share_boot_le0": 0.008
+    },
+    "same_epc": {
+     "beta": 0.151,
+     "ci95": [
+      0.02,
+      0.292
+     ],
+     "share_boot_le0": 0.004
+    },
+    "epc_missing": {
+     "beta": -0.018,
+     "ci95": [
+      -0.032,
+      -0.006
+     ],
+     "share_boot_le0": 1.0
+    }
+   },
+   "full": {
+    "intercept": {
+     "beta": 0.198,
+     "ci95": [
+      0.144,
+      0.252
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_target": {
+     "beta": 0.106,
+     "ci95": [
+      0.053,
+      0.161
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc4": {
+     "beta": 0.285,
+     "ci95": [
+      0.139,
+      0.457
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc3": {
+     "beta": 0.111,
+     "ci95": [
+      0.047,
+      0.187
+     ],
+     "share_boot_le0": 0.0
+    },
+    "same_atc1": {
+     "beta": 0.018,
+     "ci95": [
+      0.0,
+      0.036
+     ],
+     "share_boot_le0": 0.024
+    },
+    "atc_missing": {
+     "beta": 0.014,
+     "ci95": [
+      -0.002,
+      0.031
+     ],
+     "share_boot_le0": 0.042
+    },
+    "same_epc": {
+     "beta": 0.17,
+     "ci95": [
+      0.072,
+      0.3
+     ],
+     "share_boot_le0": 0.004
+    },
+    "epc_missing": {
+     "beta": -0.009,
+     "ci95": [
+      -0.022,
+      0.006
+     ],
+     "share_boot_le0": 0.888
+    },
+    "shared_indication": {
+     "beta": 0.083,
+     "ci95": [
+      0.061,
+      0.108
+     ],
+     "share_boot_le0": 0.0
+    },
+    "logrep_sum": {
+     "beta": -0.016,
+     "ci95": [
+      -0.023,
+      -0.008
+     ],
+     "share_boot_le0": 1.0
+    },
+    "logrep_absdiff": {
+     "beta": -0.075,
+     "ci95": [
+      -0.086,
+      -0.065
+     ],
+     "share_boot_le0": 1.0
+    },
+    "year_gap": {
+     "beta": -0.0,
+     "ci95": [
+      -0.0,
+      0.0
+     ],
+     "share_boot_le0": 0.916
+    },
+    "year_missing": {
+     "beta": 0.012,
+     "ci95": [
+      -0.001,
+      0.026
+     ],
+     "share_boot_le0": 0.044
+    },
+    "comention_share": {
+     "beta": 4.44,
+     "ci95": [
+      3.318,
+      5.734
+     ],
+     "share_boot_le0": 0.0
+    }
+   },
+   "within_class_contrasts": {
+    "same_atc4": {
+     "same_target_pairs": 1517,
+     "different_target_pairs": 556,
+     "mean_same": 0.968,
+     "mean_different": 0.496,
+     "difference": 0.471,
+     "ci95": [
+      0.21,
+      0.749
+     ]
+    },
+    "different_atc4": {
+     "same_target_pairs": 4763,
+     "different_target_pairs": 315970,
+     "mean_same": 0.321,
+     "mean_different": 0.07,
+     "difference": 0.251,
+     "ci95": [
+      0.184,
+      0.33
+     ]
+    },
+    "shared_indication": {
+     "same_target_pairs": 4507,
+     "different_target_pairs": 55591,
+     "mean_same": 0.67,
+     "mean_different": 0.222,
+     "difference": 0.449,
+     "ci95": [
+      0.333,
+      0.557
+     ]
+    },
+    "no_shared_indication": {
+     "same_target_pairs": 2682,
+     "different_target_pairs": 310900,
+     "mean_same": 0.117,
+     "mean_different": 0.043,
+     "difference": 0.073,
+     "ci95": [
+      0.041,
+      0.121
+     ]
+    },
+    "no_comention": {
+     "same_target_pairs": 1238,
+     "different_target_pairs": 140159,
+     "mean_same": 0.16,
+     "mean_different": 0.041,
+     "difference": 0.119,
+     "ci95": [
+      0.066,
+      0.191
+     ]
+    }
+   }
+  },
+  "peptide_pairs": {
+   "molecules": 23,
+   "pairs": 253,
+   "same_target_pairs": 47,
+   "unadjusted": {
+    "intercept": {
+     "beta": 0.039,
+     "ci95": [
+      0.005,
+      0.078
+     ],
+     "share_boot_le0": 0.012
+    },
+    "same_target": {
+     "beta": 1.131,
+     "ci95": [
+      0.342,
+      2.314
+     ],
+     "share_boot_le0": 0.002
+    }
+   },
+   "class_only": {
+    "intercept": {
+     "beta": 0.009,
+     "ci95": [
+      -0.164,
+      0.134
+     ],
+     "share_boot_le0": 0.394
+    },
+    "same_target": {
+     "beta": 0.807,
+     "ci95": [
+      0.054,
+      1.814
+     ],
+     "share_boot_le0": 0.022
+    },
+    "same_atc4": {
+     "beta": -0.141,
+     "ci95": [
+      -2.051,
+      2.646
+     ],
+     "share_boot_le0": 0.6
+    },
+    "same_atc3": {
+     "beta": 0.535,
+     "ci95": [
+      -0.135,
+      1.697
+     ],
+     "share_boot_le0": 0.082
+    },
+    "same_atc1": {
+     "beta": 0.04,
+     "ci95": [
+      -0.163,
+      0.294
+     ],
+     "share_boot_le0": 0.324
+    },
+    "atc_missing": {
+     "beta": 0.102,
+     "ci95": [
+      -0.112,
+      0.343
+     ],
+     "share_boot_le0": 0.35
+    },
+    "same_epc": {
+     "beta": 0.716,
+     "ci95": [
+      -1.308,
+      4.428
+     ],
+     "share_boot_le0": 0.324
+    },
+    "epc_missing": {
+     "beta": -0.094,
+     "ci95": [
+      -0.366,
+      0.131
+     ],
+     "share_boot_le0": 0.776
+    }
+   },
+   "full": {
+    "intercept": {
+     "beta": 0.29,
+     "ci95": [
+      -1.233,
+      2.769
+     ],
+     "share_boot_le0": 0.466
+    },
+    "same_target": {
+     "beta": -0.07,
+     "ci95": [
+      -1.224,
+      1.054
+     ],
+     "share_boot_le0": 0.5
+    },
+    "same_atc4": {
+     "beta": -0.263,
+     "ci95": [
+      -2.574,
+      2.476
+     ],
+     "share_boot_le0": 0.638
+    },
+    "same_atc3": {
+     "beta": 0.494,
+     "ci95": [
+      -0.163,
+      1.444
+     ],
+     "share_boot_le0": 0.086
+    },
+    "same_atc1": {
+     "beta": 0.007,
+     "ci95": [
+      -0.337,
+      0.226
+     ],
+     "share_boot_le0": 0.468
+    },
+    "atc_missing": {
+     "beta": -0.03,
+     "ci95": [
+      -0.481,
+      0.203
+     ],
+     "share_boot_le0": 0.602
+    },
+    "same_epc": {
+     "beta": 0.753,
+     "ci95": [
+      -1.492,
+      3.663
+     ],
+     "share_boot_le0": 0.342
+    },
+    "epc_missing": {
+     "beta": 0.027,
+     "ci95": [
+      -0.293,
+      0.545
+     ],
+     "share_boot_le0": 0.338
+    },
+    "shared_indication": {
+     "beta": 0.713,
+     "ci95": [
+      -0.333,
+      1.669
+     ],
+     "share_boot_le0": 0.1
+    },
+    "logrep_sum": {
+     "beta": -0.015,
+     "ci95": [
+      -0.312,
+      0.159
+     ],
+     "share_boot_le0": 0.482
+    },
+    "logrep_absdiff": {
+     "beta": -0.124,
+     "ci95": [
+      -0.349,
+      0.033
+     ],
+     "share_boot_le0": 0.946
+    },
+    "year_gap": {
+     "beta": -0.003,
+     "ci95": [
+      -0.019,
+      0.008
+     ],
+     "share_boot_le0": 0.616
+    },
+    "year_missing": {
+     "beta": -0.014,
+     "ci95": [
+      -0.603,
+      0.272
+     ],
+     "share_boot_le0": 0.58
+    },
+    "comention_share": {
+     "beta": 11.398,
+     "ci95": [
+      -7.056,
+      60.533
+     ],
+     "share_boot_le0": 0.128
+    }
+   },
+   "within_class_contrasts": {
+    "same_atc4": {
+     "same_target_pairs": 15,
+     "different_target_pairs": 0,
+     "mean_same": 1.6,
+     "mean_different": NaN,
+     "difference": NaN,
+     "ci95": [
+      NaN,
+      NaN
+     ]
+    },
+    "different_atc4": {
+     "same_target_pairs": 30,
+     "different_target_pairs": 186,
+     "mean_same": 1.033,
+     "mean_different": 0.032,
+     "difference": 1.001,
+     "ci95": [
+      0.163,
+      2.401
+     ]
+    },
+    "shared_indication": {
+     "same_target_pairs": 38,
+     "different_target_pairs": 2,
+     "mean_same": 1.395,
+     "mean_different": 0.5,
+     "difference": 0.895,
+     "ci95": [
+      -0.393,
+      2.703
+     ]
+    },
+    "no_shared_indication": {
+     "same_target_pairs": 9,
+     "note": "fewer than 10 same-target pairs"
+    },
+    "no_comention": {
+     "same_target_pairs": 9,
+     "note": "fewer than 10 same-target pairs"
+    }
+   }
+  }
+ },
+ "pooled_interaction": {
+  "intercept": {
+   "beta": 0.17,
+   "ci95": [
+    0.116,
+    0.22
+   ],
+   "share_boot_le0": 0.0
+  },
+  "same_target": {
+   "beta": 0.089,
+   "ci95": [
+    0.034,
+    0.15
+   ],
+   "share_boot_le0": 0.0
+  },
+  "same_atc4": {
+   "beta": 0.314,
+   "ci95": [
+    0.186,
+    0.465
+   ],
+   "share_boot_le0": 0.0
+  },
+  "same_atc3": {
+   "beta": 0.112,
+   "ci95": [
+    0.055,
+    0.177
+   ],
+   "share_boot_le0": 0.0
+  },
+  "same_atc1": {
+   "beta": 0.014,
+   "ci95": [
+    -0.001,
+    0.029
+   ],
+   "share_boot_le0": 0.048
+  },
+  "atc_missing": {
+   "beta": 0.017,
+   "ci95": [
+    0.005,
+    0.033
+   ],
+   "share_boot_le0": 0.01
+  },
+  "same_epc": {
+   "beta": 0.18,
+   "ci95": [
+    0.077,
+    0.337
+   ],
+   "share_boot_le0": 0.0
+  },
+  "epc_missing": {
+   "beta": -0.01,
+   "ci95": [
+    -0.023,
+    0.003
+   ],
+   "share_boot_le0": 0.942
+  },
+  "shared_indication": {
+   "beta": 0.101,
+   "ci95": [
+    0.077,
+    0.128
+   ],
+   "share_boot_le0": 0.0
+  },
+  "logrep_sum": {
+   "beta": -0.013,
+   "ci95": [
+    -0.02,
+    -0.006
+   ],
+   "share_boot_le0": 0.998
+  },
+  "logrep_absdiff": {
+   "beta": -0.066,
+   "ci95": [
+    -0.077,
+    -0.057
+   ],
+   "share_boot_le0": 1.0
+  },
+  "year_gap": {
+   "beta": -0.0,
+   "ci95": [
+    -0.0,
+    0.0
+   ],
+   "share_boot_le0": 0.958
+  },
+  "year_missing": {
+   "beta": 0.014,
+   "ci95": [
+    0.003,
+    0.027
+   ],
+   "share_boot_le0": 0.004
+  },
+  "comention_share": {
+   "beta": 4.72,
+   "ci95": [
+    3.618,
+    6.179
+   ],
+   "share_boot_le0": 0.0
+  },
+  "bio_pair": {
+   "beta": 0.031,
+   "ci95": [
+    0.006,
+    0.066
+   ],
+   "share_boot_le0": 0.002
+  },
+  "mixed_pair": {
+   "beta": 0.019,
+   "ci95": [
+    0.008,
+    0.036
+   ],
+   "share_boot_le0": 0.0
+  },
+  "target_x_bio": {
+   "beta": 1.098,
+   "ci95": [
+    0.59,
+    1.682
+   ],
+   "share_boot_le0": 0.0
+  },
+  "target_x_mixed": {
+   "beta": 0.487,
+   "ci95": [
+    0.087,
+    0.943
+   ],
+   "share_boot_le0": 0.002
+  }
+ }
+}

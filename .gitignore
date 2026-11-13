@@ -1,0 +1,23 @@
+# ---- NEVER PUBLIC ---------------------------------------------------------------------------------
+# Manuscript text, supplement text, submission files, internal reviews, admin, project log
+private/
+# Row-level input data: exports from, or built with, the Trialytic database (https://trialytic.ai),
+# and fetched/derived row-level tables. Only the documentation and manifests below are public.
+data/**
+!data/README.md
+!data/MANIFEST.tsv
+!data/raw/
+!data/raw/faers_quarterly/
+!data/raw/faers_quarterly/MANIFEST.tsv
+# Row-level result tables (pairs, co-mention pairs, as-of sets, molecule labels); aggregates (*.json) are public
+results/tables/*.csv
+results/tables/*.csv.gz
+results/round1/
+logs/
+# ---- local clutter ---------------------------------------------------------------------------------
+~$*
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.env

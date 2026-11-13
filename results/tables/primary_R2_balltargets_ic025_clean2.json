@@ -1,0 +1,48 @@
+{
+ "label": "R2_balltargets_ic025_clean2",
+ "signals_file": "02_data/derived/faers_q/b_alltargets/profile_clean2_ic025_k20.csv",
+ "n_molecules": 1299,
+ "n_targets": 333,
+ "molecules_with_signals": 1299,
+ "mean_signals_per_molecule": 19.837,
+ "same_target_pairs": 10776,
+ "different_target_pairs": 832275,
+ "B_perm": 999,
+ "B_boot": 1000,
+ "master_seed": 20261112,
+ "excess_cap_ratio": 0.062,
+ "shared_signals": {
+  "delta": 1.791,
+  "molecules_used": 1299,
+  "ci95": [
+   1.5988,
+   1.9626
+  ],
+  "boot_bias": -0.0199,
+  "boot_sd": 0.09,
+  "p_perm_one_sided": 0.001,
+  "perm_null_mean": 0.0006,
+  "perm_null_sd": 0.0131,
+  "z_perm": 137.12,
+  "perm_null_max": 0.0534,
+  "pair_mean_same": 1.4207,
+  "pair_mean_different": 0.195
+ },
+ "jaccard": {
+  "delta": 0.0546,
+  "molecules_used": 1299,
+  "ci95": [
+   0.0481,
+   0.0605
+  ],
+  "boot_bias": -0.0006,
+  "boot_sd": 0.0031,
+  "p_perm_one_sided": 0.001,
+  "perm_null_mean": 0.0,
+  "perm_null_sd": 0.0004,
+  "z_perm": 127.51,
+  "perm_null_max": 0.0018,
+  "pair_mean_same": 0.0417,
+  "pair_mean_different": 0.0055
+ }
+}

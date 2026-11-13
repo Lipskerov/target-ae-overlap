@@ -1,0 +1,557 @@
+{
+ "label": "R2_ic025_clean2",
+ "profile": "02_data/derived/faers_q/b/profile_clean2_ic025_k20.csv",
+ "molecules": 1039,
+ "pairs": 539241,
+ "same_target_pairs": 7923,
+ "molecules_with_atc": 968,
+ "molecules_with_epc": 658,
+ "B": 1000,
+ "within_class_contrasts": {
+  "atc4": {
+   "same_class": {
+    "same_target_pairs": 1800,
+    "different_target_pairs": 846,
+    "mean_same_target": 2.4056,
+    "mean_different_target": 1.3712,
+    "difference": 1.0344,
+    "ci95": [
+     0.55,
+     1.4801
+    ],
+    "share_bootstrap_le0": 0.0
+   },
+   "different_class": {
+    "same_target_pairs": 5087,
+    "different_target_pairs": 460295,
+    "mean_same_target": 0.8549,
+    "mean_different_target": 0.1896,
+    "difference": 0.6653,
+    "ci95": [
+     0.5284,
+     0.8356
+    ],
+    "share_bootstrap_le0": 0.0
+   }
+  },
+  "atc3": {
+   "same_class": {
+    "same_target_pairs": 3345,
+    "different_target_pairs": 8313,
+    "mean_same_target": 1.9824,
+    "mean_different_target": 0.9367,
+    "difference": 1.0456,
+    "ci95": [
+     0.7666,
+     1.3543
+    ],
+    "share_bootstrap_le0": 0.0
+   },
+   "different_class": {
+    "same_target_pairs": 3542,
+    "different_target_pairs": 452828,
+    "mean_same_target": 0.5782,
+    "mean_different_target": 0.1781,
+    "difference": 0.4001,
+    "ci95": [
+     0.291,
+     0.5451
+    ],
+    "share_bootstrap_le0": 0.0
+   }
+  },
+  "epc": {
+   "same_class": {
+    "same_target_pairs": 1267,
+    "different_target_pairs": 1717,
+    "mean_same_target": 2.4578,
+    "mean_different_target": 0.7903,
+    "difference": 1.6674,
+    "ci95": [
+     1.2084,
+     2.1605
+    ],
+    "share_bootstrap_le0": 0.0
+   },
+   "different_class": {
+    "same_target_pairs": 1553,
+    "different_target_pairs": 211616,
+    "mean_same_target": 0.9627,
+    "mean_different_target": 0.1898,
+    "difference": 0.7728,
+    "ci95": [
+     0.5717,
+     1.0127
+    ],
+    "share_bootstrap_le0": 0.0
+   }
+  },
+  "indication": {
+   "same_class": {
+    "same_target_pairs": 5009,
+    "different_target_pairs": 68221,
+    "mean_same_target": 1.7075,
+    "mean_different_target": 0.5876,
+    "difference": 1.1199,
+    "ci95": [
+     0.909,
+     1.3574
+    ],
+    "share_bootstrap_le0": 0.0
+   },
+   "different_class": {
+    "same_target_pairs": 2914,
+    "different_target_pairs": 463097,
+    "mean_same_target": 0.4526,
+    "mean_different_target": 0.1362,
+    "difference": 0.3165,
+    "ci95": [
+     0.2271,
+     0.4226
+    ],
+    "share_bootstrap_le0": 0.0
+   }
+  }
+ },
+ "model_unadjusted": {
+  "intercept": {
+   "beta": 0.1941,
+   "ci95": [
+    0.1803,
+    0.2092
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_target": {
+   "beta": 1.0518,
+   "ci95": [
+    0.9198,
+    1.2314
+   ],
+   "share_bootstrap_le0": 0.0
+  }
+ },
+ "model_class_only": {
+  "intercept": {
+   "beta": 0.1397,
+   "ci95": [
+    0.1134,
+    0.1663
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_target": {
+   "beta": 0.5169,
+   "ci95": [
+    0.396,
+    0.6669
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_atc4": {
+   "beta": 0.783,
+   "ci95": [
+    0.5104,
+    1.0564
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_atc3": {
+   "beta": 0.4675,
+   "ci95": [
+    0.3494,
+    0.597
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_atc1": {
+   "beta": 0.2339,
+   "ci95": [
+    0.1993,
+    0.2758
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "atc_missing": {
+   "beta": 0.0748,
+   "ci95": [
+    0.0418,
+    0.1092
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_epc": {
+   "beta": 0.3192,
+   "ci95": [
+    0.0644,
+    0.5832
+   ],
+   "share_bootstrap_le0": 0.006
+  },
+  "epc_missing": {
+   "beta": 0.0009,
+   "ci95": [
+    -0.0269,
+    0.0279
+   ],
+   "share_bootstrap_le0": 0.436
+  }
+ },
+ "model_full": {
+  "intercept": {
+   "beta": 0.5847,
+   "ci95": [
+    0.4571,
+    0.7127
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_target": {
+   "beta": 0.2993,
+   "ci95": [
+    0.1747,
+    0.4345
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_atc4": {
+   "beta": 0.6473,
+   "ci95": [
+    0.3999,
+    0.9118
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_atc3": {
+   "beta": 0.3546,
+   "ci95": [
+    0.2481,
+    0.4687
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_atc1": {
+   "beta": 0.1371,
+   "ci95": [
+    0.0924,
+    0.1856
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "atc_missing": {
+   "beta": 0.0462,
+   "ci95": [
+    0.0134,
+    0.0821
+   ],
+   "share_bootstrap_le0": 0.004
+  },
+  "same_epc": {
+   "beta": 0.2938,
+   "ci95": [
+    0.0753,
+    0.505
+   ],
+   "share_bootstrap_le0": 0.002
+  },
+  "epc_missing": {
+   "beta": -0.01,
+   "ci95": [
+    -0.0327,
+    0.0134
+   ],
+   "share_bootstrap_le0": 0.814
+  },
+  "shared_indication": {
+   "beta": 0.2374,
+   "ci95": [
+    0.1835,
+    0.2931
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "logrep_sum": {
+   "beta": -0.0513,
+   "ci95": [
+    -0.0689,
+    -0.0335
+   ],
+   "share_bootstrap_le0": 1.0
+  },
+  "logrep_absdiff": {
+   "beta": -0.1324,
+   "ci95": [
+    -0.1561,
+    -0.1129
+   ],
+   "share_bootstrap_le0": 1.0
+  },
+  "year_gap": {
+   "beta": -0.0011,
+   "ci95": [
+    -0.0016,
+    -0.0005
+   ],
+   "share_bootstrap_le0": 1.0
+  },
+  "year_missing": {
+   "beta": 0.0212,
+   "ci95": [
+    -0.007,
+    0.0509
+   ],
+   "share_bootstrap_le0": 0.06
+  },
+  "comention_share": {
+   "beta": 8.3461,
+   "ci95": [
+    6.4465,
+    10.7737
+   ],
+   "share_bootstrap_le0": 0.0
+  }
+ },
+ "model_full_with_interaction": {
+  "intercept": {
+   "beta": 0.5862,
+   "ci95": [
+    0.4578,
+    0.7137
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_target": {
+   "beta": 0.2532,
+   "ci95": [
+    0.1402,
+    0.3872
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_atc4": {
+   "beta": 0.3157,
+   "ci95": [
+    -0.0121,
+    0.6868
+   ],
+   "share_bootstrap_le0": 0.028
+  },
+  "same_atc3": {
+   "beta": 0.3656,
+   "ci95": [
+    0.2581,
+    0.4789
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "same_atc1": {
+   "beta": 0.1381,
+   "ci95": [
+    0.0932,
+    0.1862
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "atc_missing": {
+   "beta": 0.0467,
+   "ci95": [
+    0.0137,
+    0.0824
+   ],
+   "share_bootstrap_le0": 0.004
+  },
+  "same_epc": {
+   "beta": 0.271,
+   "ci95": [
+    0.0479,
+    0.4772
+   ],
+   "share_bootstrap_le0": 0.006
+  },
+  "epc_missing": {
+   "beta": -0.0101,
+   "ci95": [
+    -0.0327,
+    0.0132
+   ],
+   "share_bootstrap_le0": 0.816
+  },
+  "shared_indication": {
+   "beta": 0.2374,
+   "ci95": [
+    0.1834,
+    0.2932
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "logrep_sum": {
+   "beta": -0.0514,
+   "ci95": [
+    -0.069,
+    -0.0337
+   ],
+   "share_bootstrap_le0": 1.0
+  },
+  "logrep_absdiff": {
+   "beta": -0.1324,
+   "ci95": [
+    -0.1561,
+    -0.1129
+   ],
+   "share_bootstrap_le0": 1.0
+  },
+  "year_gap": {
+   "beta": -0.0011,
+   "ci95": [
+    -0.0016,
+    -0.0005
+   ],
+   "share_bootstrap_le0": 1.0
+  },
+  "year_missing": {
+   "beta": 0.021,
+   "ci95": [
+    -0.007,
+    0.0506
+   ],
+   "share_bootstrap_le0": 0.062
+  },
+  "comention_share": {
+   "beta": 8.3485,
+   "ci95": [
+    6.4461,
+    10.7708
+   ],
+   "share_bootstrap_le0": 0.0
+  },
+  "target_x_atc4": {
+   "beta": 0.5258,
+   "ci95": [
+    0.0616,
+    0.9686
+   ],
+   "share_bootstrap_le0": 0.012
+  }
+ },
+ "target_level": {
+  "targets": 180,
+  "mean_contrast": 2.2558,
+  "ci95": [
+   1.9417,
+   2.5889
+  ],
+  "share_targets_positive": 0.9611,
+  "median": 1.6336
+ },
+ "profile_entry_reports": {
+  "entries": 20630,
+  "pct_le3": 1.7,
+  "pct_le10": 18.3,
+  "median": 35.0
+ },
+ "top_shared_terms_same_target": [
+  [
+   "AKATHISIA",
+   211
+  ],
+  [
+   "SEROTONIN SYNDROME",
+   203
+  ],
+  [
+   "BRADYCARDIA",
+   104
+  ],
+  [
+   "NEUROLEPTIC MALIGNANT SYNDROME",
+   100
+  ],
+  [
+   "PALMAR-PLANTAR ERYTHRODYSAESTHESIA SYNDROME",
+   96
+  ],
+  [
+   "FEBRILE NEUTROPENIA",
+   94
+  ],
+  [
+   "DERMATITIS ACNEIFORM",
+   82
+  ],
+  [
+   "EXTRAPYRAMIDAL DISORDER",
+   79
+  ],
+  [
+   "DEEP VEIN THROMBOSIS POSTOPERATIVE",
+   75
+  ],
+  [
+   "FACET JOINT SYNDROME",
+   73
+  ],
+  [
+   "LUPUS VULGARIS",
+   71
+  ],
+  [
+   "PARONYCHIA",
+   70
+  ],
+  [
+   "PARKINSONISM",
+   67
+  ],
+  [
+   "PNEUMONITIS",
+   67
+  ],
+  [
+   "SKIN TOXICITY",
+   66
+  ],
+  [
+   "ANTI-CYCLIC CITRULLINATED PEPTIDE ANTIBODY POSITIVE",
+   61
+  ],
+  [
+   "CYTOKINE RELEASE SYNDROME",
+   59
+  ],
+  [
+   "DUODENAL ULCER PERFORATION",
+   57
+  ],
+  [
+   "SWOLLEN JOINT COUNT INCREASED",
+   56
+  ],
+  [
+   "BLOOD PROLACTIN ABNORMAL",
+   55
+  ],
+  [
+   "MYELOSUPPRESSION",
+   55
+  ],
+  [
+   "RHEUMATIC FEVER",
+   55
+  ],
+  [
+   "ADJUSTMENT DISORDER WITH DEPRESSED MOOD",
+   54
+  ],
+  [
+   "ELECTROCARDIOGRAM QT PROLONGED",
+   54
+  ],
+  [
+   "HYPOGAMMAGLOBULINAEMIA",
+   52
+  ]
+ ],
+ "shared_signal_slots_same_target": 9872,
+ "pct_same_target_pairs_sharing_none": 57.3,
+ "pct_different_target_pairs_sharing_none": 88.7
+}

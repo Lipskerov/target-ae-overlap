@@ -1,0 +1,100 @@
+{
+ "extraction": "b",
+ "measure": "ic025",
+ "flag": "clean2",
+ "K": 20,
+ "cohort_molecules": 1039,
+ "different_pairs_per_same_pair": 5,
+ "same": {
+  "pairs": 7923,
+  "median_share_max": 0.00485,
+  "pct_share_ge_5pct": 17.9,
+  "pct_no_comention": 18.5,
+  "mean_overlap_before": 1.246,
+  "mean_overlap_after": 0.945
+ },
+ "different": {
+  "pairs": 39615,
+  "median_share_max": 0.0,
+  "pct_share_ge_5pct": 2.3,
+  "pct_no_comention": 42.9,
+  "mean_overlap_before": 0.191,
+  "mean_overlap_after": 0.144
+ },
+ "strata": [
+  {
+   "share_from": 0,
+   "share_to": 0.001,
+   "same": {
+    "pairs": 2784,
+    "before": 0.559,
+    "after": 0.559
+   },
+   "different": {
+    "pairs": 27585,
+    "before": 0.136,
+    "after": 0.136
+   }
+  },
+  {
+   "share_from": 0.001,
+   "share_to": 0.01,
+   "same": {
+    "pairs": 1956,
+    "before": 0.898,
+    "after": 0.889
+   },
+   "different": {
+    "pairs": 8266,
+    "before": 0.13,
+    "after": 0.12
+   }
+  },
+  {
+   "share_from": 0.01,
+   "share_to": 0.05,
+   "same": {
+    "pairs": 1767,
+    "before": 1.454,
+    "after": 1.259
+   },
+   "different": {
+    "pairs": 2852,
+    "before": 0.373,
+    "after": 0.175
+   }
+  },
+  {
+   "share_from": 0.05,
+   "share_to": 1.01,
+   "same": {
+    "pairs": 1416,
+    "before": 2.819,
+    "after": 1.388
+   },
+   "different": {
+    "pairs": 912,
+    "before": 1.842,
+    "after": 0.499
+   }
+  }
+ ],
+ "difference_before": {
+  "estimate": 1.055,
+  "ci95": [
+   0.903,
+   1.222
+  ],
+  "bootstrap": "molecule-level, B=2000"
+ },
+ "difference_after": {
+  "estimate": 0.801,
+  "ci95": [
+   0.676,
+   0.938
+  ],
+  "bootstrap": "molecule-level, B=2000"
+ },
+ "ratio_before": 6.52,
+ "ratio_after": 6.57
+}
